@@ -133,7 +133,7 @@ Everything was tested on a real server and a real MySQL database — not mock da
 
 ## Author
 
-**Eng. Tareq Bassam Bakr** (م. طارق بسام بكر) — Informatics Engineering · GitHub [@abotrek18-boop](https://github.com/abotrek18-boop)
+**Eng. Tareq Bassam Bakr** (م. طارق بسام بكر) — Informatics Engineering · GitHub [@Tareq-Bassam-Bakr](https://github.com/Tareq-Bassam-Bakr)
 Supervised by **Dr. Adnan Ali** — Al-Jazeera Private University, 2025–2026.
 
 ## License & usage
