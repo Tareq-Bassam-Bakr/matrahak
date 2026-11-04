@@ -1,0 +1,85 @@
+@startuml uml-6-deployment
+' مخطط النشر (Deployment Diagram): بيئة التشغيل الفعلية لمنصة مطرحك — المنافذ كما في run.bat و php artisan serve و .env
+!include _style_uml.iuml
+skinparam node {
+  BackgroundColor #F9FAFB
+  BorderColor #0F6B4A
+  BorderThickness 1.4
+  FontStyle bold
+}
+skinparam artifact {
+  BackgroundColor #FFFFFF
+  BorderColor #374151
+}
+skinparam database {
+  BackgroundColor #EFF6FF
+  BorderColor #1D4ED8
+}
+skinparam cloud {
+  BackgroundColor #FFFFFF
+  BorderColor #9CA3AF
+}
+skinparam nodesep 50
+skinparam ranksep 80
+title مخطط النشر — منصة «مطرحك»
+
+node "هاتف المواطن\n<size:11>Android 7+ · iOS · متصفح PWA</size>" as CitizenDevice {
+  artifact "matrahak_citizen.apk\n<size:11>Flutter · Riverpod · flutter_map</size>" as CitizenApp
+  artifact "صندوق الانتظار\n<size:11>shared_preferences + نسخ الصور</size>" as Outbox
+}
+
+node "هاتف الموظف\n<size:11>Android · iOS · Windows</size>" as EmployeeDevice {
+  artifact "matrahak_employee.apk\n<size:11>مطرحك ميدان</size>" as EmployeeApp
+}
+
+node "حاسوب الإدارة\n<size:11>متصفح حديث</size>" as AdminPC {
+  artifact "لوحة Filament\n<size:11>Livewire · Leaflet · Chart.js</size>" as AdminUI
+}
+
+node "خادم التطبيق\n<size:11>Windows 10/11 أو Linux</size>" as AppServer {
+  node "PHP 8.2+ <size:11>(جُرّب 8.3)</size>" as PHP {
+    artifact "smart-city-api\n<size:11>Laravel 12 · Sanctum · Filament 3</size>" as Laravel
+    artifact "php artisan serve\n<size:11>:8000 — أو Nginx/Apache + PHP-FPM</size>" as Web
+    artifact "php artisan schedule:work\n<size:11>9 مهام مجدولة</size>" as Scheduler
+    artifact "php artisan queue:work\n<size:11>اختياري — QUEUE_CONNECTION=database</size>" as Worker
+  }
+  artifact "storage/app/public\n<size:11>المرفقات · رموز QR · تصديرات</size>" as Storage
+}
+
+node "خادم الذكاء الاصطناعي\n<size:11>يمكن أن يكون الجهاز نفسه</size>" as AiServer {
+  node "Python 3.10+ <size:11>(جُرّب 3.13)</size>" as Py {
+    artifact "matrahak-ai\n<size:11>FastAPI · uvicorn :8001</size>" as AiApp
+    artifact "models/classifier.joblib\n<size:11>TF-IDF + LinearSVC</size>" as Model
+  }
+}
+
+database "MySQL 8 / MariaDB 10.6+\n<size:11>smart_city_db · :3306 · utf8mb4</size>" as DB
+
+cloud "OpenStreetMap\n<size:11>بلاطات الخريطة + Nominatim</size>" as OSM
+cloud "Firebase Cloud Messaging\n<size:11>اختياري</size>" as FCM
+
+CitizenApp --> Web : HTTPS/HTTP REST JSON\n/api/v1/citizen/* · Bearer Token
+EmployeeApp --> Web : HTTPS/HTTP REST JSON\n/api/v1/employee/* · Bearer Token
+AdminUI --> Web : HTTPS · جلسة Web + CSRF\n/admin
+Web --> Laravel
+Scheduler --> Laravel
+Worker --> Laravel
+Laravel --> DB : PDO · TCP 3306
+Laravel --> Storage
+Laravel --> AiApp : HTTP JSON :8001\nX-Internal-Key — بدون اتصال عكسي
+AiApp --> Model
+Laravel ..> FCM : HTTPS — HTTP v1 API\nعند ضبط FIREBASE_CREDENTIALS
+CitizenApp ..> OSM : HTTPS — tiles + reverse geocoding
+EmployeeApp ..> OSM : HTTPS — tiles
+AdminUI ..> OSM : HTTPS — tiles
+FCM ..> CitizenApp : Push
+
+note bottom of AiServer
+  خدمة Stateless: لا تتصل بقاعدة البيانات أبداً.
+  إن توقفت يعمل Laravel بالبديل المحلي (نفس الخوارزميات بـ PHP).
+end note
+note bottom of CitizenDevice
+  الإشعارات بلا Firebase: الاستطلاع كل 45 ثانية
+  على /api/v1/notifications/unread-count
+end note
+@enduml

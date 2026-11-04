@@ -1,0 +1,121 @@
+{
+ "success": true,
+ "message": "تمت العملية بنجاح",
+ "data": {
+  "department": {
+   "id": 1,
+   "name": "مديرية الخدمات والصيانة",
+   "code": "MUN"
+  },
+  "kpis": {
+   "total": 189,
+   "open": 15,
+   "resolved": 161,
+   "rejected": 13,
+   "overdue": 9,
+   "critical_open": 0,
+   "today": 3,
+   "resolution_rate": 85.2,
+   "avg_resolution_hours": 43.9,
+   "sla_compliance": 82.6,
+   "avg_rating": 3.98,
+   "ratings_count": 82,
+   "citizen_satisfaction": 68.3
+  },
+  "by_category": [
+   {
+    "id": 1,
+    "name": "حفر وتلف الطرق",
+    "color": "#E4572E",
+    "count": 68
+   },
+   {
+    "id": 3,
+    "name": "النفايات والقمامة",
+    "color": "#8D6E63",
+    "count": 66
+   },
+   {
+    "id": 2,
+    "name": "تلف الأرصفة",
+    "color": "#F17C67",
+    "count": 30
+   },
+   {
+    "id": 4,
+    "name": "مجاري الأمطار المسدودة",
+    "color": "#6D4C41",
+    "count": 25
+   }
+  ],
+  "by_district": [
+   {
+    "id": 1,
+    "name": "محافظة دمشق",
+    "count": 41
+   },
+   {
+    "id": 3,
+    "name": "محافظة حلب",
+    "count": 36
+   },
+   {
+    "id": 2,
+    "name": "محافظة ريف دمشق",
+    "count": 29
+   },
+   {
+    "id": 4,
+    "name": "محافظة حمص",
+    "count": 17
+   },
+   {
+    "id": 8,
+    "name": "محافظة إدلب",
+    "count": 15
+   },
+   {
+    "id": 5,
+    "name": "محافظة حماة",
+    "count": 14
+   }
+  ],
+  "last_7_days": [
+   {
+    "date": "2026-10-19",
+    "created": 2,
+    "resolved": 0
+   },
+   {
+    "date": "2026-10-20",
+    "created": 5,
+    "resolved": 2
+   },
+   {
+    "date": "2026-10-21",
+    "created": 0,
+    "resolved": 3
+   },
+   {
+    "date": "2026-10-22",
+    "created": 3,
+    "resolved": 2
+   },
+   {
+    "date": "2026-10-23",
+    "created": 2,
+    "resolved": 1
+   },
+   {
+    "date": "2026-10-24",
+    "created": 0,
+    "resolved": 0
+   },
+   {
+    "date": "2026-10-25",
+    "created": 3,
+    "resolved": 1
+   }
+  ]
+ }
+}

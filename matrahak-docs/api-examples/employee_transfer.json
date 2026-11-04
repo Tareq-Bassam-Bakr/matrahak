@@ -1,0 +1,21 @@
+{
+ "key": "employee_transfer",
+ "method": "POST",
+ "path": "/api/v1/employee/reports/608b2ad5-1bbe-42f6-b75c-89ace5a9d096/transfer",
+ "query": null,
+ "body": {
+  "department_id": 2,
+  "category_id": 5,
+  "reason": "المشكلة في شبكة الكهرباء وليست من اختصاص الخدمات"
+ },
+ "form": null,
+ "files": null,
+ "auth": true,
+ "status": 200,
+ "note": null,
+ "response": {
+  "success": true,
+  "message": "تم تحويل البلاغ — لم يعد ضمن بلاغاتك",
+  "data": null
+ }
+}

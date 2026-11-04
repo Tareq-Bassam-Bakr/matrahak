@@ -1,0 +1,312 @@
+{
+ "success": true,
+ "message": "تمت العملية بنجاح",
+ "data": {
+  "id": "dfeece99-1934-4ac8-8f20-433bbddbe021",
+  "ticket_number": "MTR-2026-000702",
+  "title": "تراكم نفايات قرب الحديقة",
+  "description": "النفايات متراكمة من يومين قرب مدخل الحديقة والريحة صارت قوية كتير",
+  "status": "resolved",
+  "status_ar": "تم الحل",
+  "priority": "medium",
+  "priority_ar": "متوسطة",
+  "citizen": {
+   "name": "أحمد المواطن",
+   "phone": "0930000003"
+  },
+  "is_anonymous": false,
+  "category": {
+   "id": 3,
+   "name": "النفايات والقمامة",
+   "icon": "delete",
+   "color": "#8D6E63"
+  },
+  "department": {
+   "id": 1,
+   "name": "مديرية الخدمات والصيانة"
+  },
+  "district": {
+   "id": 1,
+   "name": "محافظة دمشق"
+  },
+  "location": {
+   "latitude": 33.5089,
+   "longitude": 36.3012,
+   "address": null,
+   "notes": null
+  },
+  "ai": {
+   "category": "النفايات والقمامة",
+   "priority": "medium",
+   "confidence": 0.7416,
+   "summary": "تراكم نفايات قرب الحديقة — النفايات متراكمة من يومين قرب مدخل الحديقة والريحة صارت قوية كتير",
+   "is_duplicate": false,
+   "duplicate_of": null
+  },
+  "attachments": [
+   {
+    "id": 6,
+    "type": "image",
+    "stage": "before",
+    "url": "http://127.0.0.1:8000/storage/reports/dfeece99-1934-4ac8-8f20-433bbddbe021/aC7iIka0mbmORPs4nngaD2rUS9uu1HK0hE1Zkqoq.png",
+    "thumbnail": null,
+    "name": "tiny.png",
+    "size": "0.1 KB",
+    "mime": "image/png",
+    "ai_tags": null
+   }
+  ],
+  "after_attachments": [
+   {
+    "id": 9,
+    "type": "image",
+    "stage": "after",
+    "url": "http://127.0.0.1:8000/storage/reports/dfeece99-1934-4ac8-8f20-433bbddbe021/XB3hwVsjWgjhppH5JkRylomZIK9OkVvodYcngxaM.png",
+    "thumbnail": null,
+    "name": "after1.png",
+    "size": "0.1 KB",
+    "mime": "image/png",
+    "ai_tags": null
+   },
+   {
+    "id": 10,
+    "type": "image",
+    "stage": "after",
+    "url": "http://127.0.0.1:8000/storage/reports/dfeece99-1934-4ac8-8f20-433bbddbe021/9evUgkyl59Dl9EoSs8eVkmKTRwg2ax2hF8hghQiN.png",
+    "thumbnail": null,
+    "name": "after2.png",
+    "size": "0.1 KB",
+    "mime": "image/png",
+    "ai_tags": null
+   },
+   {
+    "id": 11,
+    "type": "image",
+    "stage": "after",
+    "url": "http://127.0.0.1:8000/storage/reports/dfeece99-1934-4ac8-8f20-433bbddbe021/rlhbVNhMVptYMkDptPmItBQ2hWJB1yQb2UI8FvL2.png",
+    "thumbnail": null,
+    "name": "after3.png",
+    "size": "0.1 KB",
+    "mime": "image/png",
+    "ai_tags": null
+   }
+  ],
+  "updates": [
+   {
+    "id": 4777,
+    "type": "created",
+    "type_ar": "استلام البلاغ",
+    "old_value": null,
+    "new_value": "pending",
+    "old_value_ar": null,
+    "new_value_ar": "في الانتظار",
+    "note": "تم استلام البلاغ — محافظة دمشق",
+    "is_public": true,
+    "by": {
+     "name": "أحمد المواطن",
+     "type": "citizen"
+    },
+    "date": "2026-10-25T04:41:46+03:00"
+   },
+   {
+    "id": 4778,
+    "type": "ai_update",
+    "type_ar": "تحليل آلي",
+    "old_value": null,
+    "new_value": "garbage",
+    "old_value_ar": null,
+    "new_value_ar": "garbage",
+    "note": "اقتراح الذكاء الاصطناعي: النفايات والقمامة — ثقة 74%",
+    "is_public": false,
+    "by": {
+     "name": "النظام",
+     "type": "system"
+    },
+    "date": "2026-10-25T04:41:46+03:00"
+   },
+   {
+    "id": 4787,
+    "type": "assignment",
+    "type_ar": "إسناد",
+    "old_value": null,
+    "new_value": "سامر الخطيب",
+    "old_value_ar": null,
+    "new_value_ar": "سامر الخطيب",
+    "note": "استلم الموظف البلاغ من قائمة القسم",
+    "is_public": false,
+    "by": {
+     "name": "سامر الخطيب",
+     "type": "employee"
+    },
+    "date": "2026-10-25T04:43:37+03:00"
+   },
+   {
+    "id": 4788,
+    "type": "status_change",
+    "type_ar": "تغيير الحالة",
+    "old_value": null,
+    "new_value": "assigned",
+    "old_value_ar": null,
+    "new_value_ar": "تم الإسناد",
+    "note": "تم إسناد بلاغك إلى فريق مديرية الخدمات والصيانة",
+    "is_public": true,
+    "by": {
+     "name": "النظام",
+     "type": "system"
+    },
+    "date": "2026-10-25T04:43:37+03:00"
+   },
+   {
+    "id": 4789,
+    "type": "note",
+    "type_ar": "ملاحظة",
+    "old_value": null,
+    "new_value": null,
+    "old_value_ar": null,
+    "new_value_ar": null,
+    "note": "فحص: ملاحظة داخلية للفريق",
+    "is_public": false,
+    "by": {
+     "name": "سامر الخطيب",
+     "type": "employee"
+    },
+    "date": "2026-10-25T04:43:38+03:00"
+   },
+   {
+    "id": 4790,
+    "type": "note",
+    "type_ar": "ملاحظة",
+    "old_value": null,
+    "new_value": null,
+    "old_value_ar": null,
+    "new_value_ar": null,
+    "note": "فحص: ملاحظة عامة للمواطن",
+    "is_public": true,
+    "by": {
+     "name": "سامر الخطيب",
+     "type": "employee"
+    },
+    "date": "2026-10-25T04:43:38+03:00"
+   },
+   {
+    "id": 4791,
+    "type": "citizen_response",
+    "type_ar": "رد على المواطن",
+    "old_value": null,
+    "new_value": null,
+    "old_value_ar": null,
+    "new_value_ar": null,
+    "note": "شكراً لبلاغك، الفريق في طريقه إلى الموقع.",
+    "is_public": true,
+    "by": {
+     "name": "سامر الخطيب",
+     "type": "employee"
+    },
+    "date": "2026-10-25T04:43:38+03:00"
+   },
+   {
+    "id": 4792,
+    "type": "attachment",
+    "type_ar": "مرفقات جديدة",
+    "old_value": null,
+    "new_value": "1",
+    "old_value_ar": null,
+    "new_value_ar": "1",
+    "note": "فحص: صورة بعد المعالجة",
+    "is_public": true,
+    "by": {
+     "name": "سامر الخطيب",
+     "type": "employee"
+    },
+    "date": "2026-10-25T04:43:38+03:00"
+   },
+   {
+    "id": 4793,
+    "type": "status_change",
+    "type_ar": "تغيير الحالة",
+    "old_value": "assigned",
+    "new_value": "in_progress",
+    "old_value_ar": "تم الإسناد",
+    "new_value_ar": "جاري المعالجة",
+    "note": "الفريق في الموقع وبدأ العمل",
+    "is_public": true,
+    "by": {
+     "name": "سامر الخطيب",
+     "type": "employee"
+    },
+    "date": "2026-10-25T04:43:38+03:00"
+   },
+   {
+    "id": 4794,
+    "type": "attachment",
+    "type_ar": "مرفقات جديدة",
+    "old_value": null,
+    "new_value": "2",
+    "old_value_ar": null,
+    "new_value_ar": "2",
+    "note": "أضاف الفريق صوراً بعد المعالجة",
+    "is_public": true,
+    "by": {
+     "name": "سامر الخطيب",
+     "type": "employee"
+    },
+    "date": "2026-10-25T04:43:38+03:00"
+   },
+   {
+    "id": 4795,
+    "type": "status_change",
+    "type_ar": "تغيير الحالة",
+    "old_value": "in_progress",
+    "new_value": "resolved",
+    "old_value_ar": "جاري المعالجة",
+    "new_value_ar": "تم الحل",
+    "note": "تم الإصلاح والتأكد من سلامة الموقع",
+    "is_public": true,
+    "by": {
+     "name": "سامر الخطيب",
+     "type": "employee"
+    },
+    "date": "2026-10-25T04:43:38+03:00"
+   },
+   {
+    "id": 4796,
+    "type": "note",
+    "type_ar": "ملاحظة",
+    "old_value": null,
+    "new_value": null,
+    "old_value_ar": null,
+    "new_value_ar": null,
+    "note": "فحص: ملاحظة بعد الحل",
+    "is_public": false,
+    "by": {
+     "name": "سامر الخطيب",
+     "type": "employee"
+    },
+    "date": "2026-10-25T04:43:38+03:00"
+   }
+  ],
+  "assignment": {
+   "employee": "سامر الخطيب",
+   "is_me": true,
+   "method": "claim",
+   "method_ar": "استلام ذاتي",
+   "assigned_at": "2026-10-25T04:43:37+03:00"
+  },
+  "rating": null,
+  "permissions": {
+   "can_act": false,
+   "can_claim": false,
+   "allowed_statuses": []
+  },
+  "sla": {
+   "expected_resolution": "2026-10-26T04:41:46+03:00",
+   "is_overdue": false
+  },
+  "dates": {
+   "created": "2026-10-25T04:41:46+03:00",
+   "assigned": "2026-10-25T04:43:37+03:00",
+   "started": "2026-10-25T04:43:38+03:00",
+   "resolved": "2026-10-25T04:43:38+03:00"
+  }
+ }
+}

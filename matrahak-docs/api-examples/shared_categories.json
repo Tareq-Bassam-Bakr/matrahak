@@ -1,0 +1,354 @@
+{
+ "key": "shared_categories",
+ "method": "GET",
+ "path": "/api/v1/shared/categories",
+ "query": null,
+ "body": null,
+ "form": null,
+ "files": null,
+ "auth": false,
+ "status": 200,
+ "note": null,
+ "response": {
+  "success": true,
+  "message": "تمت العملية بنجاح",
+  "data": [
+   {
+    "id": 3,
+    "name": "النفايات والقمامة",
+    "name_en": "Garbage",
+    "slug": "garbage",
+    "icon": "delete",
+    "color": "#8D6E63",
+    "sla_hours": 24,
+    "department": {
+     "id": 1,
+     "name": "مديرية الخدمات والصيانة",
+     "code": "MUN"
+    }
+   },
+   {
+    "id": 2,
+    "name": "تلف الأرصفة",
+    "name_en": "Sidewalk Damage",
+    "slug": "sidewalk-damage",
+    "icon": "directions_walk",
+    "color": "#F17C67",
+    "sla_hours": 120,
+    "department": {
+     "id": 1,
+     "name": "مديرية الخدمات والصيانة",
+     "code": "MUN"
+    }
+   },
+   {
+    "id": 1,
+    "name": "حفر وتلف الطرق",
+    "name_en": "Road Damage",
+    "slug": "road-damage",
+    "icon": "construction",
+    "color": "#E4572E",
+    "sla_hours": 72,
+    "department": {
+     "id": 1,
+     "name": "مديرية الخدمات والصيانة",
+     "code": "MUN"
+    }
+   },
+   {
+    "id": 4,
+    "name": "مجاري الأمطار المسدودة",
+    "name_en": "Blocked Drains",
+    "slug": "blocked-drains",
+    "icon": "water_damage",
+    "color": "#6D4C41",
+    "sla_hours": 48,
+    "department": {
+     "id": 1,
+     "name": "مديرية الخدمات والصيانة",
+     "code": "MUN"
+    }
+   },
+   {
+    "id": 8,
+    "name": "أسلاك كهربائية مكشوفة",
+    "name_en": "Exposed Wires",
+    "slug": "exposed-wires",
+    "icon": "bolt",
+    "color": "#EA580C",
+    "sla_hours": 6,
+    "department": {
+     "id": 2,
+     "name": "مديرية الكهرباء",
+     "code": "ELEC"
+    }
+   },
+   {
+    "id": 6,
+    "name": "إنارة شوارع معطلة",
+    "name_en": "Street Light Failure",
+    "slug": "street-light-failure",
+    "icon": "lightbulb",
+    "color": "#FBBF24",
+    "sla_hours": 72,
+    "department": {
+     "id": 2,
+     "name": "مديرية الكهرباء",
+     "code": "ELEC"
+    }
+   },
+   {
+    "id": 5,
+    "name": "انقطاع الكهرباء",
+    "name_en": "Power Outage",
+    "slug": "power-outage",
+    "icon": "power_off",
+    "color": "#F59E0B",
+    "sla_hours": 24,
+    "department": {
+     "id": 2,
+     "name": "مديرية الكهرباء",
+     "code": "ELEC"
+    }
+   },
+   {
+    "id": 7,
+    "name": "عمود كهربائي خطر",
+    "name_en": "Dangerous Electric Pole",
+    "slug": "dangerous-electric-pole",
+    "icon": "electrical_services",
+    "color": "#D97706",
+    "sla_hours": 12,
+    "department": {
+     "id": 2,
+     "name": "مديرية الكهرباء",
+     "code": "ELEC"
+    }
+   },
+   {
+    "id": 10,
+    "name": "انقطاع مياه الشرب",
+    "name_en": "Drinking Water Outage",
+    "slug": "drinking-water-outage",
+    "icon": "format_color_reset",
+    "color": "#0284C7",
+    "sla_hours": 24,
+    "department": {
+     "id": 3,
+     "name": "مديرية المياه والصرف الصحي",
+     "code": "WATER"
+    }
+   },
+   {
+    "id": 9,
+    "name": "تسرب مياه في الشارع",
+    "name_en": "Street Water Leak",
+    "slug": "street-water-leak",
+    "icon": "water_drop",
+    "color": "#0EA5E9",
+    "sla_hours": 24,
+    "department": {
+     "id": 3,
+     "name": "مديرية المياه والصرف الصحي",
+     "code": "WATER"
+    }
+   },
+   {
+    "id": 11,
+    "name": "طفح الصرف الصحي",
+    "name_en": "Sewage Overflow",
+    "slug": "sewage-overflow",
+    "icon": "warning",
+    "color": "#0369A1",
+    "sla_hours": 12,
+    "department": {
+     "id": 3,
+     "name": "مديرية المياه والصرف الصحي",
+     "code": "WATER"
+    }
+   },
+   {
+    "id": 12,
+    "name": "إشارة مرور معطلة",
+    "name_en": "Traffic Signal Failure",
+    "slug": "traffic-signal-failure",
+    "icon": "traffic",
+    "color": "#DC2626",
+    "sla_hours": 12,
+    "department": {
+     "id": 4,
+     "name": "مديرية السير والمرور",
+     "code": "TRAFFIC"
+    }
+   },
+   {
+    "id": 13,
+    "name": "ازدحام مروري",
+    "name_en": "Traffic Congestion",
+    "slug": "traffic-congestion",
+    "icon": "directions_car",
+    "color": "#B91C1C",
+    "sla_hours": 24,
+    "department": {
+     "id": 4,
+     "name": "مديرية السير والمرور",
+     "code": "TRAFFIC"
+    }
+   },
+   {
+    "id": 14,
+    "name": "لافتة طرقية تالفة",
+    "name_en": "Damaged Road Sign",
+    "slug": "damaged-road-sign",
+    "icon": "signpost",
+    "color": "#EF4444",
+    "sla_hours": 120,
+    "department": {
+     "id": 4,
+     "name": "مديرية السير والمرور",
+     "code": "TRAFFIC"
+    }
+   },
+   {
+    "id": 17,
+    "name": "تلوث مائي",
+    "name_en": "Water Pollution",
+    "slug": "water-pollution",
+    "icon": "waves",
+    "color": "#15803D",
+    "sla_hours": 48,
+    "department": {
+     "id": 5,
+     "name": "مديرية البيئة",
+     "code": "ENV"
+    }
+   },
+   {
+    "id": 16,
+    "name": "حرق نفايات",
+    "name_en": "Waste Burning",
+    "slug": "waste-burning",
+    "icon": "local_fire_department",
+    "color": "#4D7C0F",
+    "sla_hours": 24,
+    "department": {
+     "id": 5,
+     "name": "مديرية البيئة",
+     "code": "ENV"
+    }
+   },
+   {
+    "id": 15,
+    "name": "مخالفة بيئية",
+    "name_en": "Environmental Violation",
+    "slug": "environmental-violation",
+    "icon": "eco",
+    "color": "#16A34A",
+    "sla_hours": 72,
+    "department": {
+     "id": 5,
+     "name": "مديرية البيئة",
+     "code": "ENV"
+    }
+   },
+   {
+    "id": 19,
+    "name": "حريق",
+    "name_en": "Fire",
+    "slug": "fire",
+    "icon": "whatshot",
+    "color": "#E11D48",
+    "sla_hours": 1,
+    "department": {
+     "id": 6,
+     "name": "الدفاع المدني والسلامة العامة",
+     "code": "SAFETY"
+    }
+   },
+   {
+    "id": 20,
+    "name": "خطر على السلامة العامة",
+    "name_en": "Public Safety Hazard",
+    "slug": "public-safety-hazard",
+    "icon": "report",
+    "color": "#9333EA",
+    "sla_hours": 12,
+    "department": {
+     "id": 6,
+     "name": "الدفاع المدني والسلامة العامة",
+     "code": "SAFETY"
+    }
+   },
+   {
+    "id": 18,
+    "name": "مبنى آيل للسقوط",
+    "name_en": "Collapsing Building",
+    "slug": "collapsing-building",
+    "icon": "domain_disabled",
+    "color": "#7C3AED",
+    "sla_hours": 6,
+    "department": {
+     "id": 6,
+     "name": "الدفاع المدني والسلامة العامة",
+     "code": "SAFETY"
+    }
+   },
+   {
+    "id": 21,
+    "name": "انقطاع الإنترنت",
+    "name_en": "Internet Outage",
+    "slug": "internet-outage",
+    "icon": "wifi_off",
+    "color": "#4F46E5",
+    "sla_hours": 48,
+    "department": {
+     "id": 7,
+     "name": "مديرية الاتصالات والتقانة",
+     "code": "TELECOM"
+    }
+   },
+   {
+    "id": 22,
+    "name": "عطل في شبكة الاتصالات",
+    "name_en": "Telecom Network Failure",
+    "slug": "telecom-network-failure",
+    "icon": "signal_cellular_off",
+    "color": "#4338CA",
+    "sla_hours": 48,
+    "department": {
+     "id": 7,
+     "name": "مديرية الاتصالات والتقانة",
+     "code": "TELECOM"
+    }
+   },
+   {
+    "id": 23,
+    "name": "مخالفة صحية",
+    "name_en": "Health Violation",
+    "slug": "health-violation",
+    "icon": "health_and_safety",
+    "color": "#DB2777",
+    "sla_hours": 24,
+    "department": {
+     "id": 8,
+     "name": "مديرية الصحة",
+     "code": "HEALTH"
+    }
+   },
+   {
+    "id": 24,
+    "name": "مياه ملوثة",
+    "name_en": "Contaminated Water",
+    "slug": "contaminated-water",
+    "icon": "science",
+    "color": "#BE185D",
+    "sla_hours": 12,
+    "department": {
+     "id": 8,
+     "name": "مديرية الصحة",
+     "code": "HEALTH"
+    }
+   }
+  ]
+ }
+}

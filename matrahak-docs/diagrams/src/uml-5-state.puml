@@ -1,0 +1,78 @@
+@startuml uml-5-state
+' مخطط الحالات (State Machine Diagram): حالات البلاغ — يطابق App\Enums\ReportStatus::allowedTransitions()
+' والانتقالات التلقائية في AssignmentService و ReportWorkflowService والمجدول
+!include _style_uml.iuml
+skinparam state {
+  BackgroundColor #FFFFFF
+  BorderColor #0F6B4A
+  BorderThickness 1.4
+  FontStyle bold
+  AttributeFontSize 11
+  AttributeFontColor #4B5563
+  StartColor #0F6B4A
+  EndColor #0F6B4A
+}
+skinparam nodesep 60
+skinparam ranksep 70
+hide empty description
+title مخطط الحالات — دورة حياة البلاغ ReportStatus
+
+state "في الانتظار\n<size:11>pending</size>" as Pending #FFFBEB
+state "قيد المراجعة\n<size:11>under_review</size>" as UnderReview #EFF6FF
+state "تم الإسناد\n<size:11>assigned</size>" as Assigned #EEF2FF
+state "جاري المعالجة\n<size:11>in_progress</size>" as InProgress #ECFEFF
+state "تم الحل\n<size:11>resolved</size>" as Resolved #F0FDF4
+state "مغلق\n<size:11>closed</size>" as Closed #F1F5F9
+state "مرفوض\n<size:11>rejected</size>" as Rejected #FEF2F2
+
+Pending : عند الدخول: رقم متابعة + QR + مهلة SLA
+Pending : الحذف مسموح للمواطن فقط هنا قبل الإسناد
+Assigned : موظف واحد فعّال: report_assignments.is_active
+InProgress : started_at
+Resolved : resolved_at · يُنتظر تقييم المواطن
+Closed : closed_at · حالة نهائية
+Rejected : closed_at · حالة نهائية
+
+[*] --> Pending : المواطن يرفع البلاغ
+
+Pending --> Assigned : إسناد تلقائي / يدوي / استلام Claim
+UnderReview --> Assigned : إسناد
+Pending --> UnderReview : الموظف أو الإدارة
+Assigned --> UnderReview : الموظف يطلب تفاصيل
+InProgress --> UnderReview : تحويل لمديرية أخرى من أي حالة مفتوحة\nثم إسناد تلقائي فيها
+
+Pending --> InProgress
+UnderReview --> InProgress
+Assigned --> InProgress : الموظف يبدأ العمل
+
+Assigned --> Resolved
+InProgress --> Resolved : الموظف: تم الحل + صور بعد
+
+Resolved --> InProgress : إعادة فتح\nالمشكلة لم تُحل
+Resolved --> Closed : تقييم المواطن 1..5\nأو إغلاق تلقائي بعد 7 أيام
+
+Pending --> Rejected : بلاغ غير صالح\nأو مكرر لبلاغ قائم
+UnderReview --> Rejected
+Assigned --> Rejected
+InProgress --> Rejected
+
+Closed --> [*]
+Rejected --> [*]
+
+note right of Assigned
+  <b>حارس الانتقال (Guard):</b>
+  الموظف مقيّد بالدالة allowedTransitions
+  ويختار فقط حالات employeeSelectable:
+  under_review · in_progress · resolved · rejected
+  «تم الإسناد» تحدث عبر الإسناد فقط.
+  مدير النظام يستطيع التجاوز من لوحة الإدارة.
+end note
+
+note left of Resolved
+  كل انتقال يكتب سطراً في السجل الزمني
+  report_updates ويطلق الحدث ReportStatusChanged:
+  إشعار المواطن + تحديث إحصائيات الموظف.
+  البلاغ المفتوح بعد expected_resolution
+  يُنبَّه عليه مرة واحدة بالأمر reports:check-overdue
+end note
+@enduml

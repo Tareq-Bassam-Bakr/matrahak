@@ -1,0 +1,33 @@
+' نمط موحّد لكل مخططات UML في توثيق مطرحك
+skinparam defaultFontName Cairo
+skinparam defaultFontSize 13
+skinparam dpi 160
+skinparam shadowing false
+skinparam roundcorner 12
+skinparam ArrowColor #374151
+skinparam ArrowThickness 1.1
+skinparam TitleFontSize 18
+skinparam actor {
+  BorderColor #0F6B4A
+  BackgroundColor #E7F2EC
+  FontStyle bold
+}
+skinparam usecase {
+  BackgroundColor #FFFFFF
+  BorderColor #0F6B4A
+  BorderThickness 1.2
+}
+skinparam rectangle {
+  BorderColor #0F6B4A
+  BorderThickness 1.4
+}
+skinparam package {
+  BorderColor #9CA3AF
+  BackgroundColor #FAFAF9
+  FontColor #0F6B4A
+  FontStyle bold
+}
+skinparam note {
+  BackgroundColor #FFFBEB
+  BorderColor #D97706
+}

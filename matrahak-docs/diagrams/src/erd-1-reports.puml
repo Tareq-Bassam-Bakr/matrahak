@@ -1,0 +1,226 @@
+@startuml erd-1-reports
+skinparam defaultFontName Cairo
+skinparam defaultFontSize 13
+skinparam dpi 160
+skinparam shadowing false
+skinparam roundcorner 8
+skinparam nodesep 45
+skinparam ranksep 55
+skinparam ArrowColor #4B5563
+skinparam ArrowThickness 1.1
+skinparam class {
+  BackgroundColor #FFFFFF
+  BorderColor #0F6B4A
+  BorderThickness 1.3
+  HeaderBackgroundColor #E7F2EC
+  FontStyle bold
+  AttributeFontSize 12
+  StereotypeFontSize 10
+}
+hide circle
+hide methods
+hide stereotype
+
+title <size:18>مخطط الكيانات والعلاقات (1): البلاغات ودورة حياتها</size>
+left to right direction
+entity "users\n<size:11>المستخدمون</size>" as users {
+  * <b>id</b> : bigint <color:#0F6B4A>PK</color>
+  --
+  * uuid : char(36) <color:#1D4ED8>UQ</color>
+  * name : varchar(100)
+  * email : varchar(150) <color:#1D4ED8>UQ</color>
+    phone : varchar(20) <color:#1D4ED8>UQ</color>
+    national_id : varchar(20) <color:#1D4ED8>UQ</color>
+  * user_type : enum(4)
+    avatar : varchar(500)
+    department_id : bigint <color:#B45309>FK</color>
+    district_id : bigint <color:#B45309>FK</color>
+  * is_active : bool
+  * is_verified : bool
+    citizen_fcm_token : varchar(500)
+    employee_fcm_token : varchar(500)
+  * preferred_lang : enum(2)
+    last_login_at : timestamp
+    email_verified_at : timestamp
+  * password : varchar(255)
+    remember_token : varchar(100)
+  <color:#6B7280><size:10>deleted_at · created_at · updated_at</size></color>
+}
+entity "districts\n<size:11>المحافظات</size>" as districts {
+  * <b>id</b> : bigint <color:#0F6B4A>PK</color>
+  --
+  * uuid : char(36) <color:#1D4ED8>UQ</color>
+  * name : varchar(150)
+    name_en : varchar(150)
+  * code : varchar(20) <color:#1D4ED8>UQ</color>
+    iso_code : varchar(10) <color:#1D4ED8>UQ</color>
+    city : varchar(100)
+    population : int
+    area_km2 : decimal(10,2)
+    boundary : json
+  * center_lat : decimal(10,8)
+  * center_lng : decimal(11,8)
+  * risk_score : decimal(5,2)
+    risk_updated_at : timestamp
+  * is_active : bool
+  <color:#6B7280><size:10>deleted_at · created_at · updated_at</size></color>
+}
+entity "departments\n<size:11>المديريات</size>" as departments {
+  * <b>id</b> : bigint <color:#0F6B4A>PK</color>
+  --
+  * uuid : char(36) <color:#1D4ED8>UQ</color>
+  * name : varchar(150)
+    name_en : varchar(150)
+  * code : varchar(20) <color:#1D4ED8>UQ</color>
+    description : text
+    manager_id : bigint <color:#B45309>FK</color>
+    parent_id : bigint <color:#B45309>FK</color>
+    contact_email : varchar(150)
+    contact_phone : varchar(20)
+  * avg_resolution_hours : int
+  * is_active : bool
+  <color:#6B7280><size:10>deleted_at · created_at · updated_at</size></color>
+}
+entity "categories\n<size:11>التصنيفات</size>" as categories {
+  * <b>id</b> : bigint <color:#0F6B4A>PK</color>
+  --
+  * uuid : char(36) <color:#1D4ED8>UQ</color>
+  * name : varchar(100)
+    name_en : varchar(100)
+  * slug : varchar(100) <color:#1D4ED8>UQ</color>
+    icon : varchar(100)
+    color : varchar(7)
+  * department_id : bigint <color:#B45309>FK</color>
+    parent_id : bigint <color:#B45309>FK</color>
+    keywords : json
+  * priority_weight : tinyint
+  * sla_hours : int
+  * is_active : bool
+  <color:#6B7280><size:10>deleted_at · created_at · updated_at</size></color>
+}
+entity "reports\n<size:11>البلاغات</size>" as reports {
+  * <b>id</b> : bigint <color:#0F6B4A>PK</color>
+  --
+  * uuid : char(36) <color:#1D4ED8>UQ</color>
+  * ticket_number : varchar(30) <color:#1D4ED8>UQ</color>
+  * citizen_id : bigint <color:#B45309>FK</color>
+    category_id : bigint <color:#B45309>FK</color>
+    department_id : bigint <color:#B45309>FK</color>
+    district_id : bigint <color:#B45309>FK</color>
+  * title : varchar(255)
+  * description : text
+  * status : enum(7)
+  * priority : enum(4)
+  * latitude : decimal(10,8)
+  * longitude : decimal(11,8)
+    address : varchar(500)
+    location_notes : varchar(255)
+    ai_category_id : bigint <color:#B45309>FK</color>
+    ai_department_id : bigint <color:#B45309>FK</color>
+    ai_priority : enum(4)
+    ai_confidence : decimal(5,4)
+    ai_summary : text
+  * ai_is_duplicate : bool
+    ai_duplicate_of : bigint <color:#B45309>FK</color>
+    ai_duplicate_score : decimal(5,4)
+    ai_processed_at : timestamp
+    assigned_at : timestamp
+    started_at : timestamp
+    resolved_at : timestamp
+    closed_at : timestamp
+    expected_resolution : timestamp
+    overdue_notified_at : timestamp
+  * is_anonymous : bool
+  * is_featured : bool
+  * views_count : int
+  * upvotes_count : int
+    qr_code_path : varchar(500)
+    geofence_zone_ids : json
+  <color:#6B7280><size:10>deleted_at · created_at · updated_at</size></color>
+}
+entity "report_attachments\n<size:11>المرفقات</size>" as report_attachments {
+  * <b>id</b> : bigint <color:#0F6B4A>PK</color>
+  --
+  * report_id : bigint <color:#B45309>FK</color>
+  * uploader_id : bigint <color:#B45309>FK</color>
+  * file_type : enum(3)
+  * stage : enum(2)
+  * file_path : varchar(500)
+  * file_name : varchar(255)
+  * file_size : int
+  * mime_type : varchar(100)
+    thumbnail : varchar(500)
+    ai_tags : json
+    ai_severity : tinyint
+  * sort_order : tinyint
+  <color:#6B7280><size:10>deleted_at · created_at · updated_at</size></color>
+}
+entity "report_updates\n<size:11>السجل الزمني للبلاغ</size>" as report_updates {
+  * <b>id</b> : bigint <color:#0F6B4A>PK</color>
+  --
+  * report_id : bigint <color:#B45309>FK</color>
+    user_id : bigint <color:#B45309>FK</color>
+  * type : enum(9)
+    old_value : varchar(150)
+    new_value : varchar(150)
+    note : text
+  * is_public : bool
+  <color:#6B7280><size:10>created_at</size></color>
+}
+entity "report_assignments\n<size:11>الإسنادات</size>" as report_assignments {
+  * <b>id</b> : bigint <color:#0F6B4A>PK</color>
+  --
+  * report_id : bigint <color:#B45309>FK</color>
+  * employee_id : bigint <color:#B45309>FK</color>
+    assigned_by : bigint <color:#B45309>FK</color>
+  * department_id : bigint <color:#B45309>FK</color>
+  * method : enum(3)
+  * is_active : bool
+    notes : text
+  * assigned_at : timestamp
+    completed_at : timestamp
+}
+entity "report_ratings\n<size:11>التقييمات</size>" as report_ratings {
+  * <b>id</b> : bigint <color:#0F6B4A>PK</color>
+  --
+  * report_id : bigint <color:#B45309>FK</color> <color:#1D4ED8>UQ</color>
+  * citizen_id : bigint <color:#B45309>FK</color>
+    employee_id : bigint <color:#B45309>FK</color>
+  * rating : tinyint
+    feedback : text
+  * rated_at : timestamp
+}
+entity "report_upvotes\n<size:11>التأييدات</size>" as report_upvotes {
+  * <b>id</b> : bigint <color:#0F6B4A>PK</color>
+  --
+  * report_id : bigint <color:#B45309>FK</color>
+  * user_id : bigint <color:#B45309>FK</color>
+  <color:#6B7280><size:10>created_at</size></color>
+}
+departments ||--o{ categories : <size:10>department_id</size>
+categories |o--o{ categories : <size:10>parent_id</size>
+users |o--o{ departments : <size:10>manager_id</size>
+departments |o--o{ departments : <size:10>parent_id</size>
+users |o--o{ report_assignments : <size:10>assigned_by</size>
+departments ||--o{ report_assignments : <size:10>department_id</size>
+users ||--o{ report_assignments : <size:10>employee_id</size>
+reports ||--o{ report_assignments : <size:10>report_id</size>
+reports ||--o{ report_attachments : <size:10>report_id</size>
+users ||--o{ report_attachments : <size:10>uploader_id</size>
+users ||--o{ report_ratings : <size:10>citizen_id</size>
+users |o--o{ report_ratings : <size:10>employee_id</size>
+reports ||--o| report_ratings : <size:10>report_id</size>
+reports ||--o{ report_updates : <size:10>report_id</size>
+users |o--o{ report_updates : <size:10>user_id</size>
+reports ||--o{ report_upvotes : <size:10>report_id</size>
+users ||--o{ report_upvotes : <size:10>user_id</size>
+categories |o--o{ reports : <size:10>ai_category_id</size>
+departments |o--o{ reports : <size:10>ai_department_id</size>
+reports |o--o{ reports : <size:10>ai_duplicate_of</size>
+categories |o--o{ reports : <size:10>category_id</size>
+users ||--o{ reports : <size:10>citizen_id</size>
+departments |o--o{ reports : <size:10>department_id</size>
+districts |o--o{ reports : <size:10>district_id</size>
+departments |o--o{ users : <size:10>department_id</size>
+districts |o--o{ users : <size:10>district_id</size>
+@enduml

@@ -1,0 +1,24 @@
+{
+ "key": "employee_login_citizen_422",
+ "method": "POST",
+ "path": "/api/v1/employee/auth/login",
+ "query": null,
+ "body": {
+  "email": "0928803791",
+  "password": "Docs@2026y"
+ },
+ "form": null,
+ "files": null,
+ "auth": false,
+ "status": 422,
+ "note": "حساب مواطن في تطبيق الموظف",
+ "response": {
+  "success": false,
+  "message": "هذا حساب مواطن — استخدم تطبيق المواطن",
+  "errors": {
+   "email": [
+    "هذا حساب مواطن — استخدم تطبيق المواطن"
+   ]
+  }
+ }
+}

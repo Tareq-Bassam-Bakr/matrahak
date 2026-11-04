@@ -1,0 +1,36 @@
+{
+ "method": "POST",
+ "url": "/v1/analyze-image",
+ "headers": {
+  "X-Internal-Key": "***"
+ },
+ "request": {
+  "multipart": [
+   {
+    "name": "file",
+    "filename": "fire.jpg"
+   }
+  ]
+ },
+ "status": 200,
+ "response": {
+  "available": true,
+  "method": "heuristic-color-quality-v1",
+  "tags": [
+   "صورة غير واضحة",
+   "احتمال حريق أو لهب"
+  ],
+  "severity": 8,
+  "quality_ok": false,
+  "metrics": {
+   "width": 640,
+   "height": 480,
+   "brightness": 112.2,
+   "sharpness": 0.8,
+   "fire_ratio": 0.2829,
+   "green_ratio": 0.0,
+   "blue_ratio": 0.0
+  },
+  "error": null
+ }
+}

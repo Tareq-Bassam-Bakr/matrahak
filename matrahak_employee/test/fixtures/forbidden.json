@@ -1,0 +1,8 @@
+{
+ "status": 403,
+ "body": {
+  "success": false,
+  "message": "هذا البلاغ ليس مسنداً إليك — استلمه أولاً",
+  "errors": null
+ }
+}

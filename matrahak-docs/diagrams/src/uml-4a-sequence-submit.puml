@@ -1,0 +1,89 @@
+@startuml uml-4a-sequence-submit
+' مخطط التسلسل (1/2): رفع بلاغ ثم تحليله بالذكاء الاصطناعي — يطابق ReportController@store و ReportSubmissionService و ProcessReportWithAi
+!include _style_uml.iuml
+skinparam sequence {
+  ParticipantBorderColor #0F6B4A
+  ParticipantBackgroundColor #E7F2EC
+  ActorBorderColor #0F6B4A
+  ActorBackgroundColor #E7F2EC
+  LifeLineBorderColor #9CA3AF
+  GroupBorderColor #9CA3AF
+  GroupBackgroundColor #F9FAFB
+  BoxBorderColor #9CA3AF
+}
+skinparam maxMessageSize 260
+autonumber "<b>0."
+title مخطط التسلسل (1/2) — رفع بلاغ وتحليله بالذكاء الاصطناعي
+
+actor "المواطن" as U
+box "تطبيق مطرحك (Flutter)" #F0FDF4
+  participant "CreateReportScreen\n+ ReportsRepository" as App
+end box
+box "Laravel 12 — smart-city-api" #EFF6FF
+  participant "ReportController\n(Citizen)" as C
+  participant "ReportSubmission\nService" as S
+  participant "DistrictLocator\nGeofenceService\nSlaCalculator" as Geo
+  database "MySQL 8" as DB
+  participant "Assignment\nService" as A
+  participant "Event Dispatcher\n+ Listeners" as EV
+  participant "ProcessReportWithAi\nثم ReportAiProcessor" as J
+end box
+participant "matrahak-ai\n(FastAPI :8001)" as AI #FEFCE8
+
+U -> App : يملأ البلاغ ويرفق الصور ويحدد الموقع
+App -> C : POST /api/v1/citizen/reports\nBearer token · multipart/form-data
+activate C
+C -> C : StoreReportRequest (التحقق)
+alt بيانات غير صحيحة
+  C --> App : 422 { success:false, message, errors }
+  App --> U : الأخطاء تحت الحقول نفسها
+else بيانات صحيحة
+  C -> S : submit(citizen, data, files)
+  activate S
+  S -> Geo : locate(lat, lng) · zonesContaining() · deadline()
+  Geo --> S : المحافظة · مناطق المراقبة · المهلة
+  S -> DB : BEGIN
+  S -> DB : INSERT reports (ticket MTR-YYYY-NNNNNN)\nINSERT report_attachments · QR · report_updates
+  S -> DB : COMMIT
+  opt المواطن اختار تصنيفاً
+    S -> A : autoAssign(report)
+    A -> DB : الموظف الأقل عبئاً في المديرية (محافظته أولاً)
+    A -> EV : ReportAssigned · ReportStatusChanged
+  end
+  S -> EV : ReportSubmitted(report, zones)
+  activate EV
+  EV -> EV : SendReportNotifications\n(تنبيه مناطق المراقبة / البلاغ الحرج)
+  EV -> J : AnalyzeReportWithAi: dispatch(ProcessReportWithAi)\nafterResponse — أو الطابور إن كان مفعّلاً
+  deactivate EV
+  S --> C : Report
+  deactivate S
+  C --> App : 201 { data: ticket_number, tracking_url, qr_code … }
+  deactivate C
+  App --> U : شاشة «تم الرفع» + رقم المتابعة + QR
+end
+
+== بعد إرسال الرد (لا ينتظره المواطن) ==
+activate J
+J -> AI : POST /v1/classify\nX-Internal-Key · العنوان والوصف + التصنيفات المفعّلة
+alt الخدمة تعمل
+  AI --> J : category_slug · department_code · priority\nconfidence · summary · explanation
+else الخدمة متوقفة أو 401
+  J -> J : LocalKeywordClassifier\n(نفس الخوارزمية في PHP)
+end
+J -> DB : INSERT ai_classifications\nUPDATE reports (ai_*، والتصنيف إن كانت الثقة ≥ الحد)
+opt طُبّق تصنيف بمديرية جديدة
+  J -> A : autoAssign(report)
+end
+J -> AI : POST /v1/duplicates (البلاغات المفتوحة القريبة)
+AI --> J : is_duplicate · duplicate_of · score
+J -> AI : POST /v1/analyze-image (لكل صورة)
+AI --> J : quality_ok · tags · severity
+J -> DB : UPDATE reports · report_attachments (ai_tags)
+opt رُفعت الأولوية إلى حرجة
+  J -> EV : ReportPriorityEscalated: تنبيه الإدارة
+end
+deactivate J
+
+App -> C : GET /api/v1/citizen/reports/{uuid} (بعد ثوانٍ)
+C --> App : التصنيف والجهة والأولوية بعد التحليل
+@enduml

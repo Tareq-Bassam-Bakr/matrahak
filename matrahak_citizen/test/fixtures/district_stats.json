@@ -1,0 +1,53 @@
+{
+ "success": true,
+ "message": "تمت العملية بنجاح",
+ "data": {
+  "district": {
+   "id": 1,
+   "name": "محافظة دمشق",
+   "population": 1754000,
+   "area_km2": 105,
+   "risk_score": 48.81,
+   "risk_level": "medium",
+   "center": {
+    "lat": 33.5138,
+    "lng": 36.2765
+   }
+  },
+  "stats": {
+   "total": 105,
+   "resolved": 91,
+   "open": 8,
+   "avg_resolution_hours": 30.2,
+   "resolution_rate": 86.7,
+   "per_100k": 5.99
+  },
+  "top_categories": [
+   {
+    "name": "حفر وتلف الطرق",
+    "color": "#E4572E",
+    "count": 15
+   },
+   {
+    "name": "النفايات والقمامة",
+    "color": "#8D6E63",
+    "count": 15
+   },
+   {
+    "name": "انقطاع الكهرباء",
+    "color": "#F59E0B",
+    "count": 13
+   },
+   {
+    "name": "إنارة شوارع معطلة",
+    "color": "#FBBF24",
+    "count": 9
+   },
+   {
+    "name": "انقطاع مياه الشرب",
+    "color": "#0284C7",
+    "count": 8
+   }
+  ]
+ }
+}

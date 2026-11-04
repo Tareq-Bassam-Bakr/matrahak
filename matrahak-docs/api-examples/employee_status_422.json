@@ -1,0 +1,27 @@
+{
+ "key": "employee_status_422",
+ "method": "POST",
+ "path": "/api/v1/employee/reports/7bcdeae9-e2ad-4c79-a33b-ebc67a582a25/status",
+ "query": null,
+ "body": {
+  "status": "closed",
+  "note": "قص"
+ },
+ "form": null,
+ "files": null,
+ "auth": true,
+ "status": 422,
+ "note": "حالة غير متاحة للموظف + ملاحظة قصيرة",
+ "response": {
+  "success": false,
+  "message": "هذه الحالة غير متاحة للموظف",
+  "errors": {
+   "status": [
+    "هذه الحالة غير متاحة للموظف"
+   ],
+   "note": [
+    "الملاحظة قصيرة جداً (5 أحرف على الأقل)"
+   ]
+  }
+ }
+}

@@ -1,0 +1,35 @@
+{
+ "key": "citizen_profile_update",
+ "method": "POST",
+ "path": "/api/v1/citizen/profile",
+ "query": null,
+ "body": {
+  "name": "مواطن التوثيق المعدّل"
+ },
+ "form": null,
+ "files": null,
+ "auth": true,
+ "status": 200,
+ "note": null,
+ "response": {
+  "success": true,
+  "message": "تم تحديث الملف الشخصي",
+  "data": {
+   "id": "f9252e73-8be5-47be-871d-b91ad9f98ae0",
+   "name": "مواطن التوثيق المعدّل",
+   "email": "docs.945417@example.com",
+   "phone": "0928803791",
+   "national_id": null,
+   "avatar": null,
+   "user_type": "citizen",
+   "is_verified": false,
+   "preferred_lang": "ar",
+   "district": {
+    "id": 1,
+    "name": "محافظة دمشق"
+   },
+   "department": null,
+   "created_at": "2026-10-25T19:23:38+03:00"
+  }
+ }
+}

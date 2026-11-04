@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- لون خلفية شاشة الإقلاع = لون الأشرطة في التطبيق (AppColors.night) -->
+    <color name="splash_background">#022E2A</color>
+</resources>

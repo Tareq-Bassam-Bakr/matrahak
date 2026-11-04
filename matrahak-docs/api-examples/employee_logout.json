@@ -1,0 +1,17 @@
+{
+ "key": "employee_logout",
+ "method": "POST",
+ "path": "/api/v1/employee/auth/logout",
+ "query": null,
+ "body": null,
+ "form": null,
+ "files": null,
+ "auth": true,
+ "status": 200,
+ "note": null,
+ "response": {
+  "success": true,
+  "message": "تم تسجيل الخروج",
+  "data": null
+ }
+}

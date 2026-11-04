@@ -1,0 +1,141 @@
+{
+ "success": true,
+ "message": "تم جلب البلاغات",
+ "data": [
+  {
+   "id": "93309ee9-bd46-4a35-a8bc-0212afc1befe",
+   "ticket_number": "MTR-2026-000696",
+   "title": "المي مقطوعة عنا",
+   "description": "صرلنا تلت ايام بلا مي بالحارة وما حدا عم يرد",
+   "status": "resolved",
+   "status_ar": "تم الحل",
+   "priority": "medium",
+   "priority_ar": "متوسطة",
+   "is_open": false,
+   "is_anonymous": false,
+   "citizen": {
+    "name": "أحمد المواطن",
+    "is_me": true
+   },
+   "category": {
+    "id": 10,
+    "name": "انقطاع مياه الشرب",
+    "slug": "drinking-water-outage",
+    "icon": "format_color_reset",
+    "color": "#0284C7"
+   },
+   "department": {
+    "id": 3,
+    "name": "مديرية المياه والصرف الصحي"
+   },
+   "district": {
+    "id": 1,
+    "name": "محافظة دمشق"
+   },
+   "location": {
+    "latitude": 33.5151,
+    "longitude": 36.2792,
+    "address": "دمشق",
+    "notes": null
+   },
+   "attachments": [],
+   "after_attachments": [],
+   "updates": [],
+   "rating": null,
+   "ai_summary": "المي مقطوعة عنا — صرلنا تلت ايام بلا مي بالحارة وما حدا عم يرد",
+   "stats": {
+    "views": 0,
+    "upvotes": 0
+   },
+   "has_upvoted": false,
+   "is_owner": true,
+   "can_delete": false,
+   "can_rate": true,
+   "can_upvote": false,
+   "sla": {
+    "expected_resolution": "2026-10-24T04:19:21+03:00",
+    "is_overdue": false
+   },
+   "dates": {
+    "created": "2026-10-23T04:19:21+03:00",
+    "assigned": "2026-10-23T04:19:21+03:00",
+    "started": null,
+    "resolved": "2026-10-23T04:21:13+03:00",
+    "closed": null
+   },
+   "qr_code": "http://127.0.0.1:8000/storage/qrcodes/93309ee9-bd46-4a35-a8bc-0212afc1befe.svg",
+   "tracking_url": "http://127.0.0.1:8000/track/93309ee9-bd46-4a35-a8bc-0212afc1befe"
+  },
+  {
+   "id": "4922acd9-26ab-472b-8d1f-54ee2854cc52",
+   "ticket_number": "MTR-2026-000695",
+   "title": "ما في مي من تلت ايام",
+   "description": "المي مقطوعة عن الحارة كلها من تلت ايام والصهاريج غالية كتير",
+   "status": "resolved",
+   "status_ar": "تم الحل",
+   "priority": "medium",
+   "priority_ar": "متوسطة",
+   "is_open": false,
+   "is_anonymous": false,
+   "citizen": {
+    "name": "أحمد المواطن",
+    "is_me": true
+   },
+   "category": {
+    "id": 10,
+    "name": "انقطاع مياه الشرب",
+    "slug": "drinking-water-outage",
+    "icon": "format_color_reset",
+    "color": "#0284C7"
+   },
+   "department": {
+    "id": 3,
+    "name": "مديرية المياه والصرف الصحي"
+   },
+   "district": {
+    "id": 1,
+    "name": "محافظة دمشق"
+   },
+   "location": {
+    "latitude": 33.515,
+    "longitude": 36.279,
+    "address": "دمشق",
+    "notes": null
+   },
+   "attachments": [],
+   "after_attachments": [],
+   "updates": [],
+   "rating": null,
+   "ai_summary": "ما في مي من تلت ايام — المي مقطوعة عن الحارة كلها من تلت ايام والصهاريج غالية كتير",
+   "stats": {
+    "views": 0,
+    "upvotes": 0
+   },
+   "has_upvoted": false,
+   "is_owner": true,
+   "can_delete": false,
+   "can_rate": true,
+   "can_upvote": false,
+   "sla": {
+    "expected_resolution": "2026-10-24T04:19:21+03:00",
+    "is_overdue": false
+   },
+   "dates": {
+    "created": "2026-10-23T04:19:21+03:00",
+    "assigned": "2026-10-23T04:19:21+03:00",
+    "started": null,
+    "resolved": "2026-10-23T04:21:13+03:00",
+    "closed": null
+   },
+   "qr_code": "http://127.0.0.1:8000/storage/qrcodes/4922acd9-26ab-472b-8d1f-54ee2854cc52.svg",
+   "tracking_url": "http://127.0.0.1:8000/track/4922acd9-26ab-472b-8d1f-54ee2854cc52"
+  }
+ ],
+ "meta": {
+  "current_page": 1,
+  "last_page": 2,
+  "per_page": 2,
+  "total": 3,
+  "has_more": true
+ }
+}

@@ -1,0 +1,131 @@
+{
+ "method": "POST",
+ "url": "/v1/train",
+ "headers": {
+  "X-Internal-Key": "***"
+ },
+ "request": {
+  "samples": [
+   {
+    "text": "شريط كهربا مقطوع قدام المدرسة — سلك كهربا مكشوف عالأرض وعم يطلع شرار والولاد عم يلعبوا جنبه",
+    "label": "exposed-wires",
+    "source": "resolved"
+   },
+   {
+    "text": "ما في مي من تلت ايام — المي مقطوعة عن الحارة كلها من تلت ايام والصهاريج غالية كتير",
+    "label": "drinking-water-outage",
+    "source": "resolved"
+   },
+   {
+    "text": "المي مقطوعة عنا — صرلنا تلت ايام بلا مي بالحارة وما حدا عم يرد",
+    "label": "drinking-water-outage",
+    "source": "resolved"
+   },
+   {
+    "text": "تراكم نفايات قرب الحديقة — النفايات متراكمة من يومين قرب مدخل الحديقة والريحة صارت قوية كتير",
+    "label": "garbage",
+    "source": "resolved"
+   },
+   {
+    "text": "انهيار جزئي بحافة الطريق — انهار جزء من حافة الطريق قرب الجسر وصار في خطر على السيارات بالليل",
+    "label": "road-damage",
+    "source": "resolved"
+   },
+   {
+    "text": "حفرة عميقة قرب دوار المدينة — في حفرة عميقة عم تخرّب دواليب السيارات وخطيرة بالليل",
+    "label": "road-damage",
+    "source": "resolved"
+   }
+  ],
+  "include_synthetic": true
+ },
+ "status": 200,
+ "response": {
+  "status": "promoted",
+  "promoted": true,
+  "forced": false,
+  "message": "تم اعتماد النموذج الجديد. الدقة (الحالي ← الجديد): مجموعة الاختبار المستقلة: 100.0% ← 100.0% (n=148) — اختبار الإجهاد: 91.7% ← 89.6% (n=48)",
+  "samples": {
+   "received": 6,
+   "invalid_or_duplicate": 0,
+   "excluded_test_overlap": 0,
+   "skipped_labels": [],
+   "usable": 6,
+   "by_source": {
+    "resolved": 6
+   },
+   "by_label": {
+    "exposed-wires": 1,
+    "drinking-water-outage": 2,
+    "garbage": 1,
+    "road-damage": 2
+   }
+  },
+  "training": {
+   "synthetic": 1917,
+   "real_train": 6,
+   "real_test": 0,
+   "real_test_fair": 0,
+   "labels": 24,
+   "include_synthetic": true
+  },
+  "evaluation": {
+   "real_test": {
+    "n": 0,
+    "current": null,
+    "candidate": null,
+    "regressions": 0,
+    "improvements": 0,
+    "p_value": null
+   },
+   "heldout": {
+    "n": 148,
+    "current": 1.0,
+    "candidate": 1.0,
+    "regressions": 0,
+    "improvements": 0,
+    "p_value": 1.0
+   },
+   "challenge": {
+    "n": 48,
+    "current": 0.9167,
+    "candidate": 0.8958,
+    "regressions": 1,
+    "improvements": 0,
+    "p_value": 0.5
+   }
+  },
+  "worse_on": [],
+  "evaluated_at": "2026-10-25T16:21:24+00:00",
+  "train_seconds": 3.81,
+  "model": {
+   "ready": true,
+   "version": "tfidf-hybrid-v1",
+   "algorithm": "LinearSVC (Platt calibration), C=0.5, TF-IDF word+char",
+   "config": {
+    "kind": "word+char",
+    "classifier": "svm",
+    "C": 0.5,
+    "keyword_weight": 0.3
+   },
+   "keyword_weight": 0.3,
+   "trained_at": "2026-10-25T16:21:25+00:00",
+   "train_seconds": 1.35,
+   "n_samples": 1923,
+   "sources": {
+    "synthetic": 1917,
+    "resolved": 6
+   },
+   "labels": 24,
+   "sklearn": "1.9.1",
+   "metrics": {
+    "kind": "retrain",
+    "heldout_accuracy": 1.0,
+    "challenge_accuracy": 0.8958,
+    "n_real_test": 0,
+    "evaluated_at": "2026-10-25T16:21:24+00:00"
+   }
+  }
+ },
+ "note": "شُغّل على نسخة معزولة من الخدمة حتى لا يتغير النموذج المرفق"
+}

@@ -1,0 +1,10 @@
+{
+ "success": true,
+ "message": "تمت العملية بنجاح",
+ "data": {
+  "total": 3,
+  "open": 0,
+  "resolved": 3,
+  "rejected": 0
+ }
+}

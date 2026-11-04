@@ -1,0 +1,12 @@
+{
+ "success": true,
+ "message": "السيرفر يعمل",
+ "data": {
+  "status": "ok",
+  "time": "2026-10-23T23:30:31+03:00",
+  "ai_service": {
+   "reachable": false
+  },
+  "push_notifications": false
+ }
+}

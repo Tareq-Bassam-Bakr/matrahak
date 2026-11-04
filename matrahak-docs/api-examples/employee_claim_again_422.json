@@ -1,0 +1,21 @@
+{
+ "key": "employee_claim_again_422",
+ "method": "POST",
+ "path": "/api/v1/employee/reports/7bcdeae9-e2ad-4c79-a33b-ebc67a582a25/claim",
+ "query": null,
+ "body": null,
+ "form": null,
+ "files": null,
+ "auth": true,
+ "status": 422,
+ "note": null,
+ "response": {
+  "success": false,
+  "message": "البلاغ مُسند لموظف آخر بالفعل",
+  "errors": {
+   "report": [
+    "البلاغ مُسند لموظف آخر بالفعل"
+   ]
+  }
+ }
+}

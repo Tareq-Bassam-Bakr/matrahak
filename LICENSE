@@ -1,0 +1,97 @@
+Matrahak (مطرحك) — Source-Available License
+Copyright © 2026 Tareq Bassam Bakr (م. طارق بسام بكر). All rights reserved.
+
+Graduation Project · Informatics Engineering · Al-Jazeera Private University · 2025–2026
+
+-------------------------------------------------------------------------------
+ENGLISH (authoritative text)
+-------------------------------------------------------------------------------
+
+This software, its source code, documentation, diagrams and assets (together,
+"the Software") are published publicly for the SOLE purposes of portfolio
+review, academic reference and technical evaluation.
+
+1. PERMITTED — you may, free of charge:
+   a. View, read and study the source code.
+   b. Clone or download one copy for personal, non-commercial study or for
+      evaluating the author's work.
+   c. Quote short excerpts in academic, educational or review contexts,
+      provided the author is credited.
+
+2. NOT PERMITTED — you may NOT, without the prior written permission of the
+   copyright holder:
+   a. Use the Software, in whole or in part, for any commercial purpose.
+   b. Deploy, host, operate or offer the Software, or anything derived from
+      it, in production or as a service — whether free of charge or paid.
+   c. Redistribute, republish, mirror, sublicense, sell, rent or lease the
+      Software.
+   d. Create, publish or distribute derivative works based on the Software.
+   e. Remove, alter, obscure or fail to reproduce any copyright, authorship
+      or attribution notice, including — but not limited to — the
+      "Developed by Eng. Tareq Bassam Bakr / طُوّر بواسطة م. طارق بسام بكر"
+      notices embedded in the source file headers and displayed in the user
+      interfaces, the administration panel footer, the public tracking page
+      and the generated PDF reports.
+   f. Present the Software, or any part of it, as your own work, or submit it
+      as your own academic work.
+
+3. RESERVATION OF RIGHTS
+   All rights not expressly granted in Section 1 are reserved by the copyright
+   holder. No trademark, patent or branding rights are granted. Nothing here
+   transfers ownership.
+
+4. COMMERCIAL LICENSING
+   Commercial use, deployment or partnership requires a separate written
+   agreement. Contact the copyright holder through the GitHub profile that
+   hosts this repository.
+
+5. NO WARRANTY
+   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+   FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+   AUTHOR BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN
+   ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+   WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+6. THIRD-PARTY COMPONENTS
+   The Software depends on third-party open-source components (including
+   Laravel, Filament, Flutter, FastAPI, scikit-learn and others), each governed
+   by its own license held by its respective owners. This license applies only
+   to the original work authored by the copyright holder above. Map data is
+   © OpenStreetMap contributors (ODbL). Syrian governorate boundaries are
+   sourced from UN OCHA. The Syrian state emblem is used here for academic
+   demonstration only; its use is legally restricted to official bodies.
+
+7. TERMINATION
+   Any breach of Section 2 terminates the permissions in Section 1 immediately
+   and automatically.
+
+-------------------------------------------------------------------------------
+العربية (ترجمة للتسهيل — النص الإنجليزي أعلاه هو المعتمد قانونياً)
+-------------------------------------------------------------------------------
+
+حقوق التأليف © 2026 م. طارق بسام بكر. جميع الحقوق محفوظة.
+
+نُشرت هذه البرمجية وكودها وتوثيقها ومخططاتها («البرمجية») علنياً لغرض واحد فقط:
+استعراض أعمال المؤلف، والرجوع الأكاديمي، والتقييم التقني.
+
+١) مسموح لك مجاناً:
+   أ. الاطلاع على الكود وقراءته ودراسته.
+   ب. نسخه أو تنزيله نسخة واحدة للدراسة الشخصية غير التجارية أو لتقييم عمل المؤلف.
+   ج. اقتباس مقاطع قصيرة في سياق أكاديمي أو تعليمي، مع ذكر اسم المؤلف.
+
+٢) غير مسموح لك، دون إذن خطي مسبق من صاحب الحقوق:
+   أ. استخدام البرمجية، كلها أو جزءاً منها، لأي غرض تجاري.
+   ب. نشرها أو تشغيلها أو استضافتها أو تقديمها كخدمة، مجاناً كان أم بمقابل.
+   ج. إعادة توزيعها أو نشرها أو بيعها أو تأجيرها أو ترخيصها لغيرك.
+   د. اشتقاق أعمال منها أو نشر تلك الأعمال.
+   هـ. إزالة أو تغيير أو إخفاء أي إشعار بحقوق التأليف أو نسبة العمل، ومنها
+       عبارة «طُوّر بواسطة م. طارق بسام بكر» الموجودة في ترويسة كل ملف كود،
+       وفي تذييل لوحة الإدارة، وصفحة التتبع العامة، وتقارير PDF، وشاشات التطبيقين.
+   و. نسبة البرمجية أو أي جزء منها إلى نفسك، أو تقديمها كعمل أكاديمي خاص بك.
+
+٣) كل حق لم يُمنح صراحةً في البند (١) محفوظ لصاحب الحقوق.
+٤) الاستخدام التجاري يتطلب اتفاقاً خطياً منفصلاً؛ للتواصل عبر حساب GitHub المستضيف للمستودع.
+٥) تُقدَّم البرمجية «كما هي» دون أي ضمان من أي نوع.
+٦) المكوّنات مفتوحة المصدر التابعة لأطراف أخرى تخضع لرخصها الخاصة بأصحابها.
+٧) أي مخالفة للبند (٢) تُنهي الأذونات الممنوحة في البند (١) فوراً وتلقائياً.

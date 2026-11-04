@@ -1,0 +1,117 @@
+{
+ "key": "citizen_report_store_2",
+ "method": "POST",
+ "path": "/api/v1/citizen/reports",
+ "query": null,
+ "body": null,
+ "form": {
+  "title": "حفرة عميقة قرب دوار المدينة",
+  "description": "في حفرة عميقة عم تخرّب دواليب السيارات وخطيرة بالليل",
+  "latitude": "33.5110000",
+  "longitude": "36.2860000",
+  "category_id": "1"
+ },
+ "files": [
+  "attachments[] (pothole.png)"
+ ],
+ "auth": true,
+ "status": 201,
+ "note": null,
+ "response": {
+  "success": true,
+  "message": "تم رفع البلاغ بنجاح — رقم المتابعة: MTR-2026-000719",
+  "data": {
+   "id": "7bcdeae9-e2ad-4c79-a33b-ebc67a582a25",
+   "ticket_number": "MTR-2026-000719",
+   "title": "حفرة عميقة قرب دوار المدينة",
+   "description": "في حفرة عميقة عم تخرّب دواليب السيارات وخطيرة بالليل",
+   "status": "pending",
+   "status_ar": "في الانتظار",
+   "priority": "medium",
+   "priority_ar": "متوسطة",
+   "is_open": true,
+   "is_anonymous": false,
+   "citizen": {
+    "name": "مواطن التوثيق المعدّل",
+    "is_me": true
+   },
+   "category": {
+    "id": 1,
+    "name": "حفر وتلف الطرق",
+    "slug": "road-damage",
+    "icon": "construction",
+    "color": "#E4572E"
+   },
+   "department": {
+    "id": 1,
+    "name": "مديرية الخدمات والصيانة"
+   },
+   "district": {
+    "id": 1,
+    "name": "محافظة دمشق"
+   },
+   "location": {
+    "latitude": 33.511,
+    "longitude": 36.286,
+    "address": null,
+    "notes": null
+   },
+   "attachments": [
+    {
+     "id": 29,
+     "type": "image",
+     "stage": "before",
+     "url": "http://127.0.0.1:8000/storage/reports/7bcdeae9-e2ad-4c79-a33b-ebc67a582a25/oiVI9JttkADul2QJKEBKB2TECuD88xR4TgoVhjU7.png",
+     "thumbnail": null,
+     "name": "pothole.png",
+     "size": "0.1 KB",
+     "mime": "image/png",
+     "ai_tags": null
+    }
+   ],
+   "after_attachments": [],
+   "updates": [
+    {
+     "id": 4895,
+     "type": "created",
+     "type_ar": "استلام البلاغ",
+     "old_value": null,
+     "new_value": "pending",
+     "old_value_ar": null,
+     "new_value_ar": "في الانتظار",
+     "note": "تم استلام البلاغ — محافظة دمشق",
+     "is_public": true,
+     "by": {
+      "name": "مواطن التوثيق المعدّل",
+      "type": "citizen"
+     },
+     "date": "2026-10-25T19:23:41+03:00"
+    }
+   ],
+   "rating": null,
+   "ai_summary": null,
+   "stats": {
+    "views": 0,
+    "upvotes": 0
+   },
+   "has_upvoted": false,
+   "is_owner": true,
+   "can_delete": true,
+   "can_rate": false,
+   "can_upvote": false,
+   "sla": {
+    "expected_resolution": "2026-10-28T19:23:41+03:00",
+    "is_overdue": false
+   },
+   "dates": {
+    "created": "2026-10-25T19:23:41+03:00",
+    "assigned": null,
+    "started": null,
+    "resolved": null,
+    "closed": null
+   },
+   "qr_code": "http://127.0.0.1:8000/storage/qrcodes/7bcdeae9-e2ad-4c79-a33b-ebc67a582a25.svg",
+   "tracking_url": "http://127.0.0.1:8000/track/7bcdeae9-e2ad-4c79-a33b-ebc67a582a25"
+  }
+ }
+}

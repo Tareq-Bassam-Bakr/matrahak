@@ -1,0 +1,167 @@
+{
+ "key": "employee_pool",
+ "method": "GET",
+ "path": "/api/v1/employee/reports/pool",
+ "query": {
+  "per_page": 2
+ },
+ "body": null,
+ "form": null,
+ "files": null,
+ "auth": true,
+ "status": 200,
+ "note": null,
+ "response": {
+  "success": true,
+  "message": "تمت العملية بنجاح",
+  "data": [
+   {
+    "id": "6391f1e5-67cc-4113-b79f-2f20e99e984a",
+    "ticket_number": "MTR-2026-000713",
+    "title": "حفرة عميقة قرب دوار المدينة",
+    "description": "في حفرة عميقة عم تخرّب دواليب السيارات وخطيرة بالليل",
+    "status": "pending",
+    "status_ar": "في الانتظار",
+    "priority": "high",
+    "priority_ar": "عالية",
+    "citizen": {
+     "name": "مواطن التوثيق المعدّل",
+     "phone": "0913806843"
+    },
+    "is_anonymous": false,
+    "category": {
+     "id": 1,
+     "name": "حفر وتلف الطرق",
+     "icon": "construction",
+     "color": "#E4572E"
+    },
+    "department": {
+     "id": 1,
+     "name": "مديرية الخدمات والصيانة"
+    },
+    "district": {
+     "id": 1,
+     "name": "محافظة دمشق"
+    },
+    "location": {
+     "latitude": 33.511,
+     "longitude": 36.286,
+     "address": null,
+     "notes": null
+    },
+    "ai": {
+     "category": null,
+     "priority": "high",
+     "confidence": 0.815,
+     "summary": "حفرة عميقة قرب دوار المدينة — في حفرة عميقة عم تخرّب دواليب السيارات وخطيرة بالليل",
+     "is_duplicate": false,
+     "duplicate_of": null
+    },
+    "attachments": [
+     {
+      "id": 24,
+      "type": "image",
+      "stage": "before",
+      "url": "http://127.0.0.1:8000/storage/reports/6391f1e5-67cc-4113-b79f-2f20e99e984a/Pmv6wCRh3DVzfz0xxfudltNpXuxSffn7ywoFEC5Q.png",
+      "thumbnail": null,
+      "name": "pothole.png",
+      "size": "0.1 KB",
+      "mime": "image/png",
+      "ai_tags": [
+       "تعذّرت قراءة الصورة"
+      ]
+     }
+    ],
+    "after_attachments": [],
+    "updates": [],
+    "assignment": null,
+    "rating": null,
+    "permissions": {
+     "can_act": false,
+     "can_claim": true,
+     "allowed_statuses": []
+    },
+    "sla": {
+     "expected_resolution": "2026-10-28T19:22:55+03:00",
+     "is_overdue": false
+    },
+    "dates": {
+     "created": "2026-10-25T19:22:55+03:00",
+     "assigned": null,
+     "started": null,
+     "resolved": null
+    }
+   },
+   {
+    "id": "28c82e6a-25fa-4c8c-981e-4403ec24a8ac",
+    "ticket_number": "MTR-2026-000714",
+    "title": "عمود كهرباء مائل فوق الرصيف",
+    "description": "عمود الكهرباء مايل وأسلاكه متدلية فوق الرصيف قرب المدرسة",
+    "status": "pending",
+    "status_ar": "في الانتظار",
+    "priority": "high",
+    "priority_ar": "عالية",
+    "citizen": {
+     "name": "مواطن التوثيق المعدّل",
+     "phone": "0913806843"
+    },
+    "is_anonymous": false,
+    "category": {
+     "id": 1,
+     "name": "حفر وتلف الطرق",
+     "icon": "construction",
+     "color": "#E4572E"
+    },
+    "department": {
+     "id": 1,
+     "name": "مديرية الخدمات والصيانة"
+    },
+    "district": {
+     "id": 1,
+     "name": "محافظة دمشق"
+    },
+    "location": {
+     "latitude": 33.513,
+     "longitude": 36.284,
+     "address": null,
+     "notes": null
+    },
+    "ai": {
+     "category": null,
+     "priority": "high",
+     "confidence": 0.8148,
+     "summary": "عمود كهرباء مائل فوق الرصيف — عمود الكهرباء مايل وأسلاكه متدلية فوق الرصيف قرب المدرسة",
+     "is_duplicate": true,
+     "duplicate_of": null
+    },
+    "attachments": [],
+    "after_attachments": [],
+    "updates": [],
+    "assignment": null,
+    "rating": null,
+    "permissions": {
+     "can_act": false,
+     "can_claim": true,
+     "allowed_statuses": []
+    },
+    "sla": {
+     "expected_resolution": "2026-10-28T19:22:56+03:00",
+     "is_overdue": false
+    },
+    "dates": {
+     "created": "2026-10-25T19:22:56+03:00",
+     "assigned": null,
+     "started": null,
+     "resolved": null
+    }
+   }
+  ],
+  "meta": {
+   "current_page": 1,
+   "last_page": 3,
+   "per_page": 2,
+   "total": 5,
+   "has_more": true
+  }
+ }
+}

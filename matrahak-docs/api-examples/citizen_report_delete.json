@@ -1,0 +1,17 @@
+{
+ "key": "citizen_report_delete",
+ "method": "DELETE",
+ "path": "/api/v1/citizen/reports/bbdc7c6a-ae0a-4c63-8a36-01dc84bdff42",
+ "query": null,
+ "body": null,
+ "form": null,
+ "files": null,
+ "auth": true,
+ "status": 200,
+ "note": "مسموح فقط للبلاغ «في الانتظار» قبل إسناده",
+ "response": {
+  "success": true,
+  "message": "تم حذف البلاغ",
+  "data": null
+ }
+}

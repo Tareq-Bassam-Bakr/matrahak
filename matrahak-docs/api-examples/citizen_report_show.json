@@ -1,0 +1,127 @@
+{
+ "key": "citizen_report_show",
+ "method": "GET",
+ "path": "/api/v1/citizen/reports/bbdc7c6a-ae0a-4c63-8a36-01dc84bdff42",
+ "query": null,
+ "body": null,
+ "form": null,
+ "files": null,
+ "auth": true,
+ "status": 200,
+ "note": null,
+ "response": {
+  "success": true,
+  "message": "تمت العملية بنجاح",
+  "data": {
+   "id": "bbdc7c6a-ae0a-4c63-8a36-01dc84bdff42",
+   "ticket_number": "MTR-2026-000718",
+   "title": "تسرب مياه من أنبوب رئيسي",
+   "description": "في تسريب مي قوي من أنبوب مكسور عم يغرق الشارع قدام البناية",
+   "status": "pending",
+   "status_ar": "في الانتظار",
+   "priority": "critical",
+   "priority_ar": "حرجة",
+   "is_open": true,
+   "is_anonymous": false,
+   "citizen": {
+    "name": "مواطن التوثيق المعدّل",
+    "is_me": true
+   },
+   "category": {
+    "id": 9,
+    "name": "تسرب مياه في الشارع",
+    "slug": "street-water-leak",
+    "icon": "water_drop",
+    "color": "#0EA5E9"
+   },
+   "department": {
+    "id": 3,
+    "name": "مديرية المياه والصرف الصحي"
+   },
+   "district": {
+    "id": 1,
+    "name": "محافظة دمشق"
+   },
+   "location": {
+    "latitude": 33.5165,
+    "longitude": 36.2912,
+    "address": null,
+    "notes": "قرب الصيدلية"
+   },
+   "attachments": [
+    {
+     "id": 28,
+     "type": "image",
+     "stage": "before",
+     "url": "http://127.0.0.1:8000/storage/reports/bbdc7c6a-ae0a-4c63-8a36-01dc84bdff42/OLwBMWX4szYvsE043eRNR6GN0u59mryIt167XD2z.png",
+     "thumbnail": null,
+     "name": "leak.png",
+     "size": "0.1 KB",
+     "mime": "image/png",
+     "ai_tags": [
+      "تعذّرت قراءة الصورة"
+     ]
+    }
+   ],
+   "after_attachments": [],
+   "updates": [
+    {
+     "id": 4892,
+     "type": "created",
+     "type_ar": "استلام البلاغ",
+     "old_value": null,
+     "new_value": "pending",
+     "old_value_ar": null,
+     "new_value_ar": "في الانتظار",
+     "note": "تم استلام البلاغ — محافظة دمشق",
+     "is_public": true,
+     "by": {
+      "name": "مواطن التوثيق المعدّل",
+      "type": "citizen"
+     },
+     "date": "2026-10-25T19:23:39+03:00"
+    },
+    {
+     "id": 4894,
+     "type": "status_change",
+     "type_ar": "تغيير الحالة",
+     "old_value": null,
+     "new_value": "pending",
+     "old_value_ar": null,
+     "new_value_ar": "في الانتظار",
+     "note": "تم توجيه بلاغك تلقائياً إلى مديرية المياه والصرف الصحي",
+     "is_public": true,
+     "by": {
+      "name": "النظام",
+      "type": "system"
+     },
+     "date": "2026-10-25T19:23:39+03:00"
+    }
+   ],
+   "rating": null,
+   "ai_summary": "تسرب مياه من أنبوب رئيسي — في تسريب مي قوي من أنبوب مكسور عم يغرق الشارع قدام البناية",
+   "stats": {
+    "views": 0,
+    "upvotes": 0
+   },
+   "has_upvoted": false,
+   "is_owner": true,
+   "can_delete": true,
+   "can_rate": false,
+   "can_upvote": false,
+   "sla": {
+    "expected_resolution": "2026-10-26T19:23:39+03:00",
+    "is_overdue": false
+   },
+   "dates": {
+    "created": "2026-10-25T19:23:39+03:00",
+    "assigned": null,
+    "started": null,
+    "resolved": null,
+    "closed": null
+   },
+   "qr_code": "http://127.0.0.1:8000/storage/qrcodes/bbdc7c6a-ae0a-4c63-8a36-01dc84bdff42.svg",
+   "tracking_url": "http://127.0.0.1:8000/track/bbdc7c6a-ae0a-4c63-8a36-01dc84bdff42"
+  }
+ }
+}

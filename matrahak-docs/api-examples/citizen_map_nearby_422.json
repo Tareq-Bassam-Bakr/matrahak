@@ -1,0 +1,27 @@
+{
+ "key": "citizen_map_nearby_422",
+ "method": "GET",
+ "path": "/api/v1/citizen/map/nearby",
+ "query": {
+  "lat": 33.5,
+  "radius_km": 90
+ },
+ "body": null,
+ "form": null,
+ "files": null,
+ "auth": true,
+ "status": 422,
+ "note": null,
+ "response": {
+  "success": false,
+  "message": "الحقل خط الطول مطلوب.",
+  "errors": {
+   "lng": [
+    "الحقل خط الطول مطلوب."
+   ],
+   "radius_km": [
+    "يجب ألا تكون قيمة نصف القطر أكبر من 25."
+   ]
+  }
+ }
+}

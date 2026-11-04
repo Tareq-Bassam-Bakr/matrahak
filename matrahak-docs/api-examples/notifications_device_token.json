@@ -1,0 +1,19 @@
+{
+ "key": "notifications_device_token",
+ "method": "POST",
+ "path": "/api/v1/notifications/device-token",
+ "query": null,
+ "body": {
+  "token": null
+ },
+ "form": null,
+ "files": null,
+ "auth": true,
+ "status": 200,
+ "note": "null يحذف رمز FCM للجهاز",
+ "response": {
+  "success": true,
+  "message": "تم تحديث رمز الجهاز",
+  "data": null
+ }
+}

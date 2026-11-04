@@ -1,0 +1,1570 @@
+[
+    {
+        "set": "heldout_test.csv",
+        "title": "الطريق كله جور",
+        "description": "من بعد الشتوية الشارع صار كله جور وحفر والسيارات عم تتعطل",
+        "label": "road-damage",
+        "php_slug": "road-damage",
+        "php_confidence": 0.8736
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "تخريب الإسفلت",
+        "description": "الإسفلت متشقق ومخرب عند دوار الحي ويحتاج إعادة تزفيت",
+        "label": "road-damage",
+        "php_slug": "road-damage",
+        "php_confidence": 0.7766
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "الرصيف مخلوع",
+        "description": "حجار الرصيف مخلوعة قدام الجامع والناس عم توقع",
+        "label": "sidewalk-damage",
+        "php_slug": "sidewalk-damage",
+        "php_confidence": 0.7333
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "أرصفة مهترئة",
+        "description": "الأرصفة مهترئة ومكسرة ولا تصلح لمشي كبار السن",
+        "label": "sidewalk-damage",
+        "php_slug": "sidewalk-damage",
+        "php_confidence": 0.636
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "الزبالة مالية الحارة",
+        "description": "سيارة القمامة ما إجت من أسبوع والزبالة مكومة",
+        "label": "garbage",
+        "php_slug": "garbage",
+        "php_confidence": 0.7603
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "حاويات ممتلئة",
+        "description": "جميع الحاويات في الشارع ممتلئة والنفايات على الأرض",
+        "label": "garbage",
+        "php_slug": "garbage",
+        "php_confidence": 0.691
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "المطر غرّق الشارع",
+        "description": "كل ما تشتي الشارع بيتحول لبحيرة لأن المجارير مسدودة",
+        "label": "blocked-drains",
+        "php_slug": "blocked-drains",
+        "php_confidence": 0.4141
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "بالوعة مسدودة",
+        "description": "البالوعة على زاوية الشارع مسدودة بالتراب ومياه الأمطار متجمعة",
+        "label": "blocked-drains",
+        "php_slug": "blocked-drains",
+        "php_confidence": 0.6496
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "ما في كهربا",
+        "description": "الكهربا قاطعة عنا من مبارح الظهر وما رجعت أبداً",
+        "label": "power-outage",
+        "php_slug": "power-outage",
+        "php_confidence": 0.7321
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "انقطاع التيار الكهربائي",
+        "description": "انقطاع متواصل للتيار الكهربائي عن الحي منذ يومين",
+        "label": "power-outage",
+        "php_slug": "power-outage",
+        "php_confidence": 0.7619
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "الضو مطفي بالشارع",
+        "description": "ضو الشارع مطفي من شهر وصار الحي معتم بالليل",
+        "label": "street-light-failure",
+        "php_slug": "street-light-failure",
+        "php_confidence": 0.828
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "مصابيح الإنارة العامة",
+        "description": "مصابيح الإنارة العامة على الأوتوستراد لا تعمل",
+        "label": "street-light-failure",
+        "php_slug": "street-light-failure",
+        "php_confidence": 0.8047
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "عمود كهربا عم يميل",
+        "description": "عمود الكهربا قدام البناية مايل وراح يوقع عالسيارات",
+        "label": "dangerous-electric-pole",
+        "php_slug": "dangerous-electric-pole",
+        "php_confidence": 0.665
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "عمود مكسور",
+        "description": "عمود كهربائي مكسور من القاعدة بعد اصطدام سيارة",
+        "label": "dangerous-electric-pole",
+        "php_slug": "dangerous-electric-pole",
+        "php_confidence": 0.7644
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "أسلاك عالأرض",
+        "description": "في أسلاك كهربا مقطوعة ومرمية عالرصيف وعم تطلع شرار",
+        "label": "exposed-wires",
+        "php_slug": "exposed-wires",
+        "php_confidence": 0.4576
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "كابلات مكشوفة",
+        "description": "كابلات كهرباء مكشوفة بدون عازل قرب حديقة الأطفال",
+        "label": "exposed-wires",
+        "php_slug": "power-outage",
+        "php_confidence": 0.4485
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "المي عم تطلع من الأرض",
+        "description": "في مي عم تطلع من تحت الزفت من يومين وعم تمشي بالشارع",
+        "label": "street-water-leak",
+        "php_slug": "street-water-leak",
+        "php_confidence": 0.5963
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "انكسار أنبوب مياه",
+        "description": "انكسار أنبوب مياه رئيسي وهدر كبير للمياه",
+        "label": "street-water-leak",
+        "php_slug": "street-water-leak",
+        "php_confidence": 0.358
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "ما في مي عنا",
+        "description": "المي ما إجت من أربع أيام وصرنا نشتري مي",
+        "label": "drinking-water-outage",
+        "php_slug": "drinking-water-outage",
+        "php_confidence": 0.4265
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "انقطاع مياه الشفة",
+        "description": "انقطاع مياه الشرب عن الحي بالكامل منذ ثلاثة أيام",
+        "label": "drinking-water-outage",
+        "php_slug": "drinking-water-outage",
+        "php_confidence": 0.8256
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "الصرف الصحي طافح",
+        "description": "مياه الصرف الصحي طافحة بالشارع وريحتها كريهة كتير",
+        "label": "sewage-overflow",
+        "php_slug": "sewage-overflow",
+        "php_confidence": 0.7331
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "تسرب مياه آسنة",
+        "description": "مياه آسنة عم تطلع من المنهل وتدخل للبيوت",
+        "label": "sewage-overflow",
+        "php_slug": "sewage-overflow",
+        "php_confidence": 0.4544
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "الإشارة الضوئية ما عم تشتغل",
+        "description": "إشارة المرور عند الساحة واقفة والسيارات عم تتصادم",
+        "label": "traffic-signal-failure",
+        "php_slug": "traffic-signal-failure",
+        "php_confidence": 0.9001
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "عطل إشارة مرور",
+        "description": "عطل في إشارات المرور عند التقاطع الرئيسي",
+        "label": "traffic-signal-failure",
+        "php_slug": "traffic-signal-failure",
+        "php_confidence": 0.8778
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "زحمة سير خانقة",
+        "description": "كل يوم الساعة ٨ الصبح زحمة ما بتنحمل عند المدخل",
+        "label": "traffic-congestion",
+        "php_slug": "traffic-congestion",
+        "php_confidence": 0.8007
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "اختناق مروري",
+        "description": "اختناق مروري يومي بسبب السيارات المتوقفة على الطرفين",
+        "label": "traffic-congestion",
+        "php_slug": "traffic-congestion",
+        "php_confidence": 0.6413
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "شاخصة واقعة",
+        "description": "الشاخصة المرورية واقعة عالأرض وما حدا رفعها",
+        "label": "damaged-road-sign",
+        "php_slug": "damaged-road-sign",
+        "php_confidence": 0.7575
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "لوحة طرقية مكسورة",
+        "description": "لوحة الإرشاد الطرقية مكسورة وغير مقروءة",
+        "label": "damaged-road-sign",
+        "php_slug": "damaged-road-sign",
+        "php_confidence": 0.837
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "معمل عم يلوث",
+        "description": "معمل بالمنطقة عم يطلع دخان أسود وروائح طول الليل",
+        "label": "environmental-violation",
+        "php_slug": "environmental-violation",
+        "php_confidence": 0.4585
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "قطع أشجار",
+        "description": "في حدا عم يقطع الأشجار بالحديقة العامة",
+        "label": "environmental-violation",
+        "php_slug": "environmental-violation",
+        "php_confidence": 0.7181
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "حرق زبالة",
+        "description": "جيراننا عم يحرقوا الزبالة بالأرض الفاضية والدخان خانقنا",
+        "label": "waste-burning",
+        "php_slug": "waste-burning",
+        "php_confidence": 0.7017
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "حرق إطارات",
+        "description": "شباب عم يحرقوا كوشوك بالليل والريحة سامة",
+        "label": "waste-burning",
+        "php_slug": "waste-burning",
+        "php_confidence": 0.8449
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "النهر ملوث",
+        "description": "مياه النهر صارت سودا من المخلفات اللي عم ترمى فيه",
+        "label": "water-pollution",
+        "php_slug": "contaminated-water",
+        "php_confidence": 0.4928
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "تلوث بردى",
+        "description": "رمي نفايات ومخلفات في مجرى نهر بردى",
+        "label": "water-pollution",
+        "php_slug": "water-pollution",
+        "php_confidence": 0.7582
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "بيت رح يوقع",
+        "description": "البيت القديم جنبنا صار فيه تصدعات كبيرة وخايفين يوقع",
+        "label": "collapsing-building",
+        "php_slug": "collapsing-building",
+        "php_confidence": 0.5057
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "جدار متصدع",
+        "description": "جدار البناية متصدع والسقف عم ينزل منه تراب",
+        "label": "collapsing-building",
+        "php_slug": "collapsing-building",
+        "php_confidence": 0.7675
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "في حريق",
+        "description": "في نار عم تشتعل بمحل بالسوق والدخان كثيف",
+        "label": "fire",
+        "php_slug": "fire",
+        "php_confidence": 0.6671
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "حريق حراج",
+        "description": "حريق كبير بالأحراج القريبة من البيوت",
+        "label": "fire",
+        "php_slug": "fire",
+        "php_confidence": 0.4396
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "ريغار بلا غطا",
+        "description": "غطا الريغار مسروق والفتحة مفتوحة بنص الطريق",
+        "label": "public-safety-hazard",
+        "php_slug": "public-safety-hazard",
+        "php_confidence": 0.5045
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "جسم غريب",
+        "description": "لقينا جسم غريب يشبه قذيفة بالأرض الزراعية",
+        "label": "public-safety-hazard",
+        "php_slug": "public-safety-hazard",
+        "php_confidence": 0.7732
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "النت مقطوع",
+        "description": "النت مقطوع عن كل الحي والشركة ما عم ترد",
+        "label": "internet-outage",
+        "php_slug": "internet-outage",
+        "php_confidence": 0.7951
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "انقطاع خدمة الإنترنت",
+        "description": "انقطاع خدمة الإنترنت ADSL منذ أسبوع",
+        "label": "internet-outage",
+        "php_slug": "internet-outage",
+        "php_confidence": 0.8417
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "ما في شبكة",
+        "description": "ما في إرسال للموبايل بالمنطقة أبداً",
+        "label": "telecom-network-failure",
+        "php_slug": "telecom-network-failure",
+        "php_confidence": 0.7739
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "الهاتف الأرضي معطل",
+        "description": "الخط الأرضي مقطوع ما في حرارة من أسبوع",
+        "label": "telecom-network-failure",
+        "php_slug": "telecom-network-failure",
+        "php_confidence": 0.8098
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "محل لحمة مخالف",
+        "description": "محل اللحمة عم يبيع لحمة ريحتها فاسدة",
+        "label": "health-violation",
+        "php_slug": "health-violation",
+        "php_confidence": 0.3671
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "فرن غير نظيف",
+        "description": "الفرن بالحي غير نظيف وفيه صراصير وحشرات",
+        "label": "health-violation",
+        "php_slug": "health-violation",
+        "php_confidence": 0.4375
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "المي ريحتها غريبة",
+        "description": "مي الحنفية ريحتها مثل المجارير ولونها عكر",
+        "label": "contaminated-water",
+        "php_slug": "contaminated-water",
+        "php_confidence": 0.5228
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "تلوث مياه الشرب",
+        "description": "ظهور حالات تسمم بعد شرب مياه الشبكة",
+        "label": "contaminated-water",
+        "php_slug": "contaminated-water",
+        "php_confidence": 0.5365
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "تراكم القمامة في الحي",
+        "description": "الزبالة متراكمة جنب الحاوية بـالحي من أكثر من ٣ أيام والريحة صارت لا تحتمل، والقطط والكلاب عم تفرّقها بالشارع.",
+        "label": "garbage",
+        "php_slug": "garbage",
+        "php_confidence": 0.8075
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "تراكم القمامة في الحي",
+        "description": "ما حدا عم يرحّل القمامة من الحاويات بالحي، صار في أكياس مرمية عالرصيف وعم تسد الطريق.",
+        "label": "garbage",
+        "php_slug": "garbage",
+        "php_confidence": 0.6214
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "حاوية الزبالة ممتلئة من أيام",
+        "description": "الزبالة متراكمة جنب الحاوية بـالحي من أكثر من ٣ أيام والريحة صارت لا تحتمل، والقطط والكلاب عم تفرّقها بالشارع.",
+        "label": "garbage",
+        "php_slug": "garbage",
+        "php_confidence": 0.7407
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "حاوية الزبالة ممتلئة من أيام",
+        "description": "ما حدا عم يرحّل القمامة من الحاويات بالحي، صار في أكياس مرمية عالرصيف وعم تسد الطريق.",
+        "label": "garbage",
+        "php_slug": "garbage",
+        "php_confidence": 0.7707
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "نفايات مرمية جنب المدرسة",
+        "description": "الزبالة متراكمة جنب الحاوية بـالحي من أكثر من ٣ أيام والريحة صارت لا تحتمل، والقطط والكلاب عم تفرّقها بالشارع.",
+        "label": "garbage",
+        "php_slug": "garbage",
+        "php_confidence": 0.7334
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "نفايات مرمية جنب المدرسة",
+        "description": "ما حدا عم يرحّل القمامة من الحاويات بالحي، صار في أكياس مرمية عالرصيف وعم تسد الطريق.",
+        "label": "garbage",
+        "php_slug": "garbage",
+        "php_confidence": 0.7249
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "حفرة كبيرة بالطريق الرئيسي",
+        "description": "في جورة كبيرة بنص الشارع بـالحي عم تخرّب السيارات، وبالليل ما بتنشاف أبداً وصار في أكتر من حادث.",
+        "label": "road-damage",
+        "php_slug": "road-damage",
+        "php_confidence": 0.8727
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "حفرة كبيرة بالطريق الرئيسي",
+        "description": "الطريق مكسّر وبحاجة تزفيت، الحفر عم تكبر كل يوم وخاصة بعد المطر.",
+        "label": "road-damage",
+        "php_slug": "road-damage",
+        "php_confidence": 0.921
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "جورة خطيرة قرب الإشارة",
+        "description": "في جورة كبيرة بنص الشارع بـالحي عم تخرّب السيارات، وبالليل ما بتنشاف أبداً وصار في أكتر من حادث.",
+        "label": "road-damage",
+        "php_slug": "road-damage",
+        "php_confidence": 0.4557
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "جورة خطيرة قرب الإشارة",
+        "description": "الطريق مكسّر وبحاجة تزفيت، الحفر عم تكبر كل يوم وخاصة بعد المطر.",
+        "label": "road-damage",
+        "php_slug": "road-damage",
+        "php_confidence": 0.7545
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "تشققات بالزفت بعد الأمطار",
+        "description": "في جورة كبيرة بنص الشارع بـالحي عم تخرّب السيارات، وبالليل ما بتنشاف أبداً وصار في أكتر من حادث.",
+        "label": "road-damage",
+        "php_slug": "road-damage",
+        "php_confidence": 0.6437
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "تشققات بالزفت بعد الأمطار",
+        "description": "الطريق مكسّر وبحاجة تزفيت، الحفر عم تكبر كل يوم وخاصة بعد المطر.",
+        "label": "road-damage",
+        "php_slug": "road-damage",
+        "php_confidence": 0.8359
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "انقطاع الكهرباء عن الحي",
+        "description": "الكهربا مقطوعة عن الحي من أكتر من ١٢ ساعة بغير أوقات التقنين، وفي مرضى بالبيوت بحاجة أجهزة.",
+        "label": "power-outage",
+        "php_slug": "power-outage",
+        "php_confidence": 0.8761
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "انقطاع الكهرباء عن الحي",
+        "description": "المحولة بالحي عم تطلع صوت وانطفت الكهربا عن كل البناية والبنايات اللي حواليها.",
+        "label": "power-outage",
+        "php_slug": "power-outage",
+        "php_confidence": 0.8988
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "الكهربا مقطوعة من الصبح",
+        "description": "الكهربا مقطوعة عن الحي من أكتر من ١٢ ساعة بغير أوقات التقنين، وفي مرضى بالبيوت بحاجة أجهزة.",
+        "label": "power-outage",
+        "php_slug": "power-outage",
+        "php_confidence": 0.8372
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "الكهربا مقطوعة من الصبح",
+        "description": "المحولة بالحي عم تطلع صوت وانطفت الكهربا عن كل البناية والبنايات اللي حواليها.",
+        "label": "power-outage",
+        "php_slug": "power-outage",
+        "php_confidence": 0.8616
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "عطل بالمحولة",
+        "description": "الكهربا مقطوعة عن الحي من أكتر من ١٢ ساعة بغير أوقات التقنين، وفي مرضى بالبيوت بحاجة أجهزة.",
+        "label": "power-outage",
+        "php_slug": "power-outage",
+        "php_confidence": 0.8845
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "عطل بالمحولة",
+        "description": "المحولة بالحي عم تطلع صوت وانطفت الكهربا عن كل البناية والبنايات اللي حواليها.",
+        "label": "power-outage",
+        "php_slug": "power-outage",
+        "php_confidence": 0.8744
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "إنارة الشارع معطلة",
+        "description": "أعمدة الإنارة بالشارع الرئيسي بـالحي مطفية من أسبوعين، والشارع صاير معتم وخطر عالمشاة.",
+        "label": "street-light-failure",
+        "php_slug": "street-light-failure",
+        "php_confidence": 0.8478
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "إنارة الشارع معطلة",
+        "description": "لمبات الإنارة محروقة وما حدا بدّلها، الأولاد عم يرجعوا من الدروس بالعتمة.",
+        "label": "street-light-failure",
+        "php_slug": "street-light-failure",
+        "php_confidence": 0.8676
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "الشارع معتم بالليل",
+        "description": "أعمدة الإنارة بالشارع الرئيسي بـالحي مطفية من أسبوعين، والشارع صاير معتم وخطر عالمشاة.",
+        "label": "street-light-failure",
+        "php_slug": "street-light-failure",
+        "php_confidence": 0.8195
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "الشارع معتم بالليل",
+        "description": "لمبات الإنارة محروقة وما حدا بدّلها، الأولاد عم يرجعوا من الدروس بالعتمة.",
+        "label": "street-light-failure",
+        "php_slug": "street-light-failure",
+        "php_confidence": 0.9008
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "أعمدة إنارة لا تعمل",
+        "description": "أعمدة الإنارة بالشارع الرئيسي بـالحي مطفية من أسبوعين، والشارع صاير معتم وخطر عالمشاة.",
+        "label": "street-light-failure",
+        "php_slug": "street-light-failure",
+        "php_confidence": 0.8229
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "أعمدة إنارة لا تعمل",
+        "description": "لمبات الإنارة محروقة وما حدا بدّلها، الأولاد عم يرجعوا من الدروس بالعتمة.",
+        "label": "street-light-failure",
+        "php_slug": "street-light-failure",
+        "php_confidence": 0.91
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "انقطاع مياه الشرب",
+        "description": "المي مقطوعة عن الحي من ٣ أيام وما في أي إعلان، الناس صارت تشتري صهاريج بأسعار عالية.",
+        "label": "drinking-water-outage",
+        "php_slug": "drinking-water-outage",
+        "php_confidence": 0.8449
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "انقطاع مياه الشرب",
+        "description": "ضخ المياه ضعيف كتير وما عم توصل للطوابق العليا أبداً.",
+        "label": "drinking-water-outage",
+        "php_slug": "drinking-water-outage",
+        "php_confidence": 0.864
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "المي مقطوعة عن الحي",
+        "description": "المي مقطوعة عن الحي من ٣ أيام وما في أي إعلان، الناس صارت تشتري صهاريج بأسعار عالية.",
+        "label": "drinking-water-outage",
+        "php_slug": "drinking-water-outage",
+        "php_confidence": 0.7517
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "المي مقطوعة عن الحي",
+        "description": "ضخ المياه ضعيف كتير وما عم توصل للطوابق العليا أبداً.",
+        "label": "drinking-water-outage",
+        "php_slug": "drinking-water-outage",
+        "php_confidence": 0.8122
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "ضعف ضخ المياه",
+        "description": "المي مقطوعة عن الحي من ٣ أيام وما في أي إعلان، الناس صارت تشتري صهاريج بأسعار عالية.",
+        "label": "drinking-water-outage",
+        "php_slug": "drinking-water-outage",
+        "php_confidence": 0.8411
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "ضعف ضخ المياه",
+        "description": "ضخ المياه ضعيف كتير وما عم توصل للطوابق العليا أبداً.",
+        "label": "drinking-water-outage",
+        "php_slug": "drinking-water-outage",
+        "php_confidence": 0.7878
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "تسرب مياه في الشارع",
+        "description": "في كسر بخط المي الرئيسي بـالحي والمي عم تهدر بالشارع من يومين وعم تعمل برك كبيرة.",
+        "label": "street-water-leak",
+        "php_slug": "street-water-leak",
+        "php_confidence": 0.854
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "تسرب مياه في الشارع",
+        "description": "تسريب مي من تحت الإسفلت، الطريق عم يهبط والمي ضايعة.",
+        "label": "street-water-leak",
+        "php_slug": "street-water-leak",
+        "php_confidence": 0.7177
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "كسر بخط المياه الرئيسي",
+        "description": "في كسر بخط المي الرئيسي بـالحي والمي عم تهدر بالشارع من يومين وعم تعمل برك كبيرة.",
+        "label": "street-water-leak",
+        "php_slug": "street-water-leak",
+        "php_confidence": 0.8442
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "كسر بخط المياه الرئيسي",
+        "description": "تسريب مي من تحت الإسفلت، الطريق عم يهبط والمي ضايعة.",
+        "label": "street-water-leak",
+        "php_slug": "street-water-leak",
+        "php_confidence": 0.7545
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "مي عم تهدر بالطريق",
+        "description": "في كسر بخط المي الرئيسي بـالحي والمي عم تهدر بالشارع من يومين وعم تعمل برك كبيرة.",
+        "label": "street-water-leak",
+        "php_slug": "street-water-leak",
+        "php_confidence": 0.7259
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "مي عم تهدر بالطريق",
+        "description": "تسريب مي من تحت الإسفلت، الطريق عم يهبط والمي ضايعة.",
+        "label": "street-water-leak",
+        "php_slug": "street-water-leak",
+        "php_confidence": 0.577
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "طفح الصرف الصحي",
+        "description": "الريغار طافح بـالحي والمياه الآسنة عم تمشي بالشارع جنب البيوت، الريحة كتير قوية وخطر على صحة الأطفال.",
+        "label": "sewage-overflow",
+        "php_slug": "sewage-overflow",
+        "php_confidence": 0.8444
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "طفح الصرف الصحي",
+        "description": "انسداد بشبكة الصرف الصحي والمي عم ترجع عالبيوت بالطابق الأرضي.",
+        "label": "sewage-overflow",
+        "php_slug": "sewage-overflow",
+        "php_confidence": 0.8772
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "ريغار طافح بالشارع",
+        "description": "الريغار طافح بـالحي والمياه الآسنة عم تمشي بالشارع جنب البيوت، الريحة كتير قوية وخطر على صحة الأطفال.",
+        "label": "sewage-overflow",
+        "php_slug": "sewage-overflow",
+        "php_confidence": 0.6208
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "ريغار طافح بالشارع",
+        "description": "انسداد بشبكة الصرف الصحي والمي عم ترجع عالبيوت بالطابق الأرضي.",
+        "label": "sewage-overflow",
+        "php_slug": "sewage-overflow",
+        "php_confidence": 0.7186
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "روائح مجارير قوية",
+        "description": "الريغار طافح بـالحي والمياه الآسنة عم تمشي بالشارع جنب البيوت، الريحة كتير قوية وخطر على صحة الأطفال.",
+        "label": "sewage-overflow",
+        "php_slug": "sewage-overflow",
+        "php_confidence": 0.7249
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "روائح مجارير قوية",
+        "description": "انسداد بشبكة الصرف الصحي والمي عم ترجع عالبيوت بالطابق الأرضي.",
+        "label": "sewage-overflow",
+        "php_slug": "sewage-overflow",
+        "php_confidence": 0.7439
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "مجرور مطر مسدود",
+        "description": "فتحات تصريف مياه الأمطار مسدودة بـالحي وكل ما تشتي بتصير الطريق بحيرة.",
+        "label": "blocked-drains",
+        "php_slug": "blocked-drains",
+        "php_confidence": 0.8027
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "مجرور مطر مسدود",
+        "description": "المجرور مسدود بالأتربة والأوراق وبحاجة تنظيف قبل الشتوية.",
+        "label": "blocked-drains",
+        "php_slug": "blocked-drains",
+        "php_confidence": 0.8194
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "تجمع مياه الأمطار",
+        "description": "فتحات تصريف مياه الأمطار مسدودة بـالحي وكل ما تشتي بتصير الطريق بحيرة.",
+        "label": "blocked-drains",
+        "php_slug": "blocked-drains",
+        "php_confidence": 0.7783
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "تجمع مياه الأمطار",
+        "description": "المجرور مسدود بالأتربة والأوراق وبحاجة تنظيف قبل الشتوية.",
+        "label": "blocked-drains",
+        "php_slug": "blocked-drains",
+        "php_confidence": 0.8565
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "فتحات التصريف مسدودة",
+        "description": "فتحات تصريف مياه الأمطار مسدودة بـالحي وكل ما تشتي بتصير الطريق بحيرة.",
+        "label": "blocked-drains",
+        "php_slug": "blocked-drains",
+        "php_confidence": 0.7177
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "فتحات التصريف مسدودة",
+        "description": "المجرور مسدود بالأتربة والأوراق وبحاجة تنظيف قبل الشتوية.",
+        "label": "blocked-drains",
+        "php_slug": "blocked-drains",
+        "php_confidence": 0.8782
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "ازدحام خانق على المفرق",
+        "description": "في عجقة كبيرة كل يوم الصبح عند مفرق الحي، السيارات واقفة ساعة كاملة وبحاجة شرطي مرور أو تنظيم.",
+        "label": "traffic-congestion",
+        "php_slug": "traffic-congestion",
+        "php_confidence": 0.7524
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "ازدحام خانق على المفرق",
+        "description": "ازدحام خانق بسبب الوقوف المزدوج والبسطات على جانبي الطريق.",
+        "label": "traffic-congestion",
+        "php_slug": "traffic-congestion",
+        "php_confidence": 0.7531
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "عجقة سير يومية",
+        "description": "في عجقة كبيرة كل يوم الصبح عند مفرق الحي، السيارات واقفة ساعة كاملة وبحاجة شرطي مرور أو تنظيم.",
+        "label": "traffic-congestion",
+        "php_slug": "traffic-congestion",
+        "php_confidence": 0.6243
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "عجقة سير يومية",
+        "description": "ازدحام خانق بسبب الوقوف المزدوج والبسطات على جانبي الطريق.",
+        "label": "traffic-congestion",
+        "php_slug": "traffic-congestion",
+        "php_confidence": 0.7688
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "اختناق مروري وقت الذروة",
+        "description": "في عجقة كبيرة كل يوم الصبح عند مفرق الحي، السيارات واقفة ساعة كاملة وبحاجة شرطي مرور أو تنظيم.",
+        "label": "traffic-congestion",
+        "php_slug": "traffic-congestion",
+        "php_confidence": 0.6712
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "اختناق مروري وقت الذروة",
+        "description": "ازدحام خانق بسبب الوقوف المزدوج والبسطات على جانبي الطريق.",
+        "label": "traffic-congestion",
+        "php_slug": "traffic-congestion",
+        "php_confidence": 0.8267
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "إشارة المرور معطلة",
+        "description": "إشارة المرور عند تقاطع الحي معطلة من يومين وصار في فوضى وخطر حوادث.",
+        "label": "traffic-signal-failure",
+        "php_slug": "traffic-signal-failure",
+        "php_confidence": 0.9136
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "إشارة المرور معطلة",
+        "description": "الإشارة الضوئية عم تعطي إشارات غلط وفي سيارات كادت تتصادم.",
+        "label": "traffic-signal-failure",
+        "php_slug": "traffic-signal-failure",
+        "php_confidence": 0.9223
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "الإشارة الضوئية مطفية",
+        "description": "إشارة المرور عند تقاطع الحي معطلة من يومين وصار في فوضى وخطر حوادث.",
+        "label": "traffic-signal-failure",
+        "php_slug": "traffic-signal-failure",
+        "php_confidence": 0.9343
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "الإشارة الضوئية مطفية",
+        "description": "الإشارة الضوئية عم تعطي إشارات غلط وفي سيارات كادت تتصادم.",
+        "label": "traffic-signal-failure",
+        "php_slug": "traffic-signal-failure",
+        "php_confidence": 0.8662
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "إشارة تعطي أخضر للاتجاهين",
+        "description": "إشارة المرور عند تقاطع الحي معطلة من يومين وصار في فوضى وخطر حوادث.",
+        "label": "traffic-signal-failure",
+        "php_slug": "traffic-signal-failure",
+        "php_confidence": 0.9078
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "إشارة تعطي أخضر للاتجاهين",
+        "description": "الإشارة الضوئية عم تعطي إشارات غلط وفي سيارات كادت تتصادم.",
+        "label": "traffic-signal-failure",
+        "php_slug": "traffic-signal-failure",
+        "php_confidence": 0.8198
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "رصيف مكسور",
+        "description": "بلاط الرصيف مقلوع بـالحي وكبار السن عم يتعثروا، وفي حفرة بنص الرصيف.",
+        "label": "sidewalk-damage",
+        "php_slug": "sidewalk-damage",
+        "php_confidence": 0.7031
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "رصيف مكسور",
+        "description": "الرصيف مكسر بالكامل والناس عم تمشي بنص الطريق.",
+        "label": "sidewalk-damage",
+        "php_slug": "sidewalk-damage",
+        "php_confidence": 0.546
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "بلاط الرصيف مقلوع",
+        "description": "بلاط الرصيف مقلوع بـالحي وكبار السن عم يتعثروا، وفي حفرة بنص الرصيف.",
+        "label": "sidewalk-damage",
+        "php_slug": "sidewalk-damage",
+        "php_confidence": 0.7442
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "بلاط الرصيف مقلوع",
+        "description": "الرصيف مكسر بالكامل والناس عم تمشي بنص الطريق.",
+        "label": "sidewalk-damage",
+        "php_slug": "sidewalk-damage",
+        "php_confidence": 0.7454
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "رصيف خطر على المشاة",
+        "description": "بلاط الرصيف مقلوع بـالحي وكبار السن عم يتعثروا، وفي حفرة بنص الرصيف.",
+        "label": "sidewalk-damage",
+        "php_slug": "sidewalk-damage",
+        "php_confidence": 0.7565
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "رصيف خطر على المشاة",
+        "description": "الرصيف مكسر بالكامل والناس عم تمشي بنص الطريق.",
+        "label": "sidewalk-damage",
+        "php_slug": "sidewalk-damage",
+        "php_confidence": 0.6306
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "لافتة طرقية ساقطة",
+        "description": "لافتة الاتجاهات ساقطة عالأرض بـالحي وما عاد في دلالة للطريق.",
+        "label": "damaged-road-sign",
+        "php_slug": "damaged-road-sign",
+        "php_confidence": 0.728
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "شاخصة مرورية مكسورة",
+        "description": "لافتة الاتجاهات ساقطة عالأرض بـالحي وما عاد في دلالة للطريق.",
+        "label": "damaged-road-sign",
+        "php_slug": "damaged-road-sign",
+        "php_confidence": 0.732
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "أسلاك كهربائية مكشوفة",
+        "description": "في شريط كهربا مقطوع ومرمي عالأرض بـالحي وعم يطلع شرار، خطر جداً عالأطفال، لازم تدخل فوري.",
+        "label": "exposed-wires",
+        "php_slug": "exposed-wires",
+        "php_confidence": 0.7207
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "أسلاك كهربائية مكشوفة",
+        "description": "أسلاك كهربائية مكشوفة بعلبة التوزيع والباب مخلوع.",
+        "label": "exposed-wires",
+        "php_slug": "exposed-wires",
+        "php_confidence": 0.7316
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "شريط كهربا مقطوع عالأرض",
+        "description": "في شريط كهربا مقطوع ومرمي عالأرض بـالحي وعم يطلع شرار، خطر جداً عالأطفال، لازم تدخل فوري.",
+        "label": "exposed-wires",
+        "php_slug": "exposed-wires",
+        "php_confidence": 0.501
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "شريط كهربا مقطوع عالأرض",
+        "description": "أسلاك كهربائية مكشوفة بعلبة التوزيع والباب مخلوع.",
+        "label": "exposed-wires",
+        "php_slug": "exposed-wires",
+        "php_confidence": 0.6679
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "كبل مكشوف جنب المدرسة",
+        "description": "في شريط كهربا مقطوع ومرمي عالأرض بـالحي وعم يطلع شرار، خطر جداً عالأطفال، لازم تدخل فوري.",
+        "label": "exposed-wires",
+        "php_slug": "exposed-wires",
+        "php_confidence": 0.7283
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "كبل مكشوف جنب المدرسة",
+        "description": "أسلاك كهربائية مكشوفة بعلبة التوزيع والباب مخلوع.",
+        "label": "exposed-wires",
+        "php_slug": "exposed-wires",
+        "php_confidence": 0.8003
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "عمود كهرباء مائل",
+        "description": "عمود الكهربا بـالحي مايل كتير بعد العاصفة وممكن يوقع على السيارات والمارة.",
+        "label": "dangerous-electric-pole",
+        "php_slug": "dangerous-electric-pole",
+        "php_confidence": 0.6442
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "عمود كهربائي آيل للسقوط",
+        "description": "عمود الكهربا بـالحي مايل كتير بعد العاصفة وممكن يوقع على السيارات والمارة.",
+        "label": "dangerous-electric-pole",
+        "php_slug": "dangerous-electric-pole",
+        "php_confidence": 0.7263
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "حرق نفايات قرب البيوت",
+        "description": "في ناس عم تحرق الزبالة كل مسا بالأرض الفاضية بـالحي والدخان مالي البيوت وفي أطفال عندهن ربو.",
+        "label": "waste-burning",
+        "php_slug": "waste-burning",
+        "php_confidence": 0.7071
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "دخان حرق زبالة",
+        "description": "في ناس عم تحرق الزبالة كل مسا بالأرض الفاضية بـالحي والدخان مالي البيوت وفي أطفال عندهن ربو.",
+        "label": "waste-burning",
+        "php_slug": "waste-burning",
+        "php_confidence": 0.762
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "ورشة ترمي زيوت بالشارع",
+        "description": "ورشة تصليح سيارات بـالحي عم ترمي الزيوت المستعملة بالمجرور والشارع.",
+        "label": "environmental-violation",
+        "php_slug": "environmental-violation",
+        "php_confidence": 0.7109
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "مخالفة بيئية من معمل",
+        "description": "ورشة تصليح سيارات بـالحي عم ترمي الزيوت المستعملة بالمجرور والشارع.",
+        "label": "environmental-violation",
+        "php_slug": "environmental-violation",
+        "php_confidence": 0.7446
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "تلوث مياه النهر",
+        "description": "المي بالساقية قرب الحي لونها متغير وريحتها كريهة، في مخلفات عم ترمى فيها.",
+        "label": "water-pollution",
+        "php_slug": "water-pollution",
+        "php_confidence": 0.8271
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "رمي مخلفات بالساقية",
+        "description": "المي بالساقية قرب الحي لونها متغير وريحتها كريهة، في مخلفات عم ترمى فيها.",
+        "label": "water-pollution",
+        "php_slug": "water-pollution",
+        "php_confidence": 0.6826
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "بناء آيل للسقوط",
+        "description": "في بناية قديمة بـالحي صار فيها تشققات كبيرة بعد المطر وعم يوقع منها حجار عالرصيف، خطر على الساكنين والمارة.",
+        "label": "collapsing-building",
+        "php_slug": "collapsing-building",
+        "php_confidence": 0.7876
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "تشققات خطيرة بجدران بناية",
+        "description": "في بناية قديمة بـالحي صار فيها تشققات كبيرة بعد المطر وعم يوقع منها حجار عالرصيف، خطر على الساكنين والمارة.",
+        "label": "collapsing-building",
+        "php_slug": "collapsing-building",
+        "php_confidence": 0.6739
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "حريق بأرض زراعية",
+        "description": "في حريق عم يمتد بالأعشاب اليابسة جنب البيوت بـالحي، بحاجة إطفاء بسرعة.",
+        "label": "fire",
+        "php_slug": "fire",
+        "php_confidence": 0.6502
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "حريق بمحل تجاري",
+        "description": "في حريق عم يمتد بالأعشاب اليابسة جنب البيوت بـالحي، بحاجة إطفاء بسرعة.",
+        "label": "fire",
+        "php_slug": "fire",
+        "php_confidence": 0.7189
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "فتحة ريغار مكشوفة",
+        "description": "غطا الريغار مسروق والفتحة مكشوفة بنص الطريق بـالحي، ممكن يوقع فيها طفل أو موتور.",
+        "label": "public-safety-hazard",
+        "php_slug": "public-safety-hazard",
+        "php_confidence": 0.7885
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "حفرة بدون حماية",
+        "description": "غطا الريغار مسروق والفتحة مكشوفة بنص الطريق بـالحي، ممكن يوقع فيها طفل أو موتور.",
+        "label": "public-safety-hazard",
+        "php_slug": "public-safety-hazard",
+        "php_confidence": 0.5389
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "انقطاع الإنترنت",
+        "description": "الإنترنت مقطوع عن الحي من يومين، الطلاب والموظفين اللي بيشتغلوا أونلاين متضررين.",
+        "label": "internet-outage",
+        "php_slug": "internet-outage",
+        "php_confidence": 0.8536
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "انقطاع الإنترنت",
+        "description": "سرعة الإنترنت ضعيفة كتير وبتقطع كل شوي من بعد عطل بالمقسم.",
+        "label": "internet-outage",
+        "php_slug": "internet-outage",
+        "php_confidence": 0.8722
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "الإنترنت ضعيف جداً",
+        "description": "الإنترنت مقطوع عن الحي من يومين، الطلاب والموظفين اللي بيشتغلوا أونلاين متضررين.",
+        "label": "internet-outage",
+        "php_slug": "internet-outage",
+        "php_confidence": 0.863
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "الإنترنت ضعيف جداً",
+        "description": "سرعة الإنترنت ضعيفة كتير وبتقطع كل شوي من بعد عطل بالمقسم.",
+        "label": "internet-outage",
+        "php_slug": "internet-outage",
+        "php_confidence": 0.8713
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "خط الهاتف والإنترنت مقطوع",
+        "description": "الإنترنت مقطوع عن الحي من يومين، الطلاب والموظفين اللي بيشتغلوا أونلاين متضررين.",
+        "label": "internet-outage",
+        "php_slug": "internet-outage",
+        "php_confidence": 0.7469
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "خط الهاتف والإنترنت مقطوع",
+        "description": "سرعة الإنترنت ضعيفة كتير وبتقطع كل شوي من بعد عطل بالمقسم.",
+        "label": "internet-outage",
+        "php_slug": "internet-outage",
+        "php_confidence": 0.837
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "ضعف تغطية الشبكة الخلوية",
+        "description": "تغطية الموبايل ضعيفة كتير بـالحي وما فينا نتصل حتى بالطوارئ.",
+        "label": "telecom-network-failure",
+        "php_slug": "telecom-network-failure",
+        "php_confidence": 0.8845
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "عطل بكبل الهاتف الأرضي",
+        "description": "تغطية الموبايل ضعيفة كتير بـالحي وما فينا نتصل حتى بالطوارئ.",
+        "label": "telecom-network-failure",
+        "php_slug": "telecom-network-failure",
+        "php_confidence": 0.8804
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "مطعم مخالف للشروط الصحية",
+        "description": "مطعم بـالحي عم يشتغل بشروط صحية سيئة وفي حشرات بالمطبخ.",
+        "label": "health-violation",
+        "php_slug": "health-violation",
+        "php_confidence": 0.9155
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "بيع مواد غذائية منتهية الصلاحية",
+        "description": "مطعم بـالحي عم يشتغل بشروط صحية سيئة وفي حشرات بالمطبخ.",
+        "label": "health-violation",
+        "php_slug": "health-violation",
+        "php_confidence": 0.9079
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "مياه الشرب ملوثة",
+        "description": "مي الشرب عم تجي لونها أصفر وريحتها غريبة بـالحي، وفي أطفال مرضوا.",
+        "label": "contaminated-water",
+        "php_slug": "contaminated-water",
+        "php_confidence": 0.6227
+    },
+    {
+        "set": "heldout_test.csv",
+        "title": "لون المي متغير",
+        "description": "مي الشرب عم تجي لونها أصفر وريحتها غريبة بـالحي، وفي أطفال مرضوا.",
+        "label": "contaminated-water",
+        "php_slug": "contaminated-water",
+        "php_confidence": 0.6707
+    },
+    {
+        "set": "challenge_test.csv",
+        "title": "جورة",
+        "description": "جورة",
+        "label": "road-damage",
+        "php_slug": "road-damage",
+        "php_confidence": 0.8182
+    },
+    {
+        "set": "challenge_test.csv",
+        "title": "السكة كلها مطبات وجور ومخربة",
+        "description": "السكة كلها مطبات وجور ومخربة",
+        "label": "road-damage",
+        "php_slug": "road-damage",
+        "php_confidence": 0.871
+    },
+    {
+        "set": "challenge_test.csv",
+        "title": "البلاط طالع من مكانه عالرصيف",
+        "description": "البلاط طالع من مكانه عالرصيف",
+        "label": "sidewalk-damage",
+        "php_slug": "sidewalk-damage",
+        "php_confidence": 0.8561
+    },
+    {
+        "set": "challenge_test.csv",
+        "title": "ما في رصيف نمشي عليه كلو مكسر",
+        "description": "ما في رصيف نمشي عليه كلو مكسر",
+        "label": "sidewalk-damage",
+        "php_slug": "sidewalk-damage",
+        "php_confidence": 0.8134
+    },
+    {
+        "set": "challenge_test.csv",
+        "title": "زباله",
+        "description": "زباله",
+        "label": "garbage",
+        "php_slug": "garbage",
+        "php_confidence": 0.6156
+    },
+    {
+        "set": "challenge_test.csv",
+        "title": "الحاويه فايضه والريحه طالعه",
+        "description": "الحاويه فايضه والريحه طالعه",
+        "label": "garbage",
+        "php_slug": "garbage",
+        "php_confidence": 0.431
+    },
+    {
+        "set": "challenge_test.csv",
+        "title": "البلاليع طايفة بعد الشتي",
+        "description": "البلاليع طايفة بعد الشتي",
+        "label": "blocked-drains",
+        "php_slug": null,
+        "php_confidence": null
+    },
+    {
+        "set": "challenge_test.csv",
+        "title": "المطر غرّق الطريق لأنو المصارف سكرانة",
+        "description": "المطر غرّق الطريق لأنو المصارف سكرانة",
+        "label": "blocked-drains",
+        "php_slug": "road-damage",
+        "php_confidence": 0.7049
+    },
+    {
+        "set": "challenge_test.csv",
+        "title": "الكهربه مقطوعه",
+        "description": "الكهربه مقطوعه",
+        "label": "power-outage",
+        "php_slug": "power-outage",
+        "php_confidence": 0.7581
+    },
+    {
+        "set": "challenge_test.csv",
+        "title": "ما في ضو بالبيت من امبارح",
+        "description": "ما في ضو بالبيت من امبارح",
+        "label": "power-outage",
+        "php_slug": "street-light-failure",
+        "php_confidence": 0.1587
+    },
+    {
+        "set": "challenge_test.csv",
+        "title": "عتمة بالشارع",
+        "description": "عتمة بالشارع",
+        "label": "street-light-failure",
+        "php_slug": "street-light-failure",
+        "php_confidence": 0.707
+    },
+    {
+        "set": "challenge_test.csv",
+        "title": "اللمبة اللي عالعمود محروقة",
+        "description": "اللمبة اللي عالعمود محروقة",
+        "label": "street-light-failure",
+        "php_slug": "street-light-failure",
+        "php_confidence": 0.3696
+    },
+    {
+        "set": "challenge_test.csv",
+        "title": "عمود مايل",
+        "description": "عمود مايل",
+        "label": "dangerous-electric-pole",
+        "php_slug": "dangerous-electric-pole",
+        "php_confidence": 0.7948
+    },
+    {
+        "set": "challenge_test.csv",
+        "title": "العامود رح يوقع على البيت",
+        "description": "العامود رح يوقع على البيت",
+        "label": "dangerous-electric-pole",
+        "php_slug": null,
+        "php_confidence": null
+    },
+    {
+        "set": "challenge_test.csv",
+        "title": "شرطان مقصوصة نازلة عالارض",
+        "description": "شرطان مقصوصة نازلة عالارض",
+        "label": "exposed-wires",
+        "php_slug": "exposed-wires",
+        "php_confidence": 0.4185
+    },
+    {
+        "set": "challenge_test.csv",
+        "title": "في كبل عاري جنب باب البناية",
+        "description": "في كبل عاري جنب باب البناية",
+        "label": "exposed-wires",
+        "php_slug": "exposed-wires",
+        "php_confidence": 0.2141
+    },
+    {
+        "set": "challenge_test.csv",
+        "title": "القسطل فاقع والمي عم تفور",
+        "description": "القسطل فاقع والمي عم تفور",
+        "label": "street-water-leak",
+        "php_slug": "street-water-leak",
+        "php_confidence": 0.6066
+    },
+    {
+        "set": "challenge_test.csv",
+        "title": "مي ضايعة بالطريق من بوري مكسور",
+        "description": "مي ضايعة بالطريق من بوري مكسور",
+        "label": "street-water-leak",
+        "php_slug": "street-water-leak",
+        "php_confidence": 0.4464
+    },
+    {
+        "set": "challenge_test.csv",
+        "title": "ما في مي",
+        "description": "ما في مي",
+        "label": "drinking-water-outage",
+        "php_slug": "drinking-water-outage",
+        "php_confidence": 0.3267
+    },
+    {
+        "set": "challenge_test.csv",
+        "title": "الخزان فاضي والمي ما اجت",
+        "description": "الخزان فاضي والمي ما اجت",
+        "label": "drinking-water-outage",
+        "php_slug": "drinking-water-outage",
+        "php_confidence": 0.2619
+    },
+    {
+        "set": "challenge_test.csv",
+        "title": "الريغار فايض",
+        "description": "الريغار فايض",
+        "label": "sewage-overflow",
+        "php_slug": "blocked-drains",
+        "php_confidence": 0.3306
+    },
+    {
+        "set": "challenge_test.csv",
+        "title": "المجاري طالعة على وش الأرض وريحتها بتقتل",
+        "description": "المجاري طالعة على وش الأرض وريحتها بتقتل",
+        "label": "sewage-overflow",
+        "php_slug": "sewage-overflow",
+        "php_confidence": 0.6107
+    },
+    {
+        "set": "challenge_test.csv",
+        "title": "الضو الأحمر والأخضر عم يشتغلوا سوا",
+        "description": "الضو الأحمر والأخضر عم يشتغلوا سوا",
+        "label": "traffic-signal-failure",
+        "php_slug": null,
+        "php_confidence": null
+    },
+    {
+        "set": "challenge_test.csv",
+        "title": "اشارة السير طافية عالمفرق",
+        "description": "اشارة السير طافية عالمفرق",
+        "label": "traffic-signal-failure",
+        "php_slug": "traffic-signal-failure",
+        "php_confidence": 0.5474
+    },
+    {
+        "set": "challenge_test.csv",
+        "title": "عجقة",
+        "description": "عجقة",
+        "label": "traffic-congestion",
+        "php_slug": "traffic-congestion",
+        "php_confidence": 0.5452
+    },
+    {
+        "set": "challenge_test.csv",
+        "title": "السيارات صافة صفين وما عم نقدر نمرق",
+        "description": "السيارات صافة صفين وما عم نقدر نمرق",
+        "label": "traffic-congestion",
+        "php_slug": null,
+        "php_confidence": null
+    },
+    {
+        "set": "challenge_test.csv",
+        "title": "لوحة الطريق واقعة",
+        "description": "لوحة الطريق واقعة",
+        "label": "damaged-road-sign",
+        "php_slug": "road-damage",
+        "php_confidence": 0.5567
+    },
+    {
+        "set": "challenge_test.csv",
+        "title": "الشاخصة ممسوحة وما بتنقرا",
+        "description": "الشاخصة ممسوحة وما بتنقرا",
+        "label": "damaged-road-sign",
+        "php_slug": "damaged-road-sign",
+        "php_confidence": 0.6312
+    },
+    {
+        "set": "challenge_test.csv",
+        "title": "دخان أسود طالع من مدخنة المعمل",
+        "description": "دخان أسود طالع من مدخنة المعمل",
+        "label": "environmental-violation",
+        "php_slug": "environmental-violation",
+        "php_confidence": 0.3823
+    },
+    {
+        "set": "challenge_test.csv",
+        "title": "عم يكبوا تراب وردم بالأرض الزراعية",
+        "description": "عم يكبوا تراب وردم بالأرض الزراعية",
+        "label": "environmental-violation",
+        "php_slug": "environmental-violation",
+        "php_confidence": 0.4997
+    },
+    {
+        "set": "challenge_test.csv",
+        "title": "حرق زباله",
+        "description": "حرق زباله",
+        "label": "waste-burning",
+        "php_slug": "waste-burning",
+        "php_confidence": 0.597
+    },
+    {
+        "set": "challenge_test.csv",
+        "title": "ولعوا دواليب بالليل والريحة سامة",
+        "description": "ولعوا دواليب بالليل والريحة سامة",
+        "label": "waste-burning",
+        "php_slug": "contaminated-water",
+        "php_confidence": 0.2164
+    },
+    {
+        "set": "challenge_test.csv",
+        "title": "النهر كلو اوساخ",
+        "description": "النهر كلو اوساخ",
+        "label": "water-pollution",
+        "php_slug": "water-pollution",
+        "php_confidence": 0.7812
+    },
+    {
+        "set": "challenge_test.csv",
+        "title": "الساقية لونها اخضر وفيها زيت",
+        "description": "الساقية لونها اخضر وفيها زيت",
+        "label": "water-pollution",
+        "php_slug": "water-pollution",
+        "php_confidence": 0.6206
+    },
+    {
+        "set": "challenge_test.csv",
+        "title": "البيت متشقق وخايفين ينزل",
+        "description": "البيت متشقق وخايفين ينزل",
+        "label": "collapsing-building",
+        "php_slug": "collapsing-building",
+        "php_confidence": 0.1728
+    },
+    {
+        "set": "challenge_test.csv",
+        "title": "الحيط رح يوقع عالطريق",
+        "description": "الحيط رح يوقع عالطريق",
+        "label": "collapsing-building",
+        "php_slug": "road-damage",
+        "php_confidence": 0.7103
+    },
+    {
+        "set": "challenge_test.csv",
+        "title": "حريق!",
+        "description": "حريق!",
+        "label": "fire",
+        "php_slug": "fire",
+        "php_confidence": 0.4396
+    },
+    {
+        "set": "challenge_test.csv",
+        "title": "نار عم تاكل الشجر جنب البيوت",
+        "description": "نار عم تاكل الشجر جنب البيوت",
+        "label": "fire",
+        "php_slug": "fire",
+        "php_confidence": 0.5452
+    },
+    {
+        "set": "challenge_test.csv",
+        "title": "فتحة مفتوحة بالأرض بلا غطا",
+        "description": "فتحة مفتوحة بالأرض بلا غطا",
+        "label": "public-safety-hazard",
+        "php_slug": "public-safety-hazard",
+        "php_confidence": 0.2595
+    },
+    {
+        "set": "challenge_test.csv",
+        "title": "لقينا شي متل القنبلة بالحقل",
+        "description": "لقينا شي متل القنبلة بالحقل",
+        "label": "public-safety-hazard",
+        "php_slug": null,
+        "php_confidence": null
+    },
+    {
+        "set": "challenge_test.csv",
+        "title": "النت فاصل",
+        "description": "النت فاصل",
+        "label": "internet-outage",
+        "php_slug": "internet-outage",
+        "php_confidence": 0.7862
+    },
+    {
+        "set": "challenge_test.csv",
+        "title": "الانترنيت ما عم يفتح ولا موقع",
+        "description": "الانترنيت ما عم يفتح ولا موقع",
+        "label": "internet-outage",
+        "php_slug": null,
+        "php_confidence": null
+    },
+    {
+        "set": "challenge_test.csv",
+        "title": "ما في شبكة للموبايل",
+        "description": "ما في شبكة للموبايل",
+        "label": "telecom-network-failure",
+        "php_slug": "telecom-network-failure",
+        "php_confidence": 0.6841
+    },
+    {
+        "set": "challenge_test.csv",
+        "title": "التلفون الارضي خرسان",
+        "description": "التلفون الارضي خرسان",
+        "label": "telecom-network-failure",
+        "php_slug": "telecom-network-failure",
+        "php_confidence": 0.24
+    },
+    {
+        "set": "challenge_test.csv",
+        "title": "اللحمة بالمحل ريحتها خايسة",
+        "description": "اللحمة بالمحل ريحتها خايسة",
+        "label": "health-violation",
+        "php_slug": null,
+        "php_confidence": null
+    },
+    {
+        "set": "challenge_test.csv",
+        "title": "المطعم وسخ وفي صراصير",
+        "description": "المطعم وسخ وفي صراصير",
+        "label": "health-violation",
+        "php_slug": "health-violation",
+        "php_confidence": 0.6269
+    },
+    {
+        "set": "challenge_test.csv",
+        "title": "المي اللي عم تنزل من الحنفية عكرة",
+        "description": "المي اللي عم تنزل من الحنفية عكرة",
+        "label": "contaminated-water",
+        "php_slug": "drinking-water-outage",
+        "php_confidence": 0.2619
+    },
+    {
+        "set": "challenge_test.csv",
+        "title": "ولادنا مرضو من مي الشرب",
+        "description": "ولادنا مرضو من مي الشرب",
+        "label": "contaminated-water",
+        "php_slug": "drinking-water-outage",
+        "php_confidence": 0.3922
+    }
+]

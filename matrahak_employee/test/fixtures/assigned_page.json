@@ -1,0 +1,315 @@
+{
+ "success": true,
+ "message": "تمت العملية بنجاح",
+ "data": [
+  {
+   "id": "c088091a-1fb4-4866-abf8-488443a23cbf",
+   "ticket_number": "MTR-2026-000697",
+   "title": "حفرة كبيرة قرب المدرسة",
+   "description": "في جورة كبيرة بنص الطريق عم تسبب حوادث للسيارات — فحص آلي من tool/api_check.dart",
+   "status": "assigned",
+   "status_ar": "تم الإسناد",
+   "priority": "high",
+   "priority_ar": "عالية",
+   "citizen": {
+    "name": "مواطن معدّل 003787",
+    "phone": "0994194623"
+   },
+   "is_anonymous": false,
+   "category": {
+    "id": 1,
+    "name": "حفر وتلف الطرق",
+    "icon": "construction",
+    "color": "#E4572E"
+   },
+   "department": {
+    "id": 1,
+    "name": "مديرية الخدمات والصيانة"
+   },
+   "district": {
+    "id": 1,
+    "name": "محافظة دمشق"
+   },
+   "location": {
+    "latitude": 33.5148,
+    "longitude": 36.2775,
+    "address": null,
+    "notes": "قرب المدرسة"
+   },
+   "ai": {
+    "category": null,
+    "priority": "high",
+    "confidence": 0.8949,
+    "summary": "حفرة كبيرة قرب المدرسة — في جورة كبيرة بنص الطريق عم تسبب حوادث للسيارات — فحص آلي من tool/api_check",
+    "is_duplicate": false,
+    "duplicate_of": null
+   },
+   "attachments": [
+    {
+     "id": 2,
+     "type": "image",
+     "stage": "before",
+     "url": "http://127.0.0.1:8000/storage/reports/c088091a-1fb4-4866-abf8-488443a23cbf/nwAFYlZ5xhC61HFppdoyULzwjPPyIRjqpTwVtXGX.png",
+     "thumbnail": null,
+     "name": "photo.png",
+     "size": "0.1 KB",
+     "mime": "image/png",
+     "ai_tags": null
+    }
+   ],
+   "after_attachments": [],
+   "updates": [],
+   "assignment": {
+    "employee": "سامر الخطيب",
+    "is_me": true,
+    "method": "auto",
+    "method_ar": "تلقائي",
+    "assigned_at": "2026-10-23T23:06:45+03:00"
+   },
+   "rating": null,
+   "permissions": {
+    "can_act": true,
+    "can_claim": false,
+    "allowed_statuses": [
+     {
+      "value": "under_review",
+      "label": "قيد المراجعة"
+     },
+     {
+      "value": "in_progress",
+      "label": "جاري المعالجة"
+     },
+     {
+      "value": "resolved",
+      "label": "تم الحل"
+     },
+     {
+      "value": "rejected",
+      "label": "مرفوض"
+     }
+    ]
+   },
+   "sla": {
+    "expected_resolution": "2026-10-26T23:06:45+03:00",
+    "is_overdue": false
+   },
+   "dates": {
+    "created": "2026-10-23T23:06:45+03:00",
+    "assigned": "2026-10-23T23:06:45+03:00",
+    "started": null,
+    "resolved": null
+   }
+  },
+  {
+   "id": "be1ce261-e935-47cd-b175-0e33d0f82fe8",
+   "ticket_number": "MTR-2026-000698",
+   "title": "حفرة كبيرة قرب المدرسة",
+   "description": "في جورة كبيرة بنص الطريق عم تسبب حوادث للسيارات — فحص آلي من tool/api_check.dart",
+   "status": "assigned",
+   "status_ar": "تم الإسناد",
+   "priority": "high",
+   "priority_ar": "عالية",
+   "citizen": {
+    "name": "مواطن معدّل 768522",
+    "phone": "0953469806"
+   },
+   "is_anonymous": false,
+   "category": {
+    "id": 1,
+    "name": "حفر وتلف الطرق",
+    "icon": "construction",
+    "color": "#E4572E"
+   },
+   "department": {
+    "id": 1,
+    "name": "مديرية الخدمات والصيانة"
+   },
+   "district": {
+    "id": 1,
+    "name": "محافظة دمشق"
+   },
+   "location": {
+    "latitude": 33.5148,
+    "longitude": 36.2775,
+    "address": null,
+    "notes": "قرب المدرسة"
+   },
+   "ai": {
+    "category": null,
+    "priority": "high",
+    "confidence": 0.8949,
+    "summary": "حفرة كبيرة قرب المدرسة — في جورة كبيرة بنص الطريق عم تسبب حوادث للسيارات — فحص آلي من tool/api_check",
+    "is_duplicate": true,
+    "duplicate_of": null
+   },
+   "attachments": [
+    {
+     "id": 3,
+     "type": "image",
+     "stage": "before",
+     "url": "http://127.0.0.1:8000/storage/reports/be1ce261-e935-47cd-b175-0e33d0f82fe8/ddOpyCtJ9wnLv3Twt0dg9CDX5kdaab3gctvMlpAp.png",
+     "thumbnail": null,
+     "name": "photo.png",
+     "size": "0.1 KB",
+     "mime": "image/png",
+     "ai_tags": null
+    }
+   ],
+   "after_attachments": [],
+   "updates": [],
+   "assignment": {
+    "employee": "سامر الخطيب",
+    "is_me": true,
+    "method": "auto",
+    "method_ar": "تلقائي",
+    "assigned_at": "2026-10-23T23:36:09+03:00"
+   },
+   "rating": null,
+   "permissions": {
+    "can_act": true,
+    "can_claim": false,
+    "allowed_statuses": [
+     {
+      "value": "under_review",
+      "label": "قيد المراجعة"
+     },
+     {
+      "value": "in_progress",
+      "label": "جاري المعالجة"
+     },
+     {
+      "value": "resolved",
+      "label": "تم الحل"
+     },
+     {
+      "value": "rejected",
+      "label": "مرفوض"
+     }
+    ]
+   },
+   "sla": {
+    "expected_resolution": "2026-10-26T23:36:09+03:00",
+    "is_overdue": false
+   },
+   "dates": {
+    "created": "2026-10-23T23:36:09+03:00",
+    "assigned": "2026-10-23T23:36:09+03:00",
+    "started": null,
+    "resolved": null
+   }
+  },
+  {
+   "id": "8739c72d-c32a-4736-a627-0529f5fd182b",
+   "ticket_number": "MTR-2026-000701",
+   "title": "حفرة عميقة أمام الفرن الآلي",
+   "description": "في حفرة عميقة أمام الفرن الآلي عم تخرّب دواليب السيارات وصارت خطر على المشاة",
+   "status": "in_progress",
+   "status_ar": "جاري المعالجة",
+   "priority": "high",
+   "priority_ar": "عالية",
+   "citizen": {
+    "name": "أحمد المواطن",
+    "phone": "0930000003"
+   },
+   "is_anonymous": false,
+   "category": {
+    "id": 1,
+    "name": "حفر وتلف الطرق",
+    "icon": "construction",
+    "color": "#E4572E"
+   },
+   "department": {
+    "id": 1,
+    "name": "مديرية الخدمات والصيانة"
+   },
+   "district": {
+    "id": 1,
+    "name": "محافظة دمشق"
+   },
+   "location": {
+    "latitude": 33.5205,
+    "longitude": 36.2925,
+    "address": null,
+    "notes": null
+   },
+   "ai": {
+    "category": null,
+    "priority": "high",
+    "confidence": 0.4679,
+    "summary": "حفرة عميقة أمام الفرن الآلي — في حفرة عميقة أمام الفرن الآلي عم تخرّب دواليب السيارات وصارت خطر على المشاة",
+    "is_duplicate": false,
+    "duplicate_of": null
+   },
+   "attachments": [
+    {
+     "id": 5,
+     "type": "image",
+     "stage": "before",
+     "url": "http://127.0.0.1:8000/storage/reports/8739c72d-c32a-4736-a627-0529f5fd182b/D541lzlYaKRThMXyqntk4H8tsX2QavrjohQ800oe.png",
+     "thumbnail": null,
+     "name": "tiny.png",
+     "size": "0.1 KB",
+     "mime": "image/png",
+     "ai_tags": null
+    }
+   ],
+   "after_attachments": [
+    {
+     "id": 8,
+     "type": "image",
+     "stage": "after",
+     "url": "http://127.0.0.1:8000/storage/reports/8739c72d-c32a-4736-a627-0529f5fd182b/U7gWjhr9IDHGsWPAQYDanyaSCJoD8URyPM9QFxCM.png",
+     "thumbnail": null,
+     "name": "after.png",
+     "size": "0.1 KB",
+     "mime": "image/png",
+     "ai_tags": null
+    }
+   ],
+   "updates": [],
+   "assignment": {
+    "employee": "سامر الخطيب",
+    "is_me": true,
+    "method": "claim",
+    "method_ar": "استلام ذاتي",
+    "assigned_at": "2026-10-25T04:42:03+03:00"
+   },
+   "rating": null,
+   "permissions": {
+    "can_act": true,
+    "can_claim": false,
+    "allowed_statuses": [
+     {
+      "value": "under_review",
+      "label": "قيد المراجعة"
+     },
+     {
+      "value": "resolved",
+      "label": "تم الحل"
+     },
+     {
+      "value": "rejected",
+      "label": "مرفوض"
+     }
+    ]
+   },
+   "sla": {
+    "expected_resolution": "2026-10-28T04:41:46+03:00",
+    "is_overdue": false
+   },
+   "dates": {
+    "created": "2026-10-25T04:41:46+03:00",
+    "assigned": "2026-10-25T04:42:03+03:00",
+    "started": "2026-10-25T04:42:03+03:00",
+    "resolved": null
+   }
+  }
+ ],
+ "meta": {
+  "current_page": 1,
+  "last_page": 1,
+  "per_page": 5,
+  "total": 3,
+  "has_more": false
+ }
+}

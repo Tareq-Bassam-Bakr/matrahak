@@ -1,0 +1,65 @@
+{
+ "key": "citizen_district_stats",
+ "method": "GET",
+ "path": "/api/v1/citizen/map/districts/1/stats",
+ "query": null,
+ "body": null,
+ "form": null,
+ "files": null,
+ "auth": true,
+ "status": 200,
+ "note": null,
+ "response": {
+  "success": true,
+  "message": "تمت العملية بنجاح",
+  "data": {
+   "district": {
+    "id": 1,
+    "name": "محافظة دمشق",
+    "population": 1754000,
+    "area_km2": 105,
+    "risk_score": 61.58,
+    "risk_level": "high",
+    "center": {
+     "lat": 33.5138,
+     "lng": 36.2765
+    }
+   },
+   "stats": {
+    "total": 122,
+    "resolved": 96,
+    "open": 20,
+    "avg_resolution_hours": 28.7,
+    "resolution_rate": 78.7,
+    "per_100k": 6.96
+   },
+   "top_categories": [
+    {
+     "name": "حفر وتلف الطرق",
+     "color": "#E4572E",
+     "count": 25
+    },
+    {
+     "name": "انقطاع الكهرباء",
+     "color": "#F59E0B",
+     "count": 17
+    },
+    {
+     "name": "النفايات والقمامة",
+     "color": "#8D6E63",
+     "count": 16
+    },
+    {
+     "name": "إنارة شوارع معطلة",
+     "color": "#FBBF24",
+     "count": 9
+    },
+    {
+     "name": "انقطاع مياه الشرب",
+     "color": "#0284C7",
+     "count": 8
+    }
+   ]
+  }
+ }
+}

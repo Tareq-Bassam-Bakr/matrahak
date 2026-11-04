@@ -1,0 +1,8 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.env
+models/classifier.prev.joblib
+models/training_history.jsonl
+data/real/*.csv

@@ -1,0 +1,66 @@
+{
+ "key": "employee_workload",
+ "method": "GET",
+ "path": "/api/v1/employee/analytics/workload",
+ "query": null,
+ "body": null,
+ "form": null,
+ "files": null,
+ "auth": true,
+ "status": 200,
+ "note": null,
+ "response": {
+  "success": true,
+  "message": "تمت العملية بنجاح",
+  "data": {
+   "total_open": 3,
+   "critical": 0,
+   "high": 3,
+   "overdue": 0,
+   "reports": [
+    {
+     "id": "c088091a-1fb4-4866-abf8-488443a23cbf",
+     "ticket_number": "MTR-2026-000697",
+     "title": "حفرة كبيرة قرب المدرسة",
+     "priority": "high",
+     "priority_ar": "عالية",
+     "status": "assigned",
+     "status_ar": "تم الإسناد",
+     "category": "حفر وتلف الطرق",
+     "district": "محافظة دمشق",
+     "is_overdue": false,
+     "expected_resolution": "2026-10-26T23:06:45+03:00",
+     "created_at": "2026-10-23T23:06:45+03:00"
+    },
+    {
+     "id": "be1ce261-e935-47cd-b175-0e33d0f82fe8",
+     "ticket_number": "MTR-2026-000698",
+     "title": "حفرة كبيرة قرب المدرسة",
+     "priority": "high",
+     "priority_ar": "عالية",
+     "status": "assigned",
+     "status_ar": "تم الإسناد",
+     "category": "حفر وتلف الطرق",
+     "district": "محافظة دمشق",
+     "is_overdue": false,
+     "expected_resolution": "2026-10-26T23:36:09+03:00",
+     "created_at": "2026-10-23T23:36:09+03:00"
+    },
+    {
+     "id": "8739c72d-c32a-4736-a627-0529f5fd182b",
+     "ticket_number": "MTR-2026-000701",
+     "title": "حفرة عميقة أمام الفرن الآلي",
+     "priority": "high",
+     "priority_ar": "عالية",
+     "status": "in_progress",
+     "status_ar": "جاري المعالجة",
+     "category": "حفر وتلف الطرق",
+     "district": "محافظة دمشق",
+     "is_overdue": false,
+     "expected_resolution": "2026-10-28T04:41:46+03:00",
+     "created_at": "2026-10-25T04:41:46+03:00"
+    }
+   ]
+  }
+ }
+}

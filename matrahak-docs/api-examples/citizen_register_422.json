@@ -1,0 +1,38 @@
+{
+ "key": "citizen_register_422",
+ "method": "POST",
+ "path": "/api/v1/citizen/auth/register",
+ "query": null,
+ "body": {
+  "name": "أ",
+  "email": "docs.945417@example.com",
+  "phone": "0512345678",
+  "password": "123",
+  "password_confirmation": "321"
+ },
+ "form": null,
+ "files": null,
+ "auth": false,
+ "status": 422,
+ "note": "بريد مستخدم + جوال غير سوري + كلمة مرور ضعيفة",
+ "response": {
+  "success": false,
+  "message": "الاسم يجب أن يكون 3 أحرف على الأقل",
+  "errors": {
+   "name": [
+    "الاسم يجب أن يكون 3 أحرف على الأقل"
+   ],
+   "email": [
+    "البريد الإلكتروني مستخدم مسبقاً"
+   ],
+   "phone": [
+    "رقم الجوال يجب أن يكون سورياً بصيغة 09XXXXXXXX"
+   ],
+   "password": [
+    "تأكيد كلمة المرور غير مطابق",
+    "كلمة المرور يجب أن تكون 8 أحرف على الأقل",
+    "يجب أن تحتوي كلمة المرور على حرف واحد على الأقل."
+   ]
+  }
+ }
+}

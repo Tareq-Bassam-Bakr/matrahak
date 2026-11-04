@@ -1,0 +1,572 @@
+{
+ "method": "POST",
+ "url": "/v1/classify",
+ "headers": {
+  "X-Internal-Key": "***"
+ },
+ "request": {
+  "title": "تسرب مياه من أنبوب رئيسي",
+  "description": "في تسريب مي قوي من أنبوب مكسور عم يغرق الشارع قدام البناية",
+  "categories": [
+   {
+    "slug": "road-damage",
+    "name": "حفر وتلف الطرق",
+    "name_en": "Road Damage",
+    "keywords": [
+     "حفرة",
+     "حفر",
+     "جورة",
+     "جور",
+     "طريق",
+     "زفت",
+     "اسفلت",
+     "تزفيت",
+     "شارع مكسور",
+     "تشققات في الطريق",
+     "مطب",
+     "حفرة بالطريق",
+     "الطريق مكسر",
+     "تزفيت الطريق",
+     "هبوط بالاسفلت"
+    ],
+    "department_code": "MUN",
+    "priority_weight": 7
+   },
+   {
+    "slug": "sidewalk-damage",
+    "name": "تلف الأرصفة",
+    "name_en": "Sidewalk Damage",
+    "keywords": [
+     "رصيف",
+     "ارصفة",
+     "بلاط الرصيف",
+     "حجر الرصيف",
+     "بردورة",
+     "بلاط",
+     "بلاط مقلوع",
+     "المشاة",
+     "الرصيف مكسر"
+    ],
+    "department_code": "MUN",
+    "priority_weight": 4
+   },
+   {
+    "slug": "garbage",
+    "name": "النفايات والقمامة",
+    "name_en": "Garbage",
+    "keywords": [
+     "قمامة",
+     "زبالة",
+     "نفايات",
+     "حاوية",
+     "حاويات",
+     "مكب",
+     "اكياس الزبالة",
+     "ترحيل القمامة",
+     "روائح القمامة",
+     "ترحيل الزبالة",
+     "كيس زبالة",
+     "تراكم النفايات",
+     "عمال النظافة"
+    ],
+    "department_code": "MUN",
+    "priority_weight": 6
+   },
+   {
+    "slug": "blocked-drains",
+    "name": "مجاري الأمطار المسدودة",
+    "name_en": "Blocked Drains",
+    "keywords": [
+     "مجرور",
+     "مجارير",
+     "ريغار",
+     "ريكار",
+     "فتحة تصريف",
+     "انسداد",
+     "بالوعة",
+     "مناهل",
+     "تجمع مياه الامطار",
+     "مجرور مسدود",
+     "فتحات التصريف",
+     "تصريف المطر",
+     "مياه الامطار",
+     "سيول",
+     "بحيرة بالشارع"
+    ],
+    "department_code": "MUN",
+    "priority_weight": 7
+   },
+   {
+    "slug": "power-outage",
+    "name": "انقطاع الكهرباء",
+    "name_en": "Power Outage",
+    "keywords": [
+     "انقطاع الكهرباء",
+     "الكهربا مقطوعة",
+     "قطع الكهرباء",
+     "تقنين",
+     "ما في كهربا",
+     "محولة",
+     "خط الكهربا",
+     "عطل كهربائي",
+     "كهربا",
+     "المحولة",
+     "امبيرات",
+     "ساعات التقنين",
+     "انطفت الكهربا"
+    ],
+    "department_code": "ELEC",
+    "priority_weight": 8
+   },
+   {
+    "slug": "street-light-failure",
+    "name": "إنارة شوارع معطلة",
+    "name_en": "Street Light Failure",
+    "keywords": [
+     "انارة",
+     "انارة الشارع",
+     "ضو الشارع",
+     "عمود الانارة",
+     "لمبة",
+     "مصباح",
+     "عتمة",
+     "الشارع معتم",
+     "لمبات",
+     "اعمدة الانارة",
+     "انارة طرقية"
+    ],
+    "department_code": "ELEC",
+    "priority_weight": 5
+   },
+   {
+    "slug": "dangerous-electric-pole",
+    "name": "عمود كهربائي خطر",
+    "name_en": "Dangerous Electric Pole",
+    "keywords": [
+     "عمود كهربا",
+     "عمود مايل",
+     "عمود مكسور",
+     "عمود ساقط",
+     "عمود كهربائي",
+     "عمود الكهربا",
+     "عمود ايل للسقوط"
+    ],
+    "department_code": "ELEC",
+    "priority_weight": 9
+   },
+   {
+    "slug": "exposed-wires",
+    "name": "أسلاك كهربائية مكشوفة",
+    "name_en": "Exposed Wires",
+    "keywords": [
+     "اسلاك مكشوفة",
+     "شريط مكشوف",
+     "شرطان",
+     "كبل مقطوع",
+     "سلك مقطوع",
+     "ماس كهربائي",
+     "شرارة",
+     "كبل مكشوف",
+     "سلك مكشوف",
+     "شريط كهربا",
+     "شرار",
+     "علبة توزيع"
+    ],
+    "department_code": "ELEC",
+    "priority_weight": 10
+   },
+   {
+    "slug": "street-water-leak",
+    "name": "تسرب مياه في الشارع",
+    "name_en": "Street Water Leak",
+    "keywords": [
+     "تسرب",
+     "تسريب",
+     "مي عم تطلع",
+     "مياه بالشارع",
+     "انكسار قسطل",
+     "قسطل",
+     "بوري",
+     "انبوب مكسور",
+     "كسر بخط المي",
+     "خط المياه",
+     "خط المي",
+     "تهدر",
+     "هدر المي",
+     "برك مي",
+     "تسريب مي"
+    ],
+    "department_code": "WATER",
+    "priority_weight": 7
+   },
+   {
+    "slug": "drinking-water-outage",
+    "name": "انقطاع مياه الشرب",
+    "name_en": "Drinking Water Outage",
+    "keywords": [
+     "انقطاع المياه",
+     "ما في مي",
+     "المي مقطوعة",
+     "مياه الشرب",
+     "ضعف ضخ",
+     "ضغط المي ضعيف",
+     "صهاريج",
+     "ضخ المياه",
+     "ما عم توصل المي",
+     "دور المي"
+    ],
+    "department_code": "WATER",
+    "priority_weight": 8
+   },
+   {
+    "slug": "sewage-overflow",
+    "name": "طفح الصرف الصحي",
+    "name_en": "Sewage Overflow",
+    "keywords": [
+     "صرف صحي",
+     "طفح",
+     "مياه اسنة",
+     "مياه سوداء",
+     "مجاري طافحة",
+     "روائح كريهة",
+     "ريغار طافح",
+     "مجارير",
+     "مجاري",
+     "شبكة الصرف",
+     "انسداد الصرف",
+     "مياه الصرف",
+     "ريحة المجارير"
+    ],
+    "department_code": "WATER",
+    "priority_weight": 9
+   },
+   {
+    "slug": "traffic-signal-failure",
+    "name": "إشارة مرور معطلة",
+    "name_en": "Traffic Signal Failure",
+    "keywords": [
+     "اشارة مرور",
+     "اشارة ضوئية",
+     "الاشارة معطلة",
+     "الاشارة طافية",
+     "شرطي مرور",
+     "اشارة",
+     "اشارات المرور",
+     "ضوئية",
+     "تقاطع",
+     "اشارة معطلة"
+    ],
+    "department_code": "TRAFFIC",
+    "priority_weight": 8
+   },
+   {
+    "slug": "traffic-congestion",
+    "name": "ازدحام مروري",
+    "name_en": "Traffic Congestion",
+    "keywords": [
+     "ازدحام",
+     "عجقة",
+     "زحمة",
+     "اختناق مروري",
+     "طريق مسدود",
+     "توقف السير",
+     "سير",
+     "مفرق",
+     "وقوف مزدوج",
+     "بسطات",
+     "ازدحام خانق",
+     "وقت الذروة"
+    ],
+    "department_code": "TRAFFIC",
+    "priority_weight": 6
+   },
+   {
+    "slug": "damaged-road-sign",
+    "name": "لافتة طرقية تالفة",
+    "name_en": "Damaged Road Sign",
+    "keywords": [
+     "لافتة",
+     "شاخصة",
+     "لوحة طرقية",
+     "اشارة تحذيرية",
+     "لوحة مكسورة",
+     "لافتة طرقية",
+     "شاخصة مرورية",
+     "لوحة اتجاهات",
+     "دلالة الطريق"
+    ],
+    "department_code": "TRAFFIC",
+    "priority_weight": 4
+   },
+   {
+    "slug": "environmental-violation",
+    "name": "مخالفة بيئية",
+    "name_en": "Environmental Violation",
+    "keywords": [
+     "مخالفة بيئية",
+     "تلوث",
+     "قطع اشجار",
+     "رمي ردميات",
+     "ردم",
+     "ضجيج",
+     "دخان مصنع",
+     "زيوت",
+     "رمي زيوت",
+     "ورشة",
+     "مخلفات صناعية",
+     "معمل",
+     "روائح كيماوية"
+    ],
+    "department_code": "ENV",
+    "priority_weight": 6
+   },
+   {
+    "slug": "waste-burning",
+    "name": "حرق نفايات",
+    "name_en": "Waste Burning",
+    "keywords": [
+     "حرق نفايات",
+     "حرق زبالة",
+     "دخان",
+     "حريق نفايات",
+     "حرق اطارات",
+     "حرق كوشوك",
+     "تحرق الزبالة",
+     "دخان الحرق",
+     "حرق مخلفات"
+    ],
+    "department_code": "ENV",
+    "priority_weight": 8
+   },
+   {
+    "slug": "water-pollution",
+    "name": "تلوث مائي",
+    "name_en": "Water Pollution",
+    "keywords": [
+     "تلوث النهر",
+     "تلوث المياه",
+     "مخلفات بالنهر",
+     "بردى",
+     "العاصي",
+     "الفرات",
+     "زيت بالمياه",
+     "ساقية",
+     "نهر",
+     "مخلفات بالمي",
+     "مجرى النهر",
+     "بحيرة"
+    ],
+    "department_code": "ENV",
+    "priority_weight": 8
+   },
+   {
+    "slug": "collapsing-building",
+    "name": "مبنى آيل للسقوط",
+    "name_en": "Collapsing Building",
+    "keywords": [
+     "مبنى ايل للسقوط",
+     "بناء متصدع",
+     "تشققات بالبناء",
+     "بناية مايلة",
+     "سقف ساقط",
+     "جدار ساقط",
+     "انهيار",
+     "تشققات",
+     "تصدع",
+     "بناية قديمة",
+     "جدران متشققة",
+     "ايل للسقوط",
+     "سقوط حجار"
+    ],
+    "department_code": "SAFETY",
+    "priority_weight": 10
+   },
+   {
+    "slug": "fire",
+    "name": "حريق",
+    "name_en": "Fire",
+    "keywords": [
+     "حريق",
+     "نار",
+     "اشتعال",
+     "دخان كثيف",
+     "حرائق",
+     "احتراق",
+     "اطفاء",
+     "دفاع مدني",
+     "نيران"
+    ],
+    "department_code": "SAFETY",
+    "priority_weight": 10
+   },
+   {
+    "slug": "public-safety-hazard",
+    "name": "خطر على السلامة العامة",
+    "name_en": "Public Safety Hazard",
+    "keywords": [
+     "فتحة مكشوفة",
+     "بئر مكشوف",
+     "حفرة عميقة",
+     "جسم غريب",
+     "جسم مشبوه",
+     "مخلفات حرب",
+     "قذيفة",
+     "لغم",
+     "بدون حماية",
+     "غطا ريغار",
+     "ريغار مكشوف",
+     "فتحة ريغار",
+     "خطر على المارة"
+    ],
+    "department_code": "SAFETY",
+    "priority_weight": 9
+   },
+   {
+    "slug": "internet-outage",
+    "name": "انقطاع الإنترنت",
+    "name_en": "Internet Outage",
+    "keywords": [
+     "انترنت",
+     "نت",
+     "adsl",
+     "بطء النت",
+     "راوتر",
+     "النت مقطوع",
+     "مقسم",
+     "سرعة النت",
+     "الانترنت مقطوع",
+     "انترنت ضعيف"
+    ],
+    "department_code": "TELECOM",
+    "priority_weight": 5
+   },
+   {
+    "slug": "telecom-network-failure",
+    "name": "عطل في شبكة الاتصالات",
+    "name_en": "Telecom Network Failure",
+    "keywords": [
+     "تغطية",
+     "ارسال",
+     "برج",
+     "الخط الارضي",
+     "هاتف ارضي",
+     "علبة الهاتف",
+     "كبل هاتف",
+     "تغطية الموبايل",
+     "شبكة الموبايل",
+     "سيريتل",
+     "ام تي ان",
+     "ما في تغطية"
+    ],
+    "department_code": "TELECOM",
+    "priority_weight": 5
+   },
+   {
+    "slug": "health-violation",
+    "name": "مخالفة صحية",
+    "name_en": "Health Violation",
+    "keywords": [
+     "مخالفة صحية",
+     "مطعم مخالف",
+     "اغذية فاسدة",
+     "منتهي الصلاحية",
+     "حشرات",
+     "قوارض",
+     "جرذان",
+     "كلاب شاردة",
+     "شروط صحية",
+     "مطبخ",
+     "مطعم",
+     "منتهية الصلاحية",
+     "لحوم فاسدة"
+    ],
+    "department_code": "HEALTH",
+    "priority_weight": 7
+   },
+   {
+    "slug": "contaminated-water",
+    "name": "مياه ملوثة",
+    "name_en": "Contaminated Water",
+    "keywords": [
+     "مياه ملوثة",
+     "مي ملوثة",
+     "لون المي",
+     "ريحة المي",
+     "عكارة",
+     "تسمم",
+     "ملوثة",
+     "ملوث",
+     "مي صفرا",
+     "لون اصفر",
+     "ريحة غريبة",
+     "تلوث مياه الشرب"
+    ],
+    "department_code": "HEALTH",
+    "priority_weight": 10
+   }
+  ]
+ },
+ "status": 200,
+ "response": {
+  "category_slug": "street-water-leak",
+  "department_code": "WATER",
+  "confidence": 0.8543,
+  "priority": "critical",
+  "urgency_signal": "critical",
+  "summary": "تسرب مياه من أنبوب رئيسي — في تسريب مي قوي من أنبوب مكسور عم يغرق الشارع قدام البناية",
+  "keywords_matched": [
+   "تسرب",
+   "تسريب",
+   "مي عم تطلع",
+   "مياه بالشارع",
+   "انبوب مكسور",
+   "خط المياه",
+   "برك مي",
+   "تسريب مي",
+   "تسرب مياه في الشارع"
+  ],
+  "explanation": [
+   {
+    "term": "انبوب",
+    "weight": 0.1616
+   },
+   {
+    "term": "تسريب",
+    "weight": 0.1062
+   },
+   {
+    "term": "تسريب مي",
+    "weight": 0.1062
+   },
+   {
+    "term": "مي",
+    "weight": 0.059
+   },
+   {
+    "term": "تسرب",
+    "weight": 0.0587
+   },
+   {
+    "term": "مكسور",
+    "weight": 0.0374
+   }
+  ],
+  "alternatives": [
+   {
+    "slug": "drinking-water-outage",
+    "score": 0.0296
+   },
+   {
+    "slug": "road-damage",
+    "score": 0.0209
+   },
+   {
+    "slug": "sewage-overflow",
+    "score": 0.019
+   }
+  ],
+  "model_version": "tfidf-hybrid-v1",
+  "backend": "ml-hybrid",
+  "processing_ms": 24
+ }
+}

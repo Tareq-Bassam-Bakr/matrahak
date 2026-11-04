@@ -1,0 +1,25 @@
+{
+ "key": "health",
+ "method": "GET",
+ "path": "/api/v1/health",
+ "query": null,
+ "body": null,
+ "form": null,
+ "files": null,
+ "auth": false,
+ "status": 200,
+ "note": null,
+ "response": {
+  "success": true,
+  "message": "السيرفر يعمل",
+  "data": {
+   "status": "ok",
+   "time": "2026-10-25T19:23:37+03:00",
+   "ai_service": {
+    "reachable": true,
+    "backend": "ml-hybrid"
+   },
+   "push_notifications": false
+  }
+ }
+}

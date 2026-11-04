@@ -1,0 +1,48 @@
+{
+ "success": true,
+ "message": "تمت العملية بنجاح",
+ "data": [
+  {
+   "id": 3,
+   "name": "النفايات والقمامة",
+   "name_en": "Garbage",
+   "slug": "garbage",
+   "icon": "delete",
+   "color": "#8D6E63",
+   "sla_hours": 24,
+   "department": {
+    "id": 1,
+    "name": "مديرية الخدمات والصيانة",
+    "code": "MUN"
+   }
+  },
+  {
+   "id": 2,
+   "name": "تلف الأرصفة",
+   "name_en": "Sidewalk Damage",
+   "slug": "sidewalk-damage",
+   "icon": "directions_walk",
+   "color": "#F17C67",
+   "sla_hours": 120,
+   "department": {
+    "id": 1,
+    "name": "مديرية الخدمات والصيانة",
+    "code": "MUN"
+   }
+  },
+  {
+   "id": 1,
+   "name": "حفر وتلف الطرق",
+   "name_en": "Road Damage",
+   "slug": "road-damage",
+   "icon": "construction",
+   "color": "#E4572E",
+   "sla_hours": 72,
+   "department": {
+    "id": 1,
+    "name": "مديرية الخدمات والصيانة",
+    "code": "MUN"
+   }
+  }
+ ]
+}

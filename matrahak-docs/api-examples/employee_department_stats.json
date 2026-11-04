@@ -1,0 +1,133 @@
+{
+ "key": "employee_department_stats",
+ "method": "GET",
+ "path": "/api/v1/employee/analytics/department-stats",
+ "query": null,
+ "body": null,
+ "form": null,
+ "files": null,
+ "auth": true,
+ "status": 200,
+ "note": null,
+ "response": {
+  "success": true,
+  "message": "تمت العملية بنجاح",
+  "data": {
+   "department": {
+    "id": 1,
+    "name": "مديرية الخدمات والصيانة",
+    "code": "MUN"
+   },
+   "kpis": {
+    "total": 196,
+    "open": 17,
+    "resolved": 166,
+    "rejected": 13,
+    "overdue": 9,
+    "critical_open": 0,
+    "today": 10,
+    "resolution_rate": 84.7,
+    "avg_resolution_hours": 42.6,
+    "sla_compliance": 83.1,
+    "avg_rating": 4.01,
+    "ratings_count": 85,
+    "citizen_satisfaction": 69.4
+   },
+   "by_category": [
+    {
+     "id": 1,
+     "name": "حفر وتلف الطرق",
+     "color": "#E4572E",
+     "count": 75
+    },
+    {
+     "id": 3,
+     "name": "النفايات والقمامة",
+     "color": "#8D6E63",
+     "count": 66
+    },
+    {
+     "id": 2,
+     "name": "تلف الأرصفة",
+     "color": "#F17C67",
+     "count": 30
+    },
+    {
+     "id": 4,
+     "name": "مجاري الأمطار المسدودة",
+     "color": "#6D4C41",
+     "count": 25
+    }
+   ],
+   "by_district": [
+    {
+     "id": 1,
+     "name": "محافظة دمشق",
+     "count": 48
+    },
+    {
+     "id": 3,
+     "name": "محافظة حلب",
+     "count": 36
+    },
+    {
+     "id": 2,
+     "name": "محافظة ريف دمشق",
+     "count": 29
+    },
+    {
+     "id": 4,
+     "name": "محافظة حمص",
+     "count": 17
+    },
+    {
+     "id": 8,
+     "name": "محافظة إدلب",
+     "count": 15
+    },
+    {
+     "id": 5,
+     "name": "محافظة حماة",
+     "count": 14
+    }
+   ],
+   "last_7_days": [
+    {
+     "date": "2026-10-19",
+     "created": 2,
+     "resolved": 0
+    },
+    {
+     "date": "2026-10-20",
+     "created": 5,
+     "resolved": 2
+    },
+    {
+     "date": "2026-10-21",
+     "created": 0,
+     "resolved": 3
+    },
+    {
+     "date": "2026-10-22",
+     "created": 3,
+     "resolved": 2
+    },
+    {
+     "date": "2026-10-23",
+     "created": 2,
+     "resolved": 1
+    },
+    {
+     "date": "2026-10-24",
+     "created": 0,
+     "resolved": 0
+    },
+    {
+     "date": "2026-10-25",
+     "created": 10,
+     "resolved": 6
+    }
+   ]
+  }
+ }
+}

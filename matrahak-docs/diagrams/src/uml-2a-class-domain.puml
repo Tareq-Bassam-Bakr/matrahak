@@ -1,0 +1,231 @@
+@startuml uml-2a-class-domain
+' مخطط الأصناف (1/2): نموذج المجال — Eloquent Models في app/Models و app/Enums (الأسماء والعلاقات كما في الكود)
+!include _style_uml.iuml
+skinparam class {
+  BackgroundColor #FFFFFF
+  BorderColor #0F6B4A
+  HeaderBackgroundColor #E7F2EC
+  ArrowColor #374151
+  AttributeFontSize 12
+}
+skinparam enum {
+  BackgroundColor #FFF7ED
+  BorderColor #B45309
+}
+hide empty members
+skinparam nodesep 28
+skinparam ranksep 60
+title مخطط الأصناف (1/2) — نموذج المجال (Domain Model)
+
+package "المستخدمون والهيكل الإداري" {
+  class User {
+    +uuid : string
+    +name : string
+    +email : string
+    +phone : string
+    +user_type : UserType
+    +is_active : bool
+    +preferred_lang : ar|en
+    --
+    +isCitizen() : bool
+    +isEmployee() : bool
+    +isManager() : bool
+    +isAdmin() : bool
+    +currentWorkload() : int
+    +fcmToken() : ?string
+    +canAccessPanel(panel) : bool
+  }
+  class Department {
+    +code : string
+    +name : string
+    +avg_resolution_hours : int
+    +is_active : bool
+  }
+  class District {
+    +code : string
+    +name : string
+    +population : int
+    +boundary : GeoJSON
+    +center_lat / center_lng
+    +risk_score : 0..100
+    --
+    +riskLevel() : string
+  }
+  class Category {
+    +slug : string
+    +name / name_en
+    +keywords : string[]
+    +priority_weight : 1..10
+    +sla_hours : int
+    --
+    +basePriority() : ReportPriority
+  }
+}
+
+package "البلاغ ودورة حياته" {
+  class Report {
+    +uuid : string
+    +ticket_number : MTR-YYYY-NNNNNN
+    +title / description
+    +status : ReportStatus
+    +priority : ReportPriority
+    +latitude / longitude
+    +address / location_notes
+    +is_anonymous : bool
+    +expected_resolution : datetime
+    +ai_confidence / ai_summary
+    +ai_is_duplicate : bool
+    +geofence_zone_ids : int[]
+    +qr_code_path
+    --
+    +isOpen() : bool
+    +isResolved() : bool
+    +isOverdue() : bool
+    +assignee() : ?User
+    +trackingUrl() : string
+    +scopeNearby(lat, lng, km)
+    +scopeOverdue()
+    +scopeUnassigned()
+  }
+  class ReportAttachment {
+    +file_type : image|video
+    +stage : before|after
+    +file_path / mime_type / file_size
+    +ai_tags : string[]
+    +ai_severity : 0..10
+  }
+  class ReportUpdate {
+    +type : created|status_change|assignment|note|\ncitizen_response|transfer|ai_update|rating
+    +old_value / new_value
+    +note : string
+    +is_public : bool
+  }
+  class ReportAssignment {
+    +method : auto|manual|claim
+    +is_active : bool
+    +assigned_at / completed_at
+  }
+  class ReportRating {
+    +rating : 1..5
+    +feedback : string
+  }
+  class ReportUpvote
+}
+
+package "الذكاء الاصطناعي والخرائط والمؤشرات" {
+  class AiClassification {
+    +model_version / backend
+    +confidence : 0..1
+    +keywords / alternatives
+    +was_applied : bool
+    +is_accepted : ?bool
+  }
+  class AiPrediction {
+    +prediction_type
+    +predicted_date / window_end
+    +probability / expected_count
+    +was_accurate : ?bool
+  }
+  class AiInsight {
+    +type : trend|anomaly|recommendation|alert
+    +severity : info|warning|critical
+    +fingerprint
+  }
+  class GeofenceZone {
+    +type : alert|monitoring|restricted
+    +boundary : GeoJSON
+    +center + radius_meters
+    +min_priority
+  }
+  class MapLayer {
+    +key / type
+    +config : json
+    +is_public / default_visible
+  }
+  class HeatmapSnapshot {
+    +period_type / period_date
+    +data_points : json
+  }
+  class AnalyticsSnapshot {
+    +snapshot_type / scope
+    +open / resolved / overdue
+    +sla_compliance
+    +citizen_satisfaction
+  }
+  class EmployeeStat {
+    +current_workload
+    +total_resolved
+    +avg_resolution_hours
+    +avg_rating
+  }
+}
+
+enum ReportStatus {
+  Pending
+  UnderReview
+  Assigned
+  InProgress
+  Resolved
+  Closed
+  Rejected
+  --
+  +allowedTransitions() : ReportStatus[]
+  +canTransitionTo(target) : bool
+  +isOpen() : bool
+}
+enum ReportPriority {
+  Low
+  Medium
+  High
+  Critical
+  --
+  +rank() : int
+  +fromWeight(w) : ReportPriority
+  +max(a, b) : ReportPriority
+}
+enum UserType {
+  Citizen
+  Employee
+  Manager
+  Admin
+}
+
+User "0..*" --> "0..1" Department : يعمل في >
+User "0..*" --> "0..1" District : يسكن / يدير >
+Department "0..1" <-- "0..*" Department : parent
+Department "1" <-- "0..*" Category : تتبع >
+Category "0..1" <-- "0..*" Category : parent
+
+User "1" -- "0..*" Report : يرفع (citizen) >
+Report "0..*" --> "0..1" Category
+Report "0..*" --> "0..1" Department
+Report "0..*" --> "0..1" District : تُحدَّد من الإحداثيات >
+Report "0..1" <-- "0..*" Report : duplicate_of
+
+Report "1" *-- "0..*" ReportAttachment
+Report "1" *-- "1..*" ReportUpdate : السجل الزمني
+Report "1" *-- "0..*" ReportAssignment
+Report "1" *-- "0..1" ReportRating
+Report "1" *-- "0..*" ReportUpvote
+Report "1" *-- "0..*" AiClassification
+ReportAssignment "0..*" --> "1" User : employee
+ReportRating "0..*" --> "0..1" User : employee
+ReportUpvote "0..*" --> "1" User
+EmployeeStat "0..1" --> "1" User : employee
+
+AiPrediction "0..*" --> "0..1" District
+AiInsight "0..*" --> "0..1" District
+HeatmapSnapshot "0..*" --> "0..1" MapLayer
+AnalyticsSnapshot "0..*" --> "0..1" District
+Report "0..*" ..> "0..*" GeofenceZone : geofence_zone_ids
+
+Report ..> ReportStatus
+Report ..> ReportPriority
+User ..> UserType
+
+' ترتيب العرض: صفّان للحزمة الثالثة بدل صف واحد طويل
+AiClassification -[hidden]down- AiPrediction
+AiPrediction -[hidden]right- AiInsight
+EmployeeStat -[hidden]down- AnalyticsSnapshot
+GeofenceZone -[hidden]down- MapLayer
+@enduml

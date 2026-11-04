@@ -1,0 +1,78 @@
+{
+ "success": true,
+ "message": "تمت العملية بنجاح",
+ "data": [
+  {
+   "id": "dfeb7dc7-ae3b-47f7-bf00-93715ff17ba3",
+   "type": "assignment",
+   "title": "تم استلام البلاغ",
+   "body": "MTR-2026-000665 — حفرة كبيرة بالطريق الرئيسي — الزهراء (متوسطة)",
+   "data": {
+    "report_uuid": "b04598a3-7bef-4e11-8370-927c1cf1d9df",
+    "ticket_number": "MTR-2026-000665",
+    "status": "assigned"
+   },
+   "read_at": "2026-10-25T04:43:39+03:00",
+   "created_at": "2026-10-25T04:43:38+03:00"
+  },
+  {
+   "id": "0e0e5492-c865-4bba-a7ad-d85e25a38aef",
+   "type": "assignment",
+   "title": "تم استلام البلاغ",
+   "body": "MTR-2026-000702 — تراكم نفايات قرب الحديقة (متوسطة)",
+   "data": {
+    "report_uuid": "dfeece99-1934-4ac8-8f20-433bbddbe021",
+    "ticket_number": "MTR-2026-000702",
+    "status": "assigned"
+   },
+   "read_at": null,
+   "created_at": "2026-10-25T04:43:37+03:00"
+  },
+  {
+   "id": "99719175-8ff3-4fc2-b7ff-61243f4fa6eb",
+   "type": "assignment",
+   "title": "تم استلام البلاغ",
+   "body": "MTR-2026-000701 — حفرة عميقة أمام الفرن الآلي (عالية)",
+   "data": {
+    "report_uuid": "8739c72d-c32a-4736-a627-0529f5fd182b",
+    "ticket_number": "MTR-2026-000701",
+    "status": "assigned"
+   },
+   "read_at": null,
+   "created_at": "2026-10-25T04:42:03+03:00"
+  },
+  {
+   "id": "1b9625b3-2856-401a-89dd-841ee3a25e52",
+   "type": "assignment",
+   "title": "بلاغ جديد مُسند إليك",
+   "body": "MTR-2026-000698 — حفرة كبيرة قرب المدرسة (عالية)",
+   "data": {
+    "report_uuid": "be1ce261-e935-47cd-b175-0e33d0f82fe8",
+    "ticket_number": "MTR-2026-000698",
+    "status": "assigned"
+   },
+   "read_at": null,
+   "created_at": "2026-10-23T23:36:09+03:00"
+  },
+  {
+   "id": "c486f623-c7e2-40a2-be4d-685f685c6ac3",
+   "type": "assignment",
+   "title": "بلاغ جديد مُسند إليك",
+   "body": "MTR-2026-000697 — حفرة كبيرة قرب المدرسة (عالية)",
+   "data": {
+    "report_uuid": "c088091a-1fb4-4866-abf8-488443a23cbf",
+    "ticket_number": "MTR-2026-000697",
+    "status": "assigned"
+   },
+   "read_at": null,
+   "created_at": "2026-10-23T23:06:45+03:00"
+  }
+ ],
+ "meta": {
+  "current_page": 1,
+  "last_page": 1,
+  "per_page": 5,
+  "total": 5,
+  "has_more": false
+ }
+}

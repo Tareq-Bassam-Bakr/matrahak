@@ -1,0 +1,20 @@
+{
+ "key": "employee_status_403",
+ "method": "POST",
+ "path": "/api/v1/employee/reports/32876f15-10d0-48c8-ad6f-5e5ec67163d6/status",
+ "query": null,
+ "body": {
+  "status": "in_progress",
+  "note": "محاولة على بلاغ زميل"
+ },
+ "form": null,
+ "files": null,
+ "auth": true,
+ "status": 403,
+ "note": null,
+ "response": {
+  "success": false,
+  "message": "هذا البلاغ ليس مسنداً إليك — استلمه أولاً",
+  "errors": null
+ }
+}

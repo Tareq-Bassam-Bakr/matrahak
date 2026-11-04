@@ -1,0 +1,96 @@
+@startuml uml-7-component
+' مخطط المكوّنات (Component Diagram): المكوّنات والواجهات بين الأجزاء الأربعة — كما في هيكل المجلدات الفعلي
+!include _style_uml.iuml
+skinparam component {
+  BackgroundColor #FFFFFF
+  BorderColor #0F6B4A
+  BorderThickness 1.3
+}
+skinparam interface {
+  BackgroundColor #E7F2EC
+  BorderColor #0F6B4A
+}
+skinparam nodesep 40
+skinparam ranksep 70
+title مخطط المكوّنات — منصة «مطرحك»
+
+package "تطبيق المواطن — matrahak_citizen" as CitizenPkg {
+  [presentation\n<size:11>الشاشات + Riverpod Notifiers</size>] as CP
+  [domain\n<size:11>الكيانات + عقود المستودعات</size>] as CD
+  [data\n<size:11>Mappers + RepositoryImpl</size>] as CDa
+  [core/network\n<size:11>ApiClient — Dio</size>] as CN
+  [application\n<size:11>OutboxController — Offline</size>] as CO
+  [core/services\n<size:11>Location · Geocoding</size>] as CS
+}
+
+package "تطبيق الموظف — matrahak_employee" as EmpPkg {
+  [presentation\n<size:11>الشاشات + Riverpod</size>] as EP
+  [domain + data] as ED
+  [application\n<size:11>ReportChanges</size>] as EA
+  [core/network\n<size:11>ApiClient — Dio</size>] as EN
+}
+
+package "الخادم — smart-city-api (Laravel 12)" as LaravelPkg {
+  interface "REST API\n/api/v1" as REST
+  [HTTP\n<size:11>Controllers · FormRequests</size>\n<size:11>Resources · Middleware</size>] as HTTP
+  [Filament Admin\n<size:11>Resources · Pages · Widgets</size>] as Filament
+  [Policies + Spatie RBAC\n<size:11>+ ManagerScope</size>] as RBAC
+  [Services\n<size:11>Reports · Ai · Analytics · Geo</size>\n<size:11>Map · Notifications · Exports</size>] as Services
+  [Repositories\n<size:11>ReportRepositoryInterface</size>] as Repo
+  [Events / Listeners] as Events
+  [Jobs + Notifications\n<size:11>database · FcmChannel</size>] as Jobs
+  [Console Commands\n<size:11>المجدول</size>] as Console
+  [Eloquent Models\n<size:11>20 نموذجاً</size>] as Models
+  [AiServiceClient\n<size:11>+ البديل المحلي</size>] as AiClient
+}
+
+package "خدمة الذكاء الاصطناعي — matrahak-ai (FastAPI)" as AiPkg {
+  interface "Internal API\n/v1 · X-Internal-Key" as AIAPI
+  [app/main.py\n<size:11>المسارات + الحماية + schemas</size>] as AiMain
+  [services\n<size:11>classify · duplicates · vision</size>\n<size:11>forecast · risk</size>] as AiSvc
+  [ml\n<size:11>features · train · retrain</size>] as AiMl
+  [text\n<size:11>توحيد النص العربي + الكلمات المفتاحية</size>] as AiText
+}
+
+database "MySQL 8" as DB
+interface "FCM HTTP v1" as FCMI
+interface "OSM tiles / Nominatim" as OSMI
+
+CP --> CD
+CDa ..|> CD
+CDa --> CN
+CO --> CDa
+CP --> CS
+CP --> CO
+EP --> ED
+EP --> EA
+ED --> EN
+
+CN --( REST
+EN --( REST
+CS --( OSMI
+EP --( OSMI
+
+REST -- HTTP
+HTTP --> RBAC
+HTTP --> Services
+Filament --> RBAC
+Filament --> Services
+Services --> Repo
+Services --> Models
+Repo --> Models
+Services --> Events
+Events --> Jobs
+Events --> Services
+Console --> Services
+Services --> AiClient
+Jobs --> Services
+Models --> DB
+Jobs --( FCMI
+
+AiClient --( AIAPI
+AIAPI -- AiMain
+AiMain --> AiSvc
+AiSvc --> AiMl
+AiSvc --> AiText
+@enduml

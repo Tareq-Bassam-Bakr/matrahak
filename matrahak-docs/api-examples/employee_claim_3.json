@@ -1,0 +1,187 @@
+{
+ "key": "employee_claim_3",
+ "method": "POST",
+ "path": "/api/v1/employee/reports/608b2ad5-1bbe-42f6-b75c-89ace5a9d096/claim",
+ "query": null,
+ "body": null,
+ "form": null,
+ "files": null,
+ "auth": true,
+ "status": 200,
+ "note": null,
+ "response": {
+  "success": true,
+  "message": "تم استلام البلاغ",
+  "data": {
+   "id": "608b2ad5-1bbe-42f6-b75c-89ace5a9d096",
+   "ticket_number": "MTR-2026-000720",
+   "title": "عمود كهرباء مائل فوق الرصيف",
+   "description": "عمود الكهرباء مايل وأسلاكه متدلية فوق الرصيف قرب المدرسة",
+   "status": "assigned",
+   "status_ar": "تم الإسناد",
+   "priority": "high",
+   "priority_ar": "عالية",
+   "citizen": {
+    "name": "مواطن التوثيق المعدّل",
+    "phone": "0928803791"
+   },
+   "is_anonymous": false,
+   "category": {
+    "id": 1,
+    "name": "حفر وتلف الطرق",
+    "icon": "construction",
+    "color": "#E4572E"
+   },
+   "department": {
+    "id": 1,
+    "name": "مديرية الخدمات والصيانة"
+   },
+   "district": {
+    "id": 1,
+    "name": "محافظة دمشق"
+   },
+   "location": {
+    "latitude": 33.513,
+    "longitude": 36.284,
+    "address": null,
+    "notes": null
+   },
+   "ai": {
+    "category": "عمود كهربائي خطر",
+    "priority": "high",
+    "confidence": 0.8148,
+    "summary": "عمود كهرباء مائل فوق الرصيف — عمود الكهرباء مايل وأسلاكه متدلية فوق الرصيف قرب المدرسة",
+    "is_duplicate": true,
+    "duplicate_of": {
+     "id": "81652841-09b6-421c-b0b6-cad43f919aa9",
+     "ticket_number": "MTR-2026-000708",
+     "score": 1
+    }
+   },
+   "attachments": [],
+   "after_attachments": [],
+   "updates": [
+    {
+     "id": 4898,
+     "type": "created",
+     "type_ar": "استلام البلاغ",
+     "old_value": null,
+     "new_value": "pending",
+     "old_value_ar": null,
+     "new_value_ar": "في الانتظار",
+     "note": "تم استلام البلاغ — محافظة دمشق",
+     "is_public": true,
+     "by": {
+      "name": "مواطن التوثيق المعدّل",
+      "type": "citizen"
+     },
+     "date": "2026-10-25T19:23:42+03:00"
+    },
+    {
+     "id": 4899,
+     "type": "ai_update",
+     "type_ar": "تحليل آلي",
+     "old_value": null,
+     "new_value": "dangerous-electric-pole",
+     "old_value_ar": null,
+     "new_value_ar": "dangerous-electric-pole",
+     "note": "اقتراح الذكاء الاصطناعي: عمود كهربائي خطر — ثقة 81% (يخالف تصنيف المواطن — للمراجعة) — رُفعت الأولوية إلى عالية",
+     "is_public": false,
+     "by": {
+      "name": "النظام",
+      "type": "system"
+     },
+     "date": "2026-10-25T19:23:42+03:00"
+    },
+    {
+     "id": 4900,
+     "type": "ai_update",
+     "type_ar": "تحليل آلي",
+     "old_value": null,
+     "new_value": "MTR-2026-000708",
+     "old_value_ar": null,
+     "new_value_ar": "MTR-2026-000708",
+     "note": "يُحتمل أن يكون مكرراً للبلاغ MTR-2026-000708 (تشابه 100%) — للمراجعة",
+     "is_public": false,
+     "by": {
+      "name": "النظام",
+      "type": "system"
+     },
+     "date": "2026-10-25T19:23:42+03:00"
+    },
+    {
+     "id": 4908,
+     "type": "assignment",
+     "type_ar": "إسناد",
+     "old_value": null,
+     "new_value": "سامر الخطيب",
+     "old_value_ar": null,
+     "new_value_ar": "سامر الخطيب",
+     "note": "استلم الموظف البلاغ من قائمة القسم",
+     "is_public": false,
+     "by": {
+      "name": "سامر الخطيب",
+      "type": "employee"
+     },
+     "date": "2026-10-25T19:23:46+03:00"
+    },
+    {
+     "id": 4909,
+     "type": "status_change",
+     "type_ar": "تغيير الحالة",
+     "old_value": null,
+     "new_value": "assigned",
+     "old_value_ar": null,
+     "new_value_ar": "تم الإسناد",
+     "note": "تم إسناد بلاغك إلى فريق مديرية الخدمات والصيانة",
+     "is_public": true,
+     "by": {
+      "name": "النظام",
+      "type": "system"
+     },
+     "date": "2026-10-25T19:23:46+03:00"
+    }
+   ],
+   "assignment": {
+    "employee": "سامر الخطيب",
+    "is_me": true,
+    "method": "claim",
+    "method_ar": "استلام ذاتي",
+    "assigned_at": "2026-10-25T19:23:46+03:00"
+   },
+   "rating": null,
+   "permissions": {
+    "can_act": true,
+    "can_claim": false,
+    "allowed_statuses": [
+     {
+      "value": "under_review",
+      "label": "قيد المراجعة"
+     },
+     {
+      "value": "in_progress",
+      "label": "جاري المعالجة"
+     },
+     {
+      "value": "resolved",
+      "label": "تم الحل"
+     },
+     {
+      "value": "rejected",
+      "label": "مرفوض"
+     }
+    ]
+   },
+   "sla": {
+    "expected_resolution": "2026-10-28T19:23:42+03:00",
+    "is_overdue": false
+   },
+   "dates": {
+    "created": "2026-10-25T19:23:42+03:00",
+    "assigned": "2026-10-25T19:23:46+03:00",
+    "started": null,
+    "resolved": null
+   }
+  }
+ }
+}

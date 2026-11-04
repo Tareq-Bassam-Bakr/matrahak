@@ -1,0 +1,141 @@
+{
+ "key": "citizen_report_show_other",
+ "method": "GET",
+ "path": "/api/v1/citizen/reports/be1ce261-e935-47cd-b175-0e33d0f82fe8",
+ "query": null,
+ "body": null,
+ "form": null,
+ "files": null,
+ "auth": true,
+ "status": 200,
+ "note": "بلاغ مواطن آخر: اسم صاحبه فقط (إلا إن اختار إخفاءه)، دون جواله وبريده وردود الجهة عليه، ومع can_upvote",
+ "response": {
+  "success": true,
+  "message": "تمت العملية بنجاح",
+  "data": {
+   "id": "be1ce261-e935-47cd-b175-0e33d0f82fe8",
+   "ticket_number": "MTR-2026-000698",
+   "title": "حفرة كبيرة قرب المدرسة",
+   "description": "في جورة كبيرة بنص الطريق عم تسبب حوادث للسيارات — فحص آلي من tool/api_check.dart",
+   "status": "assigned",
+   "status_ar": "تم الإسناد",
+   "priority": "high",
+   "priority_ar": "عالية",
+   "is_open": true,
+   "is_anonymous": false,
+   "citizen": {
+    "name": "مواطن معدّل 768522",
+    "is_me": false
+   },
+   "category": {
+    "id": 1,
+    "name": "حفر وتلف الطرق",
+    "slug": "road-damage",
+    "icon": "construction",
+    "color": "#E4572E"
+   },
+   "department": {
+    "id": 1,
+    "name": "مديرية الخدمات والصيانة"
+   },
+   "district": {
+    "id": 1,
+    "name": "محافظة دمشق"
+   },
+   "location": {
+    "latitude": 33.5148,
+    "longitude": 36.2775,
+    "address": null,
+    "notes": "قرب المدرسة"
+   },
+   "attachments": [
+    {
+     "id": 3,
+     "type": "image",
+     "stage": "before",
+     "url": "http://127.0.0.1:8000/storage/reports/be1ce261-e935-47cd-b175-0e33d0f82fe8/ddOpyCtJ9wnLv3Twt0dg9CDX5kdaab3gctvMlpAp.png",
+     "thumbnail": null,
+     "name": "photo.png",
+     "size": "0.1 KB",
+     "mime": "image/png",
+     "ai_tags": null
+    }
+   ],
+   "after_attachments": [],
+   "updates": [
+    {
+     "id": 4762,
+     "type": "created",
+     "type_ar": "استلام البلاغ",
+     "old_value": null,
+     "new_value": "pending",
+     "old_value_ar": null,
+     "new_value_ar": "في الانتظار",
+     "note": "تم استلام البلاغ — محافظة دمشق",
+     "is_public": true,
+     "by": {
+      "name": "مواطن معدّل 768522",
+      "type": "citizen"
+     },
+     "date": "2026-10-23T23:36:09+03:00"
+    },
+    {
+     "id": 4764,
+     "type": "status_change",
+     "type_ar": "تغيير الحالة",
+     "old_value": null,
+     "new_value": "pending",
+     "old_value_ar": null,
+     "new_value_ar": "في الانتظار",
+     "note": "تم توجيه بلاغك تلقائياً إلى مديرية الخدمات والصيانة",
+     "is_public": true,
+     "by": {
+      "name": "النظام",
+      "type": "system"
+     },
+     "date": "2026-10-23T23:36:09+03:00"
+    },
+    {
+     "id": 4766,
+     "type": "status_change",
+     "type_ar": "تغيير الحالة",
+     "old_value": null,
+     "new_value": "assigned",
+     "old_value_ar": null,
+     "new_value_ar": "تم الإسناد",
+     "note": "تم إسناد بلاغك إلى فريق مديرية الخدمات والصيانة",
+     "is_public": true,
+     "by": {
+      "name": "النظام",
+      "type": "system"
+     },
+     "date": "2026-10-23T23:36:09+03:00"
+    }
+   ],
+   "rating": null,
+   "ai_summary": "حفرة كبيرة قرب المدرسة — في جورة كبيرة بنص الطريق عم تسبب حوادث للسيارات — فحص آلي من tool/api_check",
+   "stats": {
+    "views": 1,
+    "upvotes": 0
+   },
+   "has_upvoted": false,
+   "is_owner": false,
+   "can_delete": false,
+   "can_rate": false,
+   "can_upvote": true,
+   "sla": {
+    "expected_resolution": "2026-10-26T23:36:09+03:00",
+    "is_overdue": false
+   },
+   "dates": {
+    "created": "2026-10-23T23:36:09+03:00",
+    "assigned": "2026-10-23T23:36:09+03:00",
+    "started": null,
+    "resolved": null,
+    "closed": null
+   },
+   "qr_code": "http://127.0.0.1:8000/storage/qrcodes/be1ce261-e935-47cd-b175-0e33d0f82fe8.svg",
+   "tracking_url": "http://127.0.0.1:8000/track/be1ce261-e935-47cd-b175-0e33d0f82fe8"
+  }
+ }
+}

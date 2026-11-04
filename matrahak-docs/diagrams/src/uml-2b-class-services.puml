@@ -1,0 +1,151 @@
+@startuml uml-2b-class-services
+' مخطط الأصناف (2/3): طبقة الخدمات (Service Layer) ونمط المستودع (Repository) في Laravel — كما في app/Http و app/Services و app/Repositories
+!include _style_uml.iuml
+skinparam class {
+  BackgroundColor #FFFFFF
+  BorderColor #0F6B4A
+  HeaderBackgroundColor #E7F2EC
+  AttributeFontSize 12
+}
+skinparam interface {
+  BackgroundColor #EFF6FF
+  BorderColor #1D4ED8
+}
+hide empty members
+skinparam nodesep 35
+skinparam ranksep 70
+title مخطط الأصناف (2/3) — طبقة الخدمات ونمط المستودع
+
+package "HTTP — app/Http" {
+  class "Citizen\\ReportController" as CRC {
+    +index() / show(uuid) / stats()
+    +store(StoreReportRequest)
+    +rate(uuid) / upvote(uuid) / destroy(uuid)
+  }
+  class "Employee\\ReportController" as ERC {
+    +assigned() / pool() / history()
+    +claim(uuid) / changeStatus(uuid)
+    +addNote(uuid) / reply(uuid)
+    +transfer(uuid) / uploadAttachments(uuid)
+  }
+  class StoreReportRequest <<FormRequest>> {
+    title 5..255 · description 10..5000
+    lat/lng · attachments ≤ 5 × 20MB
+  }
+  class ChangeStatusRequest <<FormRequest>> {
+    status ∈ employeeSelectable
+    note 5..1000
+  }
+  class ReportResource <<JsonResource>>
+}
+
+package "الخدمات — app/Services/Reports" {
+  class ReportSubmissionService {
+    +submit(citizen, data, files) : Report
+  }
+  class ReportWorkflowService {
+    +changeStatus(report, to, actor, note) : Report
+    +addNote(report, actor, note, isPublic)
+    +reply(report, actor, message)
+    +transfer(report, actor, department, reason)
+    +reclassify(report, actor, category, priority)
+    +acceptAiSuggestion(report, actor)
+    +closeAsDuplicate(report, actor)
+    +rate(report, citizen, rating, feedback)
+    +autoCloseResolved(days) : int
+  }
+  class AssignmentService {
+    +autoAssign(report) : ?ReportAssignment
+    +pickEmployee(departmentId, districtId) : ?User
+    +assign(report, employee, actor, method)
+    +claim(report, employee)
+    +assignPending() : int
+  }
+  class SlaCalculator {
+    +deadline(from, category, department)
+  }
+  class AttachmentService {
+    +storeMany(report, user, files, stage)
+  }
+  class QrCodeService {
+    +generate(report) : path
+  }
+}
+
+package "الجغرافيا — app/Services/Geo" {
+  class DistrictLocator {
+    +locate(lat, lng) : ?District
+  }
+  class GeofenceService {
+    +zonesContaining(lat, lng)
+  }
+}
+
+package "الذكاء الاصطناعي — app/Services/Ai" {
+  class ReportAiProcessor {
+    +process(report, force)
+    +classify(report, categories)
+    +detectDuplicates(report)
+    +analyzeImages(report)
+  }
+  class AiServiceClient {
+    +classify() / duplicates() / analyzeImage()
+    +predict() / insights() / risk()
+    +train() / health()
+  }
+  class LocalKeywordClassifier <<fallback>> {
+    +classify(title, text, categories)
+    +detectPriority(normalizedText)
+  }
+}
+
+package "المستودعات — app/Repositories" {
+  interface ReportRepositoryInterface {
+    +forCitizen(citizen, filters, perPage)
+    +citizenStats(citizen) : array
+    +findVisibleByUuid(uuid) : ?Report
+    +nearby(lat, lng, km, filters, limit)
+    +assignedTo(employee, filters, perPage)
+    +departmentPool(employee, perPage)
+    +historyFor(employee, filters, perPage)
+    +findForEmployee(uuid, employee) : ?Report
+    +departmentOpenPoints(departmentId)
+    +duplicateCandidates(report, radius, days)
+  }
+  class "Eloquent\\ReportRepository" as RR
+}
+
+CRC ..> StoreReportRequest : validates
+CRC ..> ReportResource : returns
+CRC --> ReportSubmissionService
+CRC --> ReportWorkflowService : rate()
+CRC --> ReportRepositoryInterface
+ERC ..> ChangeStatusRequest : validates
+ERC --> ReportWorkflowService
+ERC --> AssignmentService : claim()
+ERC --> ReportRepositoryInterface
+
+ReportSubmissionService --> DistrictLocator
+ReportSubmissionService --> GeofenceService
+ReportSubmissionService --> SlaCalculator
+ReportSubmissionService --> AttachmentService
+ReportSubmissionService --> QrCodeService
+ReportSubmissionService --> AssignmentService
+ReportWorkflowService --> AssignmentService
+ReportWorkflowService --> SlaCalculator
+
+ReportRepositoryInterface <|.. RR : AppServiceProvider::bind
+ReportAiProcessor --> ReportRepositoryInterface
+ReportAiProcessor --> AiServiceClient : HTTP + X-Internal-Key
+ReportAiProcessor --> LocalKeywordClassifier : إن توقفت الخدمة
+ReportAiProcessor --> AssignmentService
+ReportAiProcessor --> SlaCalculator
+
+note bottom of RR
+  كل منطق الأعمال في الخدمات.
+  الـ Controller يتحقق من الطلب عبر FormRequest،
+  ثم يستدعي خدمة، ثم يعيد Resource بالغلاف الموحّد:
+  <b>{ success, message, data, meta }</b>
+  ولوحة الإدارة Filament تستدعي الخدمات نفسها.
+end note
+@enduml

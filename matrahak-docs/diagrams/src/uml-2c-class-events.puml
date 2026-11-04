@@ -1,0 +1,127 @@
+@startuml uml-2c-class-events
+' مخطط الأصناف (3/3): الأحداث والمستمعون والمهام (Observer / Event-Driven) — app/Events و app/Listeners و app/Jobs
+!include _style_uml.iuml
+skinparam class {
+  BackgroundColor #FFFFFF
+  BorderColor #0F6B4A
+  HeaderBackgroundColor #E7F2EC
+  AttributeFontSize 12
+}
+hide empty members
+left to right direction
+skinparam nodesep 18
+skinparam ranksep 90
+title مخطط الأصناف (3/3) — الأحداث والمستمعون والمهام
+
+package "من يُطلق الأحداث" {
+  class ReportSubmissionService
+  class AssignmentService
+  class ReportWorkflowService
+  class ReportAiProcessor
+  class "reports:check-overdue" as Overdue <<command>>
+}
+
+package "الأحداث — app/Events (ShouldDispatchAfterCommit)" {
+  class ReportSubmitted <<event>> {
+    +report · zones
+  }
+  class ReportAssigned <<event>> {
+    +report · employee · method · previousEmployeeId
+  }
+  class ReportStatusChanged <<event>> {
+    +report · from · to · note
+  }
+  class ReportTransferred <<event>> {
+    +report · from · to · releasedEmployeeId
+  }
+  class ReportCommented <<event>> {
+    +report · update
+    +isReplyToCitizen() : bool
+  }
+  class ReportRated <<event>> {
+    +report · rating
+  }
+  class ReportPriorityEscalated <<event>> {
+    +report · from · to
+  }
+  class ReportOverdue <<event>> {
+    +report
+  }
+  class ReportUnassignable <<event>> {
+    +report
+  }
+}
+
+package "المستمعون — app/Listeners" {
+  class SendReportNotifications <<listener>> {
+    +handleSubmitted() · handleAssigned()
+    +handleStatusChanged() · handleTransferred()
+    +handleCommented() · handleRated()
+    +handlePriorityEscalated()
+    +handleOverdue() · handleUnassignable()
+  }
+  class RefreshEmployeeStats <<listener>> {
+    +handleAssigned() · handleStatusChanged()
+    +handleTransferred() · handleRated()
+  }
+  class AnalyzeReportWithAi <<listener>> {
+    +handle(ReportSubmitted)
+  }
+}
+
+package "التنفيذ" {
+  class ReportNotifier {
+    مواطن · موظف · إدارة ضمن نطاق المحافظة
+  }
+  class EmployeeStatsService
+  class ProcessReportWithAi <<ShouldQueue>> {
+    tries = 2
+  }
+  class ReportEventNotification <<Notification>> {
+    via: database + FcmChannel
+  }
+  class SendFcmMessage <<ShouldQueue>>
+}
+
+ReportSubmissionService ..> ReportSubmitted
+AssignmentService ..> ReportAssigned
+AssignmentService ..> ReportStatusChanged
+AssignmentService ..> ReportUnassignable
+ReportWorkflowService ..> ReportStatusChanged
+ReportWorkflowService ..> ReportTransferred
+ReportWorkflowService ..> ReportCommented
+ReportWorkflowService ..> ReportRated
+ReportAiProcessor ..> ReportPriorityEscalated
+Overdue ..> ReportOverdue
+
+ReportSubmitted --> SendReportNotifications
+ReportAssigned --> SendReportNotifications
+ReportStatusChanged --> SendReportNotifications
+ReportTransferred --> SendReportNotifications
+ReportCommented --> SendReportNotifications
+ReportRated --> SendReportNotifications
+ReportPriorityEscalated --> SendReportNotifications
+ReportOverdue --> SendReportNotifications
+ReportUnassignable --> SendReportNotifications
+
+ReportAssigned --> RefreshEmployeeStats
+ReportStatusChanged --> RefreshEmployeeStats
+ReportTransferred --> RefreshEmployeeStats
+ReportRated --> RefreshEmployeeStats
+
+ReportSubmitted --> AnalyzeReportWithAi
+
+SendReportNotifications --> ReportNotifier
+ReportNotifier ..> ReportEventNotification : notify()
+ReportEventNotification ..> SendFcmMessage : إن ضُبط Firebase
+RefreshEmployeeStats --> EmployeeStatsService
+AnalyzeReportWithAi ..> ProcessReportWithAi : afterResponse أو الطابور
+ProcessReportWithAi ..> ReportAiProcessor : process()
+
+legend right
+  خط متقطع: إطلاق الحدث — dispatch
+  خط متصل من الحدث إلى المستمع: استماع
+  الربط تلقائي — Event Discovery
+  لعرضه: php artisan event:list
+endlegend
+@enduml

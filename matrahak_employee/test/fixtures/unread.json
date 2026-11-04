@@ -1,0 +1,20 @@
+{
+ "success": true,
+ "message": "تمت العملية بنجاح",
+ "data": {
+  "count": 4,
+  "latest": {
+   "id": "0e0e5492-c865-4bba-a7ad-d85e25a38aef",
+   "type": "assignment",
+   "title": "تم استلام البلاغ",
+   "body": "MTR-2026-000702 — تراكم نفايات قرب الحديقة (متوسطة)",
+   "data": {
+    "report_uuid": "dfeece99-1934-4ac8-8f20-433bbddbe021",
+    "ticket_number": "MTR-2026-000702",
+    "status": "assigned"
+   },
+   "read_at": null,
+   "created_at": "2026-10-25T04:43:37+03:00"
+  }
+ }
+}

@@ -1,0 +1,222 @@
+{
+ "key": "citizen_report_show_final",
+ "method": "GET",
+ "path": "/api/v1/citizen/reports/7bcdeae9-e2ad-4c79-a33b-ebc67a582a25",
+ "query": null,
+ "body": null,
+ "form": null,
+ "files": null,
+ "auth": true,
+ "status": 200,
+ "note": "بعد الحل والتقييم: الصور قبل/بعد والسجل العام",
+ "response": {
+  "success": true,
+  "message": "تمت العملية بنجاح",
+  "data": {
+   "id": "7bcdeae9-e2ad-4c79-a33b-ebc67a582a25",
+   "ticket_number": "MTR-2026-000719",
+   "title": "حفرة عميقة قرب دوار المدينة",
+   "description": "في حفرة عميقة عم تخرّب دواليب السيارات وخطيرة بالليل",
+   "status": "closed",
+   "status_ar": "مغلق",
+   "priority": "high",
+   "priority_ar": "عالية",
+   "is_open": false,
+   "is_anonymous": false,
+   "citizen": {
+    "name": "مواطن التوثيق المعدّل",
+    "is_me": true
+   },
+   "category": {
+    "id": 1,
+    "name": "حفر وتلف الطرق",
+    "slug": "road-damage",
+    "icon": "construction",
+    "color": "#E4572E"
+   },
+   "department": {
+    "id": 1,
+    "name": "مديرية الخدمات والصيانة"
+   },
+   "district": {
+    "id": 1,
+    "name": "محافظة دمشق"
+   },
+   "location": {
+    "latitude": 33.511,
+    "longitude": 36.286,
+    "address": null,
+    "notes": null
+   },
+   "attachments": [
+    {
+     "id": 29,
+     "type": "image",
+     "stage": "before",
+     "url": "http://127.0.0.1:8000/storage/reports/7bcdeae9-e2ad-4c79-a33b-ebc67a582a25/oiVI9JttkADul2QJKEBKB2TECuD88xR4TgoVhjU7.png",
+     "thumbnail": null,
+     "name": "pothole.png",
+     "size": "0.1 KB",
+     "mime": "image/png",
+     "ai_tags": [
+      "تعذّرت قراءة الصورة"
+     ]
+    }
+   ],
+   "after_attachments": [
+    {
+     "id": 30,
+     "type": "image",
+     "stage": "after",
+     "url": "http://127.0.0.1:8000/storage/reports/7bcdeae9-e2ad-4c79-a33b-ebc67a582a25/f9lqtYp4zX2cJawb3YKU1XBe4TwsBQfww5SsurdD.png",
+     "thumbnail": null,
+     "name": "after.png",
+     "size": "0.1 KB",
+     "mime": "image/png",
+     "ai_tags": null
+    }
+   ],
+   "updates": [
+    {
+     "id": 4895,
+     "type": "created",
+     "type_ar": "استلام البلاغ",
+     "old_value": null,
+     "new_value": "pending",
+     "old_value_ar": null,
+     "new_value_ar": "في الانتظار",
+     "note": "تم استلام البلاغ — محافظة دمشق",
+     "is_public": true,
+     "by": {
+      "name": "مواطن التوثيق المعدّل",
+      "type": "citizen"
+     },
+     "date": "2026-10-25T19:23:41+03:00"
+    },
+    {
+     "id": 4902,
+     "type": "status_change",
+     "type_ar": "تغيير الحالة",
+     "old_value": null,
+     "new_value": "assigned",
+     "old_value_ar": null,
+     "new_value_ar": "تم الإسناد",
+     "note": "تم إسناد بلاغك إلى فريق مديرية الخدمات والصيانة",
+     "is_public": true,
+     "by": {
+      "name": "النظام",
+      "type": "system"
+     },
+     "date": "2026-10-25T19:23:45+03:00"
+    },
+    {
+     "id": 4903,
+     "type": "status_change",
+     "type_ar": "تغيير الحالة",
+     "old_value": "assigned",
+     "new_value": "in_progress",
+     "old_value_ar": "تم الإسناد",
+     "new_value_ar": "جاري المعالجة",
+     "note": "الفريق في الموقع وبدأ العمل",
+     "is_public": true,
+     "by": {
+      "name": "سامر الخطيب",
+      "type": "employee"
+     },
+     "date": "2026-10-25T19:23:45+03:00"
+    },
+    {
+     "id": 4905,
+     "type": "citizen_response",
+     "type_ar": "رد على المواطن",
+     "old_value": null,
+     "new_value": null,
+     "old_value_ar": null,
+     "new_value_ar": null,
+     "note": "شكراً لبلاغك، الفريق في الموقع الآن.",
+     "is_public": true,
+     "by": {
+      "name": "سامر الخطيب",
+      "type": "employee"
+     },
+     "date": "2026-10-25T19:23:45+03:00"
+    },
+    {
+     "id": 4906,
+     "type": "attachment",
+     "type_ar": "مرفقات جديدة",
+     "old_value": null,
+     "new_value": "1",
+     "old_value_ar": null,
+     "new_value_ar": "1",
+     "note": "بعد ردم الحفرة وتزفيت الطريق",
+     "is_public": true,
+     "by": {
+      "name": "سامر الخطيب",
+      "type": "employee"
+     },
+     "date": "2026-10-25T19:23:45+03:00"
+    },
+    {
+     "id": 4907,
+     "type": "status_change",
+     "type_ar": "تغيير الحالة",
+     "old_value": "in_progress",
+     "new_value": "resolved",
+     "old_value_ar": "جاري المعالجة",
+     "new_value_ar": "تم الحل",
+     "note": "تم الإصلاح والتأكد من سلامة الموقع",
+     "is_public": true,
+     "by": {
+      "name": "سامر الخطيب",
+      "type": "employee"
+     },
+     "date": "2026-10-25T19:23:45+03:00"
+    },
+    {
+     "id": 4913,
+     "type": "rating",
+     "type_ar": "تقييم المواطن",
+     "old_value": null,
+     "new_value": "5",
+     "old_value_ar": null,
+     "new_value_ar": "5",
+     "note": "شكراً على سرعة الاستجابة",
+     "is_public": true,
+     "by": {
+      "name": "مواطن التوثيق المعدّل",
+      "type": "citizen"
+     },
+     "date": "2026-10-25T19:23:46+03:00"
+    }
+   ],
+   "rating": {
+    "score": 5,
+    "feedback": "شكراً على سرعة الاستجابة"
+   },
+   "ai_summary": "حفرة عميقة قرب دوار المدينة — في حفرة عميقة عم تخرّب دواليب السيارات وخطيرة بالليل",
+   "stats": {
+    "views": 0,
+    "upvotes": 0
+   },
+   "has_upvoted": false,
+   "is_owner": true,
+   "can_delete": false,
+   "can_rate": false,
+   "can_upvote": false,
+   "sla": {
+    "expected_resolution": "2026-10-28T19:23:41+03:00",
+    "is_overdue": false
+   },
+   "dates": {
+    "created": "2026-10-25T19:23:41+03:00",
+    "assigned": "2026-10-25T19:23:45+03:00",
+    "started": "2026-10-25T19:23:45+03:00",
+    "resolved": "2026-10-25T19:23:45+03:00",
+    "closed": "2026-10-25T19:23:46+03:00"
+   },
+   "qr_code": "http://127.0.0.1:8000/storage/qrcodes/7bcdeae9-e2ad-4c79-a33b-ebc67a582a25.svg",
+   "tracking_url": "http://127.0.0.1:8000/track/7bcdeae9-e2ad-4c79-a33b-ebc67a582a25"
+  }
+ }
+}

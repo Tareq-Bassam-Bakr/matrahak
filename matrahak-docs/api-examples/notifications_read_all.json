@@ -1,0 +1,17 @@
+{
+ "key": "notifications_read_all",
+ "method": "POST",
+ "path": "/api/v1/notifications/read-all",
+ "query": null,
+ "body": null,
+ "form": null,
+ "files": null,
+ "auth": true,
+ "status": 200,
+ "note": null,
+ "response": {
+  "success": true,
+  "message": "تم تعليم كل الإشعارات كمقروءة",
+  "data": null
+ }
+}

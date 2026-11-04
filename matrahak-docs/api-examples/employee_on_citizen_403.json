@@ -1,0 +1,16 @@
+{
+ "key": "employee_on_citizen_403",
+ "method": "GET",
+ "path": "/api/v1/employee/reports/assigned",
+ "query": null,
+ "body": null,
+ "form": null,
+ "files": null,
+ "auth": true,
+ "status": 403,
+ "note": "Token مواطن على مسار موظف",
+ "response": {
+  "success": false,
+  "message": "هذا الحساب غير مصرح له باستخدام تطبيق الموظف"
+ }
+}

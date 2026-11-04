@@ -1,0 +1,32 @@
+{
+ "key": "notifications_unread",
+ "method": "GET",
+ "path": "/api/v1/notifications/unread-count",
+ "query": null,
+ "body": null,
+ "form": null,
+ "files": null,
+ "auth": true,
+ "status": 200,
+ "note": null,
+ "response": {
+  "success": true,
+  "message": "تمت العملية بنجاح",
+  "data": {
+   "count": 7,
+   "latest": {
+    "id": "51694ce2-67e0-42c0-9df6-9ce30e071aad",
+    "type": "transfer",
+    "title": "تحويل البلاغ MTR-2026-000720",
+    "body": "تم تحويل بلاغك إلى مديرية الكهرباء",
+    "data": {
+     "report_uuid": "608b2ad5-1bbe-42f6-b75c-89ace5a9d096",
+     "ticket_number": "MTR-2026-000720",
+     "status": "under_review"
+    },
+    "read_at": null,
+    "created_at": "2026-10-25T19:23:46+03:00"
+   }
+  }
+ }
+}

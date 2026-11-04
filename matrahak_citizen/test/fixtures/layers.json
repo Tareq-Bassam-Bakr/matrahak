@@ -1,0 +1,43 @@
+{
+ "success": true,
+ "message": "تمت العملية بنجاح",
+ "data": [
+  {
+   "id": "a9178b6d-a5f5-4783-9c56-ce639d27291b",
+   "key": "reports",
+   "name": "البلاغات",
+   "type": "cluster",
+   "default_visible": true,
+   "config": {
+    "color_by": "priority"
+   }
+  },
+  {
+   "id": "280ac19f-8468-47f1-8820-dccf4fdab456",
+   "key": "heatmap",
+   "name": "الكثافة الحرارية",
+   "type": "heatmap",
+   "default_visible": false,
+   "config": {
+    "blur": 18,
+    "days": 30,
+    "radius": 25
+   }
+  },
+  {
+   "id": "632f134e-b302-4713-9cae-0cdeca4231e1",
+   "key": "districts",
+   "name": "المحافظات ومؤشر الخطورة",
+   "type": "district",
+   "default_visible": true,
+   "config": {
+    "colors": {
+     "low": "#22c55e",
+     "high": "#f97316",
+     "medium": "#eab308",
+     "critical": "#dc2626"
+    }
+   }
+  }
+ ]
+}

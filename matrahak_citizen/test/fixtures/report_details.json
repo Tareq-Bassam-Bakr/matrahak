@@ -1,0 +1,133 @@
+{
+ "success": true,
+ "message": "تمت العملية بنجاح",
+ "data": {
+  "id": "93309ee9-bd46-4a35-a8bc-0212afc1befe",
+  "ticket_number": "MTR-2026-000696",
+  "title": "المي مقطوعة عنا",
+  "description": "صرلنا تلت ايام بلا مي بالحارة وما حدا عم يرد",
+  "status": "resolved",
+  "status_ar": "تم الحل",
+  "priority": "medium",
+  "priority_ar": "متوسطة",
+  "is_open": false,
+  "is_anonymous": false,
+  "citizen": {
+   "name": "أحمد المواطن",
+   "is_me": true
+  },
+  "category": {
+   "id": 10,
+   "name": "انقطاع مياه الشرب",
+   "slug": "drinking-water-outage",
+   "icon": "format_color_reset",
+   "color": "#0284C7"
+  },
+  "department": {
+   "id": 3,
+   "name": "مديرية المياه والصرف الصحي"
+  },
+  "district": {
+   "id": 1,
+   "name": "محافظة دمشق"
+  },
+  "location": {
+   "latitude": 33.5151,
+   "longitude": 36.2792,
+   "address": "دمشق",
+   "notes": null
+  },
+  "attachments": [],
+  "after_attachments": [],
+  "updates": [
+   {
+    "id": 4748,
+    "type": "created",
+    "type_ar": "استلام البلاغ",
+    "old_value": null,
+    "new_value": "pending",
+    "old_value_ar": null,
+    "new_value_ar": "في الانتظار",
+    "note": "تم استلام البلاغ — محافظة دمشق",
+    "is_public": true,
+    "by": {
+     "name": "أحمد المواطن",
+     "type": "citizen"
+    },
+    "date": "2026-10-23T04:19:21+03:00"
+   },
+   {
+    "id": 4750,
+    "type": "status_change",
+    "type_ar": "تغيير الحالة",
+    "old_value": null,
+    "new_value": "pending",
+    "old_value_ar": null,
+    "new_value_ar": "في الانتظار",
+    "note": "تم توجيه بلاغك تلقائياً إلى مديرية المياه والصرف الصحي",
+    "is_public": true,
+    "by": {
+     "name": "النظام",
+     "type": "system"
+    },
+    "date": "2026-10-23T04:19:21+03:00"
+   },
+   {
+    "id": 4752,
+    "type": "status_change",
+    "type_ar": "تغيير الحالة",
+    "old_value": null,
+    "new_value": "assigned",
+    "old_value_ar": null,
+    "new_value_ar": "تم الإسناد",
+    "note": "تم إسناد بلاغك إلى فريق مديرية المياه والصرف الصحي",
+    "is_public": true,
+    "by": {
+     "name": "النظام",
+     "type": "system"
+    },
+    "date": "2026-10-23T04:19:21+03:00"
+   },
+   {
+    "id": 4756,
+    "type": "status_change",
+    "type_ar": "تغيير الحالة",
+    "old_value": "assigned",
+    "new_value": "resolved",
+    "old_value_ar": "تم الإسناد",
+    "new_value_ar": "تم الحل",
+    "note": "تمت المعالجة",
+    "is_public": true,
+    "by": {
+     "name": "خالد الشامي",
+     "type": "employee"
+    },
+    "date": "2026-10-23T04:21:13+03:00"
+   }
+  ],
+  "rating": null,
+  "ai_summary": "المي مقطوعة عنا — صرلنا تلت ايام بلا مي بالحارة وما حدا عم يرد",
+  "stats": {
+   "views": 0,
+   "upvotes": 0
+  },
+  "has_upvoted": false,
+  "is_owner": true,
+  "can_delete": false,
+  "can_rate": true,
+  "can_upvote": false,
+  "sla": {
+   "expected_resolution": "2026-10-24T04:19:21+03:00",
+   "is_overdue": false
+  },
+  "dates": {
+   "created": "2026-10-23T04:19:21+03:00",
+   "assigned": "2026-10-23T04:19:21+03:00",
+   "started": null,
+   "resolved": "2026-10-23T04:21:13+03:00",
+   "closed": null
+  },
+  "qr_code": "http://127.0.0.1:8000/storage/qrcodes/93309ee9-bd46-4a35-a8bc-0212afc1befe.svg",
+  "tracking_url": "http://127.0.0.1:8000/track/93309ee9-bd46-4a35-a8bc-0212afc1befe"
+ }
+}

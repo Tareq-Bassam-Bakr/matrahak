@@ -1,0 +1,84 @@
+@startuml uml-4b-sequence-status
+' مخطط التسلسل (2/2): الموظف يحدّث حالة البلاغ ثم يُشعَر المواطن — يطابق Employee\ReportController@changeStatus و ReportWorkflowService والمستمعين
+!include _style_uml.iuml
+skinparam sequence {
+  ParticipantBorderColor #0F6B4A
+  ParticipantBackgroundColor #E7F2EC
+  ActorBorderColor #0F6B4A
+  ActorBackgroundColor #E7F2EC
+  LifeLineBorderColor #9CA3AF
+  GroupBorderColor #9CA3AF
+  GroupBackgroundColor #F9FAFB
+  BoxBorderColor #9CA3AF
+}
+skinparam maxMessageSize 260
+autonumber "<b>0."
+title مخطط التسلسل (2/2) — تحديث حالة البلاغ وإشعار المواطن
+
+actor "الموظف" as E
+box "تطبيق مطرحك ميدان" #FFF1F2
+  participant "ReportDetailsScreen\n+ StatusSheet" as EA
+end box
+box "Laravel 12" #EFF6FF
+  participant "ReportController\n(Employee)" as C
+  participant "ReportWorkflow\nService" as W
+  database "MySQL 8" as DB
+  participant "Event Dispatcher" as EV
+  participant "SendReport\nNotifications" as N
+  participant "RefreshEmployee\nStats" as ST
+  participant "FcmChannel\n(اختياري)" as F
+end box
+box "تطبيق مطرحك" #F0FDF4
+  participant "NotificationsController\n(كل 45 ثانية)" as CA
+end box
+actor "المواطن" as U
+
+E -> EA : يختار «تم الحل» + ملاحظة\n(وصور بعد المعالجة اختيارياً)
+opt صور بعد المعالجة
+  EA -> C : POST /employee/reports/{uuid}/attachments
+  C --> EA : 201
+end
+EA -> C : POST /api/v1/employee/reports/{uuid}/status\n{ status: "resolved", note }
+activate C
+C -> C : ChangeStatusRequest\n(الحالة ضمن employeeSelectable، الملاحظة 5..1000)
+C -> C : findActionable(): البلاغ في مديريته\nومُسند إليه، وما زال مفتوحاً
+alt ليس مسنداً إليه
+  C --> EA : 403 «هذا البلاغ ليس مسنداً إليك — استلمه أولاً»
+else مسموح
+  C -> W : changeStatus(report, Resolved, employee, note)
+  activate W
+  W -> W : canTransitionTo(): آلة الحالات
+  alt انتقال غير مسموح
+    W --> C : ValidationException
+    C --> EA : 422 «لا يمكن نقل البلاغ من … إلى …»
+  else انتقال مسموح
+    W -> DB : BEGIN · UPDATE reports (status, resolved_at)\nINSERT report_updates (status_change, is_public)\nUPDATE report_assignments (completed_at) · COMMIT
+    W -> EV : ReportStatusChanged(report, InProgress, Resolved, note)
+    activate EV
+    EV -> ST : handleStatusChanged()
+    ST -> DB : إعادة حساب employee_stats من الجداول
+    EV -> N : handleStatusChanged()
+    N -> DB : INSERT notifications (database)\n«تمت معالجة بلاغك — نرجو تقييم الخدمة»
+    opt Firebase مضبوط وللمواطن FCM Token
+      N -> F : SendFcmMessage (بعد الرد أو في الطابور)
+      F -->> U : Push
+    end
+    deactivate EV
+    W --> C : Report
+    deactivate W
+    C --> EA : 200 { data: EmployeeReportResource }
+  end
+end
+deactivate C
+EA --> E : تحديث الشاشة والقائمة (ReportChanges)
+
+loop كل 45 ثانية وعند العودة للتطبيق
+  CA -> C : GET /api/v1/notifications/unread-count
+  C --> CA : { count }
+end
+CA -> C : GET /api/v1/notifications
+C --> CA : الإشعار الجديد + report_uuid
+CA --> U : رسالة «تمت معالجة بلاغك» مع زر «عرض»
+U -> CA : تقييم 1..5 (POST /citizen/reports/{uuid}/rate)
+note right of U : التقييم يغلق البلاغ ويُطلق ReportRated\n(إشعار الموظف + تحديث متوسط تقييمه)
+@enduml

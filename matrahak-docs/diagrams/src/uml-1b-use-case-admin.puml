@@ -1,0 +1,72 @@
+@startuml uml-1b-use-case-admin
+' مخطط حالات الاستخدام (2/2): إدارة المدينة وإدارة النظام — يطابق RolesAndPermissionsSeeder وصفحات Filament
+!include _style_uml.iuml
+left to right direction
+title مخطط حالات الاستخدام (2/2) — إدارة المدينة وإدارة النظام
+
+actor "مدير المدينة / المحافظة\n<size:11>لوحة الإدارة Filament</size>" as Manager
+actor "مدير النظام" as Admin
+actor "خدمة الذكاء الاصطناعي\n<size:11>matrahak-ai</size>" as AI <<system>>
+actor "المجدول\n<size:11>schedule:work</size>" as Scheduler <<time>>
+
+Manager <|-- Admin
+
+rectangle "منصة مطرحك — لوحة الإدارة" {
+  package "إدارة المدينة والتحليلات" {
+    usecase "مراقبة المدينة:\nلوحة المؤشرات الحية" as UC_Dash
+    usecase "الخريطة التحليلية:\nطبقات، كثافة، إعادة تشغيل زمنية" as UC_Twin
+    usecase "إدارة البلاغات:\nالإسناد، الحالة، تصحيح التصنيف" as UC_Reports
+    usecase "اعتماد أو رفض\nاقتراح الذكاء الاصطناعي" as UC_AiReview
+    usecase "مراجعة الرؤى والتنبؤات\nومؤشر الخطورة" as UC_Insights
+    usecase "أداء المديريات والموظفين" as UC_Perf
+    usecase "توليد التقارير PDF / Excel" as UC_Export
+    usecase "طبقات الخريطة\nومناطق المراقبة GeoFencing" as UC_Layers
+  }
+  package "إدارة النظام" {
+    usecase "إدارة المستخدمين" as UC_Users
+    usecase "الأدوار والصلاحيات RBAC" as UC_Roles
+    usecase "المديريات والمحافظات\nوالتصنيفات" as UC_Ref
+    usecase "إعدادات النظام\nوالذكاء الاصطناعي" as UC_Settings
+    usecase "إعادة تدريب النموذج\nChampion/Challenger" as UC_Retrain
+    usecase "سجل التدقيق" as UC_Audit
+  }
+  package "مهام مجدولة" {
+    usecase "التنبؤ بالمشكلات\nومؤشر خطورة المحافظات" as UC_Predict
+    usecase "الرؤى: الارتفاعات المفاجئة\nوالاتجاهات" as UC_Trends
+    usecase "تنبيه البلاغات المتأخرة" as UC_Overdue
+    usecase "الإغلاق التلقائي للمحلولة" as UC_AutoClose
+    usecase "لقطات المؤشرات\nوالخريطة الحرارية" as UC_Snapshot
+  }
+}
+
+Manager --> UC_Dash
+Manager --> UC_Twin
+Manager --> UC_Reports
+Manager --> UC_Insights
+Manager --> UC_Perf
+Manager --> UC_Export
+Manager --> UC_Layers
+UC_AiReview ..> UC_Reports : <<extend>>
+
+Admin --> UC_Users
+Admin --> UC_Roles
+Admin --> UC_Ref
+Admin --> UC_Settings
+Admin --> UC_Audit
+UC_Retrain ..> UC_Settings : <<extend>>
+
+UC_Insights ..> UC_Predict : <<include>>
+UC_Insights ..> UC_Trends : <<include>>
+
+UC_Predict <-- AI
+UC_Trends <-- AI
+UC_Retrain <-- AI
+UC_Predict <-- Scheduler
+UC_Trends <-- Scheduler
+UC_Overdue <-- Scheduler
+UC_AutoClose <-- Scheduler
+UC_Snapshot <-- Scheduler
+
+note "مدير النظام يرث كل حالات استخدام مدير المدينة.\nمدير المحافظة يرى بلاغات ومؤشرات وتقارير\nمحافظته فقط (App\\Support\\ManagerScope)." as N1
+N1 .. Manager
+@enduml

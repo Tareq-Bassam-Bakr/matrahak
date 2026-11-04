@@ -1,0 +1,249 @@
+@startuml erd-2-ai-gis-analytics
+skinparam defaultFontName Cairo
+skinparam defaultFontSize 13
+skinparam dpi 160
+skinparam shadowing false
+skinparam roundcorner 8
+skinparam nodesep 45
+skinparam ranksep 55
+skinparam ArrowColor #4B5563
+skinparam ArrowThickness 1.1
+skinparam class {
+  BackgroundColor #FFFFFF
+  BorderColor #0F6B4A
+  BorderThickness 1.3
+  HeaderBackgroundColor #E7F2EC
+  FontStyle bold
+  AttributeFontSize 12
+  StereotypeFontSize 10
+}
+hide circle
+hide methods
+hide stereotype
+
+title <size:18>مخطط الكيانات والعلاقات (2): الذكاء الاصطناعي والخرائط والمؤشرات</size>
+top to bottom direction
+entity "reports\n<size:11>البلاغات</size>" as reports {
+  * <b>id</b> : bigint <color:#0F6B4A>PK</color>
+  --
+  * uuid : char(36) <color:#1D4ED8>UQ</color>
+  * ticket_number : varchar(30) <color:#1D4ED8>UQ</color>
+  * citizen_id : bigint <color:#B45309>FK</color>
+    category_id : bigint <color:#B45309>FK</color>
+    department_id : bigint <color:#B45309>FK</color>
+    district_id : bigint <color:#B45309>FK</color>
+    ai_category_id : bigint <color:#B45309>FK</color>
+    ai_department_id : bigint <color:#B45309>FK</color>
+    ai_duplicate_of : bigint <color:#B45309>FK</color>
+  <i><color:#6B7280>… 26 أعمدة أخرى</color></i>
+}
+entity "districts\n<size:11>المحافظات</size>" as districts {
+  * <b>id</b> : bigint <color:#0F6B4A>PK</color>
+  --
+  * uuid : char(36) <color:#1D4ED8>UQ</color>
+  * name : varchar(150)
+  * code : varchar(20) <color:#1D4ED8>UQ</color>
+    iso_code : varchar(10) <color:#1D4ED8>UQ</color>
+  <i><color:#6B7280>… 10 أعمدة أخرى</color></i>
+}
+entity "departments\n<size:11>المديريات</size>" as departments {
+  * <b>id</b> : bigint <color:#0F6B4A>PK</color>
+  --
+  * uuid : char(36) <color:#1D4ED8>UQ</color>
+  * name : varchar(150)
+  * code : varchar(20) <color:#1D4ED8>UQ</color>
+    manager_id : bigint <color:#B45309>FK</color>
+    parent_id : bigint <color:#B45309>FK</color>
+  <i><color:#6B7280>… 6 أعمدة أخرى</color></i>
+}
+entity "categories\n<size:11>التصنيفات</size>" as categories {
+  * <b>id</b> : bigint <color:#0F6B4A>PK</color>
+  --
+  * uuid : char(36) <color:#1D4ED8>UQ</color>
+  * name : varchar(100)
+  * slug : varchar(100) <color:#1D4ED8>UQ</color>
+  * department_id : bigint <color:#B45309>FK</color>
+    parent_id : bigint <color:#B45309>FK</color>
+  <i><color:#6B7280>… 7 أعمدة أخرى</color></i>
+}
+entity "users\n<size:11>المستخدمون</size>" as users {
+  * <b>id</b> : bigint <color:#0F6B4A>PK</color>
+  --
+  * uuid : char(36) <color:#1D4ED8>UQ</color>
+  * name : varchar(100)
+  * email : varchar(150) <color:#1D4ED8>UQ</color>
+    phone : varchar(20) <color:#1D4ED8>UQ</color>
+    national_id : varchar(20) <color:#1D4ED8>UQ</color>
+    department_id : bigint <color:#B45309>FK</color>
+    district_id : bigint <color:#B45309>FK</color>
+  <i><color:#6B7280>… 11 أعمدة أخرى</color></i>
+}
+entity "ai_classifications\n<size:11>تصنيفات الذكاء الاصطناعي</size>" as ai_classifications {
+  * <b>id</b> : bigint <color:#0F6B4A>PK</color>
+  --
+  * report_id : bigint <color:#B45309>FK</color>
+  * model_version : varchar(80)
+    backend : varchar(40)
+    category_id : bigint <color:#B45309>FK</color>
+    department_id : bigint <color:#B45309>FK</color>
+    priority : enum(4)
+  * confidence : decimal(5,4)
+    summary : text
+    keywords : json
+    alternatives : json
+    raw_response : json
+    processing_ms : int
+  * was_applied : bool
+    is_accepted : bool
+  <color:#6B7280><size:10>created_at</size></color>
+}
+entity "ai_predictions\n<size:11>التنبؤات</size>" as ai_predictions {
+  * <b>id</b> : bigint <color:#0F6B4A>PK</color>
+  --
+  * uuid : char(36) <color:#1D4ED8>UQ</color>
+  * prediction_type : enum(5)
+    district_id : bigint <color:#B45309>FK</color>
+    category_id : bigint <color:#B45309>FK</color>
+  * predicted_date : date
+    window_end : date
+  * probability : decimal(5,4)
+    expected_count : decimal(8,2)
+    severity : enum(4)
+    description : text
+    supporting_data : json
+    model_version : varchar(80)
+    was_accurate : bool
+    actual_count : int
+    verified_at : timestamp
+  <color:#6B7280><size:10>created_at</size></color>
+}
+entity "ai_insights\n<size:11>الرؤى الذكية</size>" as ai_insights {
+  * <b>id</b> : bigint <color:#0F6B4A>PK</color>
+  --
+  * uuid : char(36) <color:#1D4ED8>UQ</color>
+  * type : enum(4)
+  * title : varchar(255)
+  * content : text
+  * severity : enum(3)
+    district_id : bigint <color:#B45309>FK</color>
+    category_id : bigint <color:#B45309>FK</color>
+    department_id : bigint <color:#B45309>FK</color>
+    data_payload : json
+    fingerprint : varchar(64)
+  * is_read : bool
+  * is_dismissed : bool
+    expires_at : timestamp
+  <color:#6B7280><size:10>created_at</size></color>
+}
+entity "analytics_snapshots\n<size:11>لقطات المؤشرات</size>" as analytics_snapshots {
+  * <b>id</b> : bigint <color:#0F6B4A>PK</color>
+  --
+  * snapshot_type : enum(3)
+  * snapshot_date : date
+  * scope : varchar(40)
+    district_id : bigint <color:#B45309>FK</color>
+    department_id : bigint <color:#B45309>FK</color>
+  * total_reports : int
+  * new_reports : int
+  * open_reports : int
+  * resolved_reports : int
+  * rejected_reports : int
+  * overdue_reports : int
+    avg_resolution_hours : decimal(8,2)
+    avg_rating : decimal(3,2)
+    citizen_satisfaction : decimal(5,2)
+    sla_compliance : decimal(5,2)
+    by_category : json
+    by_priority : json
+    by_status : json
+  <color:#6B7280><size:10>created_at</size></color>
+}
+entity "heatmap_snapshots\n<size:11>بيانات الخريطة الحرارية</size>" as heatmap_snapshots {
+  * <b>id</b> : bigint <color:#0F6B4A>PK</color>
+  --
+    layer_id : bigint <color:#B45309>FK</color>
+  * period_type : enum(3)
+  * period_date : date
+    district_id : bigint <color:#B45309>FK</color>
+    category_id : bigint <color:#B45309>FK</color>
+  * scope_key : varchar(60)
+  * data_points : json
+  * total_points : int
+  * generated_at : timestamp
+}
+entity "map_layers\n<size:11>طبقات الخريطة</size>" as map_layers {
+  * <b>id</b> : bigint <color:#0F6B4A>PK</color>
+  --
+  * uuid : char(36) <color:#1D4ED8>UQ</color>
+  * key : varchar(50) <color:#1D4ED8>UQ</color>
+  * name : varchar(100)
+  * type : enum(6)
+    description : text
+    config : json
+  * is_active : bool
+  * is_public : bool
+  * default_visible : bool
+  * sort_order : tinyint
+    created_by : bigint <color:#B45309>FK</color>
+  <color:#6B7280><size:10>created_at · updated_at</size></color>
+}
+entity "geofence_zones\n<size:11>مناطق المراقبة</size>" as geofence_zones {
+  * <b>id</b> : bigint <color:#0F6B4A>PK</color>
+  --
+  * uuid : char(36) <color:#1D4ED8>UQ</color>
+  * name : varchar(150)
+  * type : enum(3)
+    boundary : json
+    center_lat : decimal(10,8)
+    center_lng : decimal(11,8)
+    radius_meters : int
+    min_priority : enum(4)
+    alert_config : json
+  * is_active : bool
+    created_by : bigint <color:#B45309>FK</color>
+  <color:#6B7280><size:10>created_at · updated_at</size></color>
+}
+entity "employee_stats\n<size:11>أداء الموظفين</size>" as employee_stats {
+  * <b>id</b> : bigint <color:#0F6B4A>PK</color>
+  --
+  * employee_id : bigint <color:#B45309>FK</color> <color:#1D4ED8>UQ</color>
+  * total_assigned : int
+  * total_resolved : int
+  * total_rejected : int
+  * current_workload : int
+  * overdue_count : int
+  * avg_resolution_hours : decimal(8,2)
+  * avg_rating : decimal(3,2)
+    last_active_at : timestamp
+  <color:#6B7280><size:10>created_at · updated_at</size></color>
+}
+categories |o--o{ ai_classifications : <size:10>category_id</size>
+departments |o--o{ ai_classifications : <size:10>department_id</size>
+reports ||--o{ ai_classifications : <size:10>report_id</size>
+categories |o--o{ ai_insights : <size:10>category_id</size>
+departments |o--o{ ai_insights : <size:10>department_id</size>
+districts |o--o{ ai_insights : <size:10>district_id</size>
+categories |o--o{ ai_predictions : <size:10>category_id</size>
+districts |o--o{ ai_predictions : <size:10>district_id</size>
+departments |o--o{ analytics_snapshots : <size:10>department_id</size>
+districts |o--o{ analytics_snapshots : <size:10>district_id</size>
+departments ||--o{ categories : <size:10>department_id</size>
+categories |o--o{ categories : <size:10>parent_id</size>
+users |o--o{ departments : <size:10>manager_id</size>
+departments |o--o{ departments : <size:10>parent_id</size>
+users ||--o| employee_stats : <size:10>employee_id</size>
+users |o--o{ geofence_zones : <size:10>created_by</size>
+categories |o--o{ heatmap_snapshots : <size:10>category_id</size>
+districts |o--o{ heatmap_snapshots : <size:10>district_id</size>
+map_layers |o--o{ heatmap_snapshots : <size:10>layer_id</size>
+users |o--o{ map_layers : <size:10>created_by</size>
+categories |o--o{ reports : <size:10>ai_category_id</size>
+departments |o--o{ reports : <size:10>ai_department_id</size>
+reports |o--o{ reports : <size:10>ai_duplicate_of</size>
+categories |o--o{ reports : <size:10>category_id</size>
+users ||--o{ reports : <size:10>citizen_id</size>
+departments |o--o{ reports : <size:10>department_id</size>
+districts |o--o{ reports : <size:10>district_id</size>
+departments |o--o{ users : <size:10>department_id</size>
+districts |o--o{ users : <size:10>district_id</size>
+@enduml

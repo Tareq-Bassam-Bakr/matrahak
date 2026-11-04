@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- شاشة الإقلاع قبل أن يرسم Flutter أول إطار: أيقونة «مطرحك» في المنتصف (خلفية بيضاء، وخضراء داكنة في الوضع الداكن) -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@color/splash_background" />
+    <item>
+        <bitmap
+            android:gravity="center"
+            android:src="@drawable/launch_icon" />
+    </item>
+</layer-list>

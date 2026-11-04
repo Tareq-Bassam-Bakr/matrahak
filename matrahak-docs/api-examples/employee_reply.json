@@ -1,0 +1,34 @@
+{
+ "key": "employee_reply",
+ "method": "POST",
+ "path": "/api/v1/employee/reports/7bcdeae9-e2ad-4c79-a33b-ebc67a582a25/reply",
+ "query": null,
+ "body": {
+  "message": "شكراً لبلاغك، الفريق في الموقع الآن."
+ },
+ "form": null,
+ "files": null,
+ "auth": true,
+ "status": 201,
+ "note": null,
+ "response": {
+  "success": true,
+  "message": "تم إرسال الرد للمواطن",
+  "data": {
+   "id": 4905,
+   "type": "citizen_response",
+   "type_ar": "رد على المواطن",
+   "old_value": null,
+   "new_value": null,
+   "old_value_ar": null,
+   "new_value_ar": null,
+   "note": "شكراً لبلاغك، الفريق في الموقع الآن.",
+   "is_public": true,
+   "by": {
+    "name": "سامر الخطيب",
+    "type": "employee"
+   },
+   "date": "2026-10-25T19:23:45+03:00"
+  }
+ }
+}

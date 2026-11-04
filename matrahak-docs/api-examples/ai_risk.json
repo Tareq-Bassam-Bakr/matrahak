@@ -1,0 +1,259 @@
+{
+ "method": "POST",
+ "url": "/v1/risk",
+ "headers": {
+  "X-Internal-Key": "***"
+ },
+ "request": {
+  "districts": [
+   {
+    "district_id": 1,
+    "population": 1754000,
+    "open_critical": 1,
+    "open_high": 6,
+    "open_medium": 6,
+    "open_low": 1,
+    "overdue": 8,
+    "last30": 44,
+    "prev30": 35,
+    "total": 114,
+    "resolved": 94
+   },
+   {
+    "district_id": 2,
+    "population": 2836000,
+    "open_critical": 1,
+    "open_high": 0,
+    "open_medium": 23,
+    "open_low": 0,
+    "overdue": 24,
+    "last30": 71,
+    "prev30": 29,
+    "total": 134,
+    "resolved": 95
+   },
+   {
+    "district_id": 3,
+    "population": 4868000,
+    "open_critical": 4,
+    "open_high": 2,
+    "open_medium": 18,
+    "open_low": 1,
+    "overdue": 24,
+    "last30": 49,
+    "prev30": 44,
+    "total": 129,
+    "resolved": 95
+   },
+   {
+    "district_id": 4,
+    "population": 1803000,
+    "open_critical": 0,
+    "open_high": 0,
+    "open_medium": 4,
+    "open_low": 0,
+    "overdue": 3,
+    "last30": 15,
+    "prev30": 15,
+    "total": 49,
+    "resolved": 45
+   },
+   {
+    "district_id": 5,
+    "population": 1628000,
+    "open_critical": 1,
+    "open_high": 0,
+    "open_medium": 6,
+    "open_low": 1,
+    "overdue": 7,
+    "last30": 17,
+    "prev30": 22,
+    "total": 51,
+    "resolved": 41
+   },
+   {
+    "district_id": 6,
+    "population": 1008000,
+    "open_critical": 0,
+    "open_high": 0,
+    "open_medium": 1,
+    "open_low": 1,
+    "overdue": 2,
+    "last30": 10,
+    "prev30": 14,
+    "total": 36,
+    "resolved": 33
+   },
+   {
+    "district_id": 7,
+    "population": 797000,
+    "open_critical": 1,
+    "open_high": 0,
+    "open_medium": 1,
+    "open_low": 0,
+    "overdue": 1,
+    "last30": 7,
+    "prev30": 11,
+    "total": 32,
+    "resolved": 28
+   },
+   {
+    "district_id": 8,
+    "population": 1501000,
+    "open_critical": 0,
+    "open_high": 0,
+    "open_medium": 1,
+    "open_low": 1,
+    "overdue": 2,
+    "last30": 18,
+    "prev30": 11,
+    "total": 43,
+    "resolved": 38
+   },
+   {
+    "district_id": 9,
+    "population": 1512000,
+    "open_critical": 1,
+    "open_high": 0,
+    "open_medium": 2,
+    "open_low": 0,
+    "overdue": 3,
+    "last30": 8,
+    "prev30": 13,
+    "total": 28,
+    "resolved": 24
+   },
+   {
+    "district_id": 10,
+    "population": 1239000,
+    "open_critical": 0,
+    "open_high": 0,
+    "open_medium": 0,
+    "open_low": 0,
+    "overdue": 0,
+    "last30": 6,
+    "prev30": 7,
+    "total": 27,
+    "resolved": 25
+   },
+   {
+    "district_id": 11,
+    "population": 944000,
+    "open_critical": 0,
+    "open_high": 0,
+    "open_medium": 0,
+    "open_low": 0,
+    "overdue": 0,
+    "last30": 4,
+    "prev30": 3,
+    "total": 14,
+    "resolved": 13
+   },
+   {
+    "district_id": 12,
+    "population": 1027000,
+    "open_critical": 1,
+    "open_high": 0,
+    "open_medium": 1,
+    "open_low": 0,
+    "overdue": 2,
+    "last30": 13,
+    "prev30": 5,
+    "total": 27,
+    "resolved": 22
+   },
+   {
+    "district_id": 13,
+    "population": 370000,
+    "open_critical": 0,
+    "open_high": 0,
+    "open_medium": 1,
+    "open_low": 0,
+    "overdue": 1,
+    "last30": 4,
+    "prev30": 8,
+    "total": 16,
+    "resolved": 13
+   },
+   {
+    "district_id": 14,
+    "population": 90000,
+    "open_critical": 0,
+    "open_high": 0,
+    "open_medium": 0,
+    "open_low": 0,
+    "overdue": 0,
+    "last30": 1,
+    "prev30": 3,
+    "total": 6,
+    "resolved": 6
+   }
+  ],
+  "scales": {
+   "load": 1,
+   "overdue": 0.5
+  }
+ },
+ "status": 200,
+ "response": {
+  "model_version": "risk-v2",
+  "scores": [
+   {
+    "district_id": 1,
+    "score": 61.58
+   },
+   {
+    "district_id": 2,
+    "score": 75.54
+   },
+   {
+    "district_id": 3,
+    "score": 53.31
+   },
+   {
+    "district_id": 4,
+    "score": 24.8
+   },
+   {
+    "district_id": 5,
+    "score": 46.88
+   },
+   {
+    "district_id": 6,
+    "score": 20.67
+   },
+   {
+    "district_id": 7,
+    "score": 32.76
+   },
+   {
+    "district_id": 8,
+    "score": 23.92
+   },
+   {
+    "district_id": 9,
+    "score": 29.24
+   },
+   {
+    "district_id": 10,
+    "score": 1.11
+   },
+   {
+    "district_id": 11,
+    "score": 5.89
+   },
+   {
+    "district_id": 12,
+    "score": 45.18
+   },
+   {
+    "district_id": 13,
+    "score": 32.04
+   },
+   {
+    "district_id": 14,
+    "score": 0
+   }
+  ]
+ }
+}

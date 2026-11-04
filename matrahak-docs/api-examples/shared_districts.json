@@ -1,0 +1,214 @@
+{
+ "key": "shared_districts",
+ "method": "GET",
+ "path": "/api/v1/shared/districts",
+ "query": null,
+ "body": null,
+ "form": null,
+ "files": null,
+ "auth": false,
+ "status": 200,
+ "note": null,
+ "response": {
+  "success": true,
+  "message": "تمت العملية بنجاح",
+  "data": [
+   {
+    "id": 1,
+    "name": "محافظة دمشق",
+    "name_en": "Damascus",
+    "code": "DAM",
+    "city": "دمشق",
+    "center": {
+     "lat": 33.5138,
+     "lng": 36.2765
+    },
+    "population": 1754000,
+    "risk_score": 61.58,
+    "risk_level": "high"
+   },
+   {
+    "id": 2,
+    "name": "محافظة ريف دمشق",
+    "name_en": "Rif Dimashq",
+    "code": "RIF",
+    "city": "دوما",
+    "center": {
+     "lat": 33.5731,
+     "lng": 36.4003
+    },
+    "population": 2836000,
+    "risk_score": 75.54,
+    "risk_level": "critical"
+   },
+   {
+    "id": 3,
+    "name": "محافظة حلب",
+    "name_en": "Aleppo",
+    "code": "ALP",
+    "city": "حلب",
+    "center": {
+     "lat": 36.2021,
+     "lng": 37.1343
+    },
+    "population": 4868000,
+    "risk_score": 53.31,
+    "risk_level": "high"
+   },
+   {
+    "id": 4,
+    "name": "محافظة حمص",
+    "name_en": "Homs",
+    "code": "HOM",
+    "city": "حمص",
+    "center": {
+     "lat": 34.7324,
+     "lng": 36.7137
+    },
+    "population": 1803000,
+    "risk_score": 24.8,
+    "risk_level": "low"
+   },
+   {
+    "id": 5,
+    "name": "محافظة حماة",
+    "name_en": "Hama",
+    "code": "HAM",
+    "city": "حماة",
+    "center": {
+     "lat": 35.1318,
+     "lng": 36.758
+    },
+    "population": 1628000,
+    "risk_score": 46.88,
+    "risk_level": "medium"
+   },
+   {
+    "id": 6,
+    "name": "محافظة اللاذقية",
+    "name_en": "Latakia",
+    "code": "LAT",
+    "city": "اللاذقية",
+    "center": {
+     "lat": 35.5317,
+     "lng": 35.7916
+    },
+    "population": 1008000,
+    "risk_score": 20.67,
+    "risk_level": "low"
+   },
+   {
+    "id": 7,
+    "name": "محافظة طرطوس",
+    "name_en": "Tartus",
+    "code": "TAR",
+    "city": "طرطوس",
+    "center": {
+     "lat": 34.8889,
+     "lng": 35.8866
+    },
+    "population": 797000,
+    "risk_score": 32.76,
+    "risk_level": "medium"
+   },
+   {
+    "id": 8,
+    "name": "محافظة إدلب",
+    "name_en": "Idlib",
+    "code": "IDL",
+    "city": "إدلب",
+    "center": {
+     "lat": 35.9306,
+     "lng": 36.6339
+    },
+    "population": 1501000,
+    "risk_score": 23.92,
+    "risk_level": "low"
+   },
+   {
+    "id": 9,
+    "name": "محافظة الحسكة",
+    "name_en": "Al-Hasakah",
+    "code": "HSK",
+    "city": "الحسكة",
+    "center": {
+     "lat": 36.5024,
+     "lng": 40.7407
+    },
+    "population": 1512000,
+    "risk_score": 29.24,
+    "risk_level": "medium"
+   },
+   {
+    "id": 10,
+    "name": "محافظة دير الزور",
+    "name_en": "Deir ez-Zor",
+    "code": "DEZ",
+    "city": "دير الزور",
+    "center": {
+     "lat": 35.3359,
+     "lng": 40.1408
+    },
+    "population": 1239000,
+    "risk_score": 1.11,
+    "risk_level": "low"
+   },
+   {
+    "id": 11,
+    "name": "محافظة الرقة",
+    "name_en": "Raqqa",
+    "code": "RAQ",
+    "city": "الرقة",
+    "center": {
+     "lat": 35.9597,
+     "lng": 39.0114
+    },
+    "population": 944000,
+    "risk_score": 5.89,
+    "risk_level": "low"
+   },
+   {
+    "id": 12,
+    "name": "محافظة درعا",
+    "name_en": "Daraa",
+    "code": "DAR",
+    "city": "درعا",
+    "center": {
+     "lat": 32.6189,
+     "lng": 36.1021
+    },
+    "population": 1027000,
+    "risk_score": 45.18,
+    "risk_level": "medium"
+   },
+   {
+    "id": 13,
+    "name": "محافظة السويداء",
+    "name_en": "As-Suwayda",
+    "code": "SWD",
+    "city": "السويداء",
+    "center": {
+     "lat": 32.709,
+     "lng": 36.565
+    },
+    "population": 370000,
+    "risk_score": 32.04,
+    "risk_level": "medium"
+   },
+   {
+    "id": 14,
+    "name": "محافظة القنيطرة",
+    "name_en": "Quneitra",
+    "code": "QUN",
+    "city": "القنيطرة",
+    "center": {
+     "lat": 33.1263,
+     "lng": 35.8238
+    },
+    "population": 90000,
+    "risk_score": 0,
+    "risk_level": "low"
+   }
+  ]
+ }
+}

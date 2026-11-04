@@ -1,0 +1,78 @@
+@startuml uml-1a-use-case-field
+' مخطط حالات الاستخدام (1/2): المواطن والموظف الميداني — يطابق routes/api.php وتطبيقي Flutter
+!include _style_uml.iuml
+left to right direction
+title مخطط حالات الاستخدام (1/2) — المواطن والموظف الميداني
+
+actor "المواطن\n<size:11>تطبيق مطرحك</size>" as Citizen
+actor "الموظف الميداني\n<size:11>تطبيق مطرحك ميدان</size>" as Employee
+actor "خدمة الذكاء الاصطناعي\n<size:11>matrahak-ai</size>" as AI <<system>>
+actor "المجدول\n<size:11>schedule:work</size>" as Scheduler <<time>>
+
+rectangle "منصة مطرحك" {
+  package "وحدة المواطن" {
+    usecase "التسجيل وتسجيل الدخول\nبالبريد أو الجوال السوري" as UC_Auth
+    usecase "رفع بلاغ بالصور والفيديو" as UC_Submit
+    usecase "تحديد الموقع\nGPS أو الخريطة" as UC_Locate
+    usecase "حفظ البلاغ دون اتصال\nOffline Reporting" as UC_Offline
+    usecase "متابعة البلاغ:\nالسجل الزمني ورمز QR" as UC_Track
+    usecase "عرض البلاغات القريبة\nوالخريطة الحرارية" as UC_Nearby
+    usecase "تأييد بلاغ قائم" as UC_Upvote
+    usecase "تقييم الخدمة" as UC_Rate
+    usecase "استلام الإشعارات" as UC_Notify
+  }
+  package "وحدة الموظف الحكومي" {
+    usecase "عرض البلاغات المسندة\nوقائمة القسم وسجلي" as UC_Assigned
+    usecase "استلام بلاغ من القسم\nClaim" as UC_Claim
+    usecase "تحديث حالة البلاغ" as UC_Status
+    usecase "رفع صور بعد المعالجة" as UC_After
+    usecase "إضافة ملاحظة داخلية" as UC_Note
+    usecase "الرد على المواطن" as UC_Reply
+    usecase "تحويل البلاغ\nلمديرية أخرى" as UC_Transfer
+    usecase "خريطة بلاغات القسم\nوالاتجاهات للموقع" as UC_Map
+    usecase "إحصائياتي وإحصائيات القسم" as UC_DeptStats
+  }
+  package "معالجة آلية" {
+    usecase "تصنيف البلاغ واقتراح\nالجهة والأولوية والملخص" as UC_Classify
+    usecase "كشف التكرار" as UC_Dup
+    usecase "تحليل الصور" as UC_Vision
+    usecase "الإسناد التلقائي\nللموظف الأقل عبئاً" as UC_AutoAssign
+  }
+}
+
+Citizen --> UC_Auth
+Citizen --> UC_Submit
+Citizen --> UC_Track
+Citizen --> UC_Nearby
+Citizen --> UC_Upvote
+Citizen --> UC_Rate
+Citizen --> UC_Notify
+
+UC_Submit ..> UC_Locate : <<include>>
+UC_Offline ..> UC_Submit : <<extend>>\nلا يوجد اتصال
+UC_Upvote ..> UC_Nearby : <<extend>>
+UC_Submit ..> UC_Classify : <<include>>
+UC_Classify ..> UC_Dup : <<include>>
+UC_Classify ..> UC_Vision : <<include>>
+UC_Classify ..> UC_AutoAssign : <<include>>
+
+Employee --> UC_Assigned
+Employee --> UC_Claim
+Employee --> UC_Status
+Employee --> UC_Note
+Employee --> UC_Reply
+Employee --> UC_Transfer
+Employee --> UC_Map
+Employee --> UC_DeptStats
+Employee --> UC_Notify
+UC_After ..> UC_Status : <<extend>>\nعند الحل
+UC_Transfer ..> UC_AutoAssign : <<include>>
+
+UC_Classify <-- AI
+UC_Dup <-- AI
+UC_Vision <-- AI
+UC_AutoAssign <-- Scheduler
+
+note "الإشعارات تعمل بدون Firebase:\nالتطبيقان يسألان الخادم كل 45 ثانية،\nوالإرسال عبر FCM اختياري عند ضبطه." as N1
+N1 .. UC_Notify
+@enduml

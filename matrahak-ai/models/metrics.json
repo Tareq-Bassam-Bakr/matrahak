@@ -1,0 +1,348 @@
+{
+  "model_version": "tfidf-hybrid-v1",
+  "evaluated_at": "2026-10-23T04:25:01",
+  "test_kind": "heldout",
+  "n_train": 1917,
+  "n_test": 148,
+  "n_challenge": 48,
+  "decontaminated": {
+    "synthetic": 3,
+    "real": 0
+  },
+  "train_sources": {
+    "synthetic": 1917
+  },
+  "test_sources": {
+    "heldout-handwritten": 48,
+    "heldout-templates": 100
+  },
+  "cv_folds": 5,
+  "selected_config": {
+    "kind": "word+char",
+    "classifier": "svm",
+    "C": 0.5,
+    "keyword_weight": 0.3
+  },
+  "selection": [
+    {
+      "kind": "word+char",
+      "classifier": "logreg",
+      "C": 2.0,
+      "cv_accuracy_mean": 0.988,
+      "cv_accuracy_std": 0.0053,
+      "cv_f1_macro_mean": 0.988
+    },
+    {
+      "kind": "word+char",
+      "classifier": "logreg",
+      "C": 8.0,
+      "cv_accuracy_mean": 0.9906,
+      "cv_accuracy_std": 0.0048,
+      "cv_f1_macro_mean": 0.9903
+    },
+    {
+      "kind": "word+char",
+      "classifier": "logreg",
+      "C": 32.0,
+      "cv_accuracy_mean": 0.989,
+      "cv_accuracy_std": 0.0065,
+      "cv_f1_macro_mean": 0.9885
+    },
+    {
+      "kind": "word+char",
+      "classifier": "svm",
+      "C": 0.25,
+      "cv_accuracy_mean": 0.9916,
+      "cv_accuracy_std": 0.0039,
+      "cv_f1_macro_mean": 0.9918
+    },
+    {
+      "kind": "word+char",
+      "classifier": "svm",
+      "C": 0.5,
+      "cv_accuracy_mean": 0.9942,
+      "cv_accuracy_std": 0.0039,
+      "cv_f1_macro_mean": 0.9945
+    },
+    {
+      "kind": "word+char",
+      "classifier": "svm",
+      "C": 1.0,
+      "cv_accuracy_mean": 0.9942,
+      "cv_accuracy_std": 0.0046,
+      "cv_f1_macro_mean": 0.9945
+    }
+  ],
+  "keyword_weight_selection": [
+    {
+      "keyword_weight": 0.0,
+      "cv_accuracy": 0.9943,
+      "cv_f1_macro": 0.9942
+    },
+    {
+      "keyword_weight": 0.1,
+      "cv_accuracy": 0.9958,
+      "cv_f1_macro": 0.9958
+    },
+    {
+      "keyword_weight": 0.2,
+      "cv_accuracy": 0.9948,
+      "cv_f1_macro": 0.9948
+    },
+    {
+      "keyword_weight": 0.3,
+      "cv_accuracy": 0.9969,
+      "cv_f1_macro": 0.9969
+    }
+  ],
+  "cv_accuracy_mean": 0.9942,
+  "cv_accuracy_std": 0.0039,
+  "cv_f1_macro_mean": 0.9945,
+  "test_accuracy": 1.0,
+  "test_f1_macro": 1.0,
+  "challenge_accuracy": 0.9167,
+  "challenge_f1_macro": 0.9153,
+  "hybrid_test_accuracy": 1.0,
+  "hybrid_challenge_accuracy": 0.8958,
+  "comparison": [
+    {
+      "model": "keywords-only (معرفة الخبير)",
+      "test_accuracy": 0.9865,
+      "test_f1_macro": 0.9842,
+      "challenge_accuracy": 0.6875,
+      "challenge_f1_macro": 0.6949
+    },
+    {
+      "model": "TF-IDF words + LogReg",
+      "test_accuracy": 1.0,
+      "test_f1_macro": 1.0,
+      "challenge_accuracy": 0.7708,
+      "challenge_f1_macro": 0.7391
+    },
+    {
+      "model": "TF-IDF chars + LogReg",
+      "test_accuracy": 1.0,
+      "test_f1_macro": 1.0,
+      "challenge_accuracy": 0.875,
+      "challenge_f1_macro": 0.8792
+    },
+    {
+      "model": "TF-IDF words+chars + LinearSVC C=0.5 (tfidf-hybrid-v1 — المختار)",
+      "test_accuracy": 1.0,
+      "test_f1_macro": 1.0,
+      "challenge_accuracy": 0.9167,
+      "challenge_f1_macro": 0.9153
+    },
+    {
+      "model": "الهجين المعتمد في الخدمة: النموذج المختار 70% + الكلمات المفتاحية 30%",
+      "test_accuracy": 1.0,
+      "test_f1_macro": 1.0,
+      "challenge_accuracy": 0.8958,
+      "challenge_f1_macro": 0.8931
+    }
+  ],
+  "per_class": {
+    "blocked-drains": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 8.0
+    },
+    "collapsing-building": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 4.0
+    },
+    "contaminated-water": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 4.0
+    },
+    "damaged-road-sign": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 4.0
+    },
+    "dangerous-electric-pole": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 4.0
+    },
+    "drinking-water-outage": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 8.0
+    },
+    "environmental-violation": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 4.0
+    },
+    "exposed-wires": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 8.0
+    },
+    "fire": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 4.0
+    },
+    "garbage": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 8.0
+    },
+    "health-violation": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 4.0
+    },
+    "internet-outage": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 8.0
+    },
+    "power-outage": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 8.0
+    },
+    "public-safety-hazard": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 4.0
+    },
+    "road-damage": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 8.0
+    },
+    "sewage-overflow": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 8.0
+    },
+    "sidewalk-damage": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 8.0
+    },
+    "street-light-failure": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 8.0
+    },
+    "street-water-leak": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 8.0
+    },
+    "telecom-network-failure": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 4.0
+    },
+    "traffic-congestion": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 8.0
+    },
+    "traffic-signal-failure": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 8.0
+    },
+    "waste-burning": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 4.0
+    },
+    "water-pollution": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 4.0
+    }
+  },
+  "errors": [
+    {
+      "set": "challenge",
+      "text": "ما في ضو بالبيت من امبارح",
+      "expected": "power-outage",
+      "predicted": "collapsing-building"
+    },
+    {
+      "set": "challenge",
+      "text": "اللمبة اللي عالعمود محروقة",
+      "expected": "street-light-failure",
+      "predicted": "dangerous-electric-pole"
+    },
+    {
+      "set": "challenge",
+      "text": "العامود رح يوقع على البيت",
+      "expected": "dangerous-electric-pole",
+      "predicted": "collapsing-building"
+    },
+    {
+      "set": "challenge",
+      "text": "الريغار فايض",
+      "expected": "sewage-overflow",
+      "predicted": "public-safety-hazard"
+    }
+  ],
+  "hybrid_errors": [
+    {
+      "set": "challenge",
+      "text": "ما في ضو بالبيت من امبارح",
+      "expected": "power-outage",
+      "predicted": "street-light-failure"
+    },
+    {
+      "set": "challenge",
+      "text": "اللمبة اللي عالعمود محروقة",
+      "expected": "street-light-failure",
+      "predicted": "dangerous-electric-pole"
+    },
+    {
+      "set": "challenge",
+      "text": "العامود رح يوقع على البيت",
+      "expected": "dangerous-electric-pole",
+      "predicted": "collapsing-building"
+    },
+    {
+      "set": "challenge",
+      "text": "الريغار فايض",
+      "expected": "sewage-overflow",
+      "predicted": "public-safety-hazard"
+    },
+    {
+      "set": "challenge",
+      "text": "الحيط رح يوقع عالطريق",
+      "expected": "collapsing-building",
+      "predicted": "road-damage"
+    }
+  ]
+}

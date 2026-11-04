@@ -1,0 +1,49 @@
+text,label,source
+جورة,road-damage,challenge
+السكة كلها مطبات وجور ومخربة,road-damage,challenge
+البلاط طالع من مكانه عالرصيف,sidewalk-damage,challenge
+ما في رصيف نمشي عليه كلو مكسر,sidewalk-damage,challenge
+زباله,garbage,challenge
+الحاويه فايضه والريحه طالعه,garbage,challenge
+البلاليع طايفة بعد الشتي,blocked-drains,challenge
+المطر غرّق الطريق لأنو المصارف سكرانة,blocked-drains,challenge
+الكهربه مقطوعه,power-outage,challenge
+ما في ضو بالبيت من امبارح,power-outage,challenge
+عتمة بالشارع,street-light-failure,challenge
+اللمبة اللي عالعمود محروقة,street-light-failure,challenge
+عمود مايل,dangerous-electric-pole,challenge
+العامود رح يوقع على البيت,dangerous-electric-pole,challenge
+شرطان مقصوصة نازلة عالارض,exposed-wires,challenge
+في كبل عاري جنب باب البناية,exposed-wires,challenge
+القسطل فاقع والمي عم تفور,street-water-leak,challenge
+مي ضايعة بالطريق من بوري مكسور,street-water-leak,challenge
+ما في مي,drinking-water-outage,challenge
+الخزان فاضي والمي ما اجت,drinking-water-outage,challenge
+الريغار فايض,sewage-overflow,challenge
+المجاري طالعة على وش الأرض وريحتها بتقتل,sewage-overflow,challenge
+الضو الأحمر والأخضر عم يشتغلوا سوا,traffic-signal-failure,challenge
+اشارة السير طافية عالمفرق,traffic-signal-failure,challenge
+عجقة,traffic-congestion,challenge
+السيارات صافة صفين وما عم نقدر نمرق,traffic-congestion,challenge
+لوحة الطريق واقعة,damaged-road-sign,challenge
+الشاخصة ممسوحة وما بتنقرا,damaged-road-sign,challenge
+دخان أسود طالع من مدخنة المعمل,environmental-violation,challenge
+عم يكبوا تراب وردم بالأرض الزراعية,environmental-violation,challenge
+حرق زباله,waste-burning,challenge
+ولعوا دواليب بالليل والريحة سامة,waste-burning,challenge
+النهر كلو اوساخ,water-pollution,challenge
+الساقية لونها اخضر وفيها زيت,water-pollution,challenge
+البيت متشقق وخايفين ينزل,collapsing-building,challenge
+الحيط رح يوقع عالطريق,collapsing-building,challenge
+حريق!,fire,challenge
+نار عم تاكل الشجر جنب البيوت,fire,challenge
+فتحة مفتوحة بالأرض بلا غطا,public-safety-hazard,challenge
+لقينا شي متل القنبلة بالحقل,public-safety-hazard,challenge
+النت فاصل,internet-outage,challenge
+الانترنيت ما عم يفتح ولا موقع,internet-outage,challenge
+ما في شبكة للموبايل,telecom-network-failure,challenge
+التلفون الارضي خرسان,telecom-network-failure,challenge
+اللحمة بالمحل ريحتها خايسة,health-violation,challenge
+المطعم وسخ وفي صراصير,health-violation,challenge
+المي اللي عم تنزل من الحنفية عكرة,contaminated-water,challenge
+ولادنا مرضو من مي الشرب,contaminated-water,challenge

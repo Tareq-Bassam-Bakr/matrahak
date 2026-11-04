@@ -1,0 +1,17 @@
+{
+ "key": "notifications_read",
+ "method": "POST",
+ "path": "/api/v1/notifications/51694ce2-67e0-42c0-9df6-9ce30e071aad/read",
+ "query": null,
+ "body": null,
+ "form": null,
+ "files": null,
+ "auth": true,
+ "status": 200,
+ "note": null,
+ "response": {
+  "success": true,
+  "message": "تم",
+  "data": null
+ }
+}

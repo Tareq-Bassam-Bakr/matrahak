@@ -1,0 +1,5 @@
+# للاختبارات وإعادة توليد تقرير التقييم (مصفوفة الالتباس)
+-r requirements.txt
+pytest>=8
+httpx>=0.27
+matplotlib>=3.8

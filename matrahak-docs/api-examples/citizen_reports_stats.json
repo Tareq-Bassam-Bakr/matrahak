@@ -1,0 +1,22 @@
+{
+ "key": "citizen_reports_stats",
+ "method": "GET",
+ "path": "/api/v1/citizen/reports/stats",
+ "query": null,
+ "body": null,
+ "form": null,
+ "files": null,
+ "auth": true,
+ "status": 200,
+ "note": null,
+ "response": {
+  "success": true,
+  "message": "تمت العملية بنجاح",
+  "data": {
+   "total": 2,
+   "open": 2,
+   "resolved": 0,
+   "rejected": 0
+  }
+ }
+}

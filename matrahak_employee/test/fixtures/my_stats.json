@@ -1,0 +1,16 @@
+{
+ "success": true,
+ "message": "تمت العملية بنجاح",
+ "data": {
+  "total_assigned": 44,
+  "total_resolved": 38,
+  "total_rejected": 2,
+  "total_open": 3,
+  "current_workload": 3,
+  "overdue_count": 0,
+  "avg_resolution_hours": 42.4,
+  "avg_rating": 3.89,
+  "resolution_rate": 86.4,
+  "this_month": 11
+ }
+}

@@ -1,0 +1,42 @@
+{
+ "key": "citizen_register",
+ "method": "POST",
+ "path": "/api/v1/citizen/auth/register",
+ "query": null,
+ "body": {
+  "name": "مواطن التوثيق",
+  "email": "docs.945417@example.com",
+  "phone": "0928803791",
+  "password": "Docs@2026x",
+  "password_confirmation": "Docs@2026x",
+  "district_id": 1
+ },
+ "form": null,
+ "files": null,
+ "auth": false,
+ "status": 201,
+ "note": null,
+ "response": {
+  "success": true,
+  "message": "تم إنشاء الحساب بنجاح",
+  "data": {
+   "user": {
+    "id": "f9252e73-8be5-47be-871d-b91ad9f98ae0",
+    "name": "مواطن التوثيق",
+    "email": "docs.945417@example.com",
+    "phone": "0928803791",
+    "avatar": null,
+    "user_type": "citizen",
+    "is_verified": false,
+    "preferred_lang": null,
+    "district": {
+     "id": 1,
+     "name": "محافظة دمشق"
+    },
+    "department": null,
+    "created_at": "2026-10-25T19:23:38+03:00"
+   },
+   "token": "<TOKEN>"
+  }
+ }
+}

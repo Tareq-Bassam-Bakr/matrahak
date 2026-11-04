@@ -1,0 +1,324 @@
+{
+ "key": "employee_map",
+ "method": "GET",
+ "path": "/api/v1/employee/map/department-issues",
+ "query": null,
+ "body": null,
+ "form": null,
+ "files": null,
+ "auth": true,
+ "status": 200,
+ "note": null,
+ "response": {
+  "success": true,
+  "message": "تمت العملية بنجاح",
+  "data": [
+   {
+    "id": "28c82e6a-25fa-4c8c-981e-4403ec24a8ac",
+    "ticket_number": "MTR-2026-000714",
+    "title": "عمود كهرباء مائل فوق الرصيف",
+    "status": "pending",
+    "status_ar": "في الانتظار",
+    "priority": "high",
+    "priority_ar": "عالية",
+    "latitude": 33.513,
+    "longitude": 36.284,
+    "is_mine": false,
+    "is_unassigned": true,
+    "category": {
+     "name": "حفر وتلف الطرق",
+     "icon": "construction",
+     "color": "#E4572E"
+    }
+   },
+   {
+    "id": "6391f1e5-67cc-4113-b79f-2f20e99e984a",
+    "ticket_number": "MTR-2026-000713",
+    "title": "حفرة عميقة قرب دوار المدينة",
+    "status": "pending",
+    "status_ar": "في الانتظار",
+    "priority": "high",
+    "priority_ar": "عالية",
+    "latitude": 33.511,
+    "longitude": 36.286,
+    "is_mine": false,
+    "is_unassigned": true,
+    "category": {
+     "name": "حفر وتلف الطرق",
+     "icon": "construction",
+     "color": "#E4572E"
+    }
+   },
+   {
+    "id": "9cfaebd1-9feb-4246-8df2-199bfaeb6560",
+    "ticket_number": "MTR-2026-000703",
+    "title": "رصيف مكسور بشارع بغداد",
+    "status": "pending",
+    "status_ar": "في الانتظار",
+    "priority": "low",
+    "priority_ar": "منخفضة",
+    "latitude": 33.517,
+    "longitude": 36.2985,
+    "is_mine": false,
+    "is_unassigned": true,
+    "category": {
+     "name": "تلف الأرصفة",
+     "icon": "directions_walk",
+     "color": "#F17C67"
+    }
+   },
+   {
+    "id": "8739c72d-c32a-4736-a627-0529f5fd182b",
+    "ticket_number": "MTR-2026-000701",
+    "title": "حفرة عميقة أمام الفرن الآلي",
+    "status": "in_progress",
+    "status_ar": "جاري المعالجة",
+    "priority": "high",
+    "priority_ar": "عالية",
+    "latitude": 33.5205,
+    "longitude": 36.2925,
+    "is_mine": true,
+    "is_unassigned": false,
+    "category": {
+     "name": "حفر وتلف الطرق",
+     "icon": "construction",
+     "color": "#E4572E"
+    }
+   },
+   {
+    "id": "be1ce261-e935-47cd-b175-0e33d0f82fe8",
+    "ticket_number": "MTR-2026-000698",
+    "title": "حفرة كبيرة قرب المدرسة",
+    "status": "assigned",
+    "status_ar": "تم الإسناد",
+    "priority": "high",
+    "priority_ar": "عالية",
+    "latitude": 33.5148,
+    "longitude": 36.2775,
+    "is_mine": true,
+    "is_unassigned": false,
+    "category": {
+     "name": "حفر وتلف الطرق",
+     "icon": "construction",
+     "color": "#E4572E"
+    }
+   },
+   {
+    "id": "c088091a-1fb4-4866-abf8-488443a23cbf",
+    "ticket_number": "MTR-2026-000697",
+    "title": "حفرة كبيرة قرب المدرسة",
+    "status": "assigned",
+    "status_ar": "تم الإسناد",
+    "priority": "high",
+    "priority_ar": "عالية",
+    "latitude": 33.5148,
+    "longitude": 36.2775,
+    "is_mine": true,
+    "is_unassigned": false,
+    "category": {
+     "name": "حفر وتلف الطرق",
+     "icon": "construction",
+     "color": "#E4572E"
+    }
+   },
+   {
+    "id": "32876f15-10d0-48c8-ad6f-5e5ec67163d6",
+    "ticket_number": "MTR-2026-000667",
+    "title": "رصيف خطر على المشاة — حلب الجديدة",
+    "status": "assigned",
+    "status_ar": "تم الإسناد",
+    "priority": "low",
+    "priority_ar": "منخفضة",
+    "latitude": 36.21154,
+    "longitude": 37.11474,
+    "is_mine": false,
+    "is_unassigned": false,
+    "category": {
+     "name": "تلف الأرصفة",
+     "icon": "directions_walk",
+     "color": "#F17C67"
+    }
+   },
+   {
+    "id": "543f492b-4136-441d-8e84-e551c07ef943",
+    "ticket_number": "MTR-2026-000662",
+    "title": "رصيف مكسور — طريق حلب",
+    "status": "in_progress",
+    "status_ar": "جاري المعالجة",
+    "priority": "low",
+    "priority_ar": "منخفضة",
+    "latitude": 35.15719,
+    "longitude": 36.75581,
+    "is_mine": false,
+    "is_unassigned": false,
+    "category": {
+     "name": "تلف الأرصفة",
+     "icon": "directions_walk",
+     "color": "#F17C67"
+    }
+   },
+   {
+    "id": "ea6a12b9-b358-418e-95a3-740c198cf206",
+    "ticket_number": "MTR-2026-000623",
+    "title": "نفايات مرمية جنب المدرسة — الوعر",
+    "status": "in_progress",
+    "status_ar": "جاري المعالجة",
+    "priority": "medium",
+    "priority_ar": "متوسطة",
+    "latitude": 34.73191,
+    "longitude": 36.65808,
+    "is_mine": false,
+    "is_unassigned": false,
+    "category": {
+     "name": "النفايات والقمامة",
+     "icon": "delete",
+     "color": "#8D6E63"
+    }
+   },
+   {
+    "id": "38875020-3711-4934-a4e7-ce13fe084351",
+    "ticket_number": "MTR-2026-000620",
+    "title": "رصيف مكسور — معرة النعمان",
+    "status": "in_progress",
+    "status_ar": "جاري المعالجة",
+    "priority": "low",
+    "priority_ar": "منخفضة",
+    "latitude": 35.64301,
+    "longitude": 36.67187,
+    "is_mine": false,
+    "is_unassigned": false,
+    "category": {
+     "name": "تلف الأرصفة",
+     "icon": "directions_walk",
+     "color": "#F17C67"
+    }
+   },
+   {
+    "id": "5ba16567-fde9-488a-bf43-6ac838ad8351",
+    "ticket_number": "MTR-2026-000605",
+    "title": "تراكم القمامة في السليمانية",
+    "status": "assigned",
+    "status_ar": "تم الإسناد",
+    "priority": "medium",
+    "priority_ar": "متوسطة",
+    "latitude": 36.20484,
+    "longitude": 37.15413,
+    "is_mine": false,
+    "is_unassigned": false,
+    "category": {
+     "name": "النفايات والقمامة",
+     "icon": "delete",
+     "color": "#8D6E63"
+    }
+   },
+   {
+    "id": "41d7ebcc-f439-4c57-ac49-d1268a19bc06",
+    "ticket_number": "MTR-2026-000593",
+    "title": "بلاط الرصيف مقلوع — مشروع الصليبة",
+    "status": "in_progress",
+    "status_ar": "جاري المعالجة",
+    "priority": "low",
+    "priority_ar": "منخفضة",
+    "latitude": 35.52915,
+    "longitude": 35.78673,
+    "is_mine": false,
+    "is_unassigned": false,
+    "category": {
+     "name": "تلف الأرصفة",
+     "icon": "directions_walk",
+     "color": "#F17C67"
+    }
+   },
+   {
+    "id": "3cdaaa3c-06bb-4b5b-af93-f0c47df75384",
+    "ticket_number": "MTR-2026-000562",
+    "title": "نفايات مرمية جنب المدرسة — المزة",
+    "status": "in_progress",
+    "status_ar": "جاري المعالجة",
+    "priority": "medium",
+    "priority_ar": "متوسطة",
+    "latitude": 33.4961,
+    "longitude": 36.24507,
+    "is_mine": false,
+    "is_unassigned": false,
+    "category": {
+     "name": "النفايات والقمامة",
+     "icon": "delete",
+     "color": "#8D6E63"
+    }
+   },
+   {
+    "id": "96f23c4a-948d-427d-bf25-99eb015313d3",
+    "ticket_number": "MTR-2026-000465",
+    "title": "نفايات مرمية جنب المدرسة — قدسيا",
+    "status": "in_progress",
+    "status_ar": "جاري المعالجة",
+    "priority": "medium",
+    "priority_ar": "متوسطة",
+    "latitude": 33.54378,
+    "longitude": 36.23504,
+    "is_mine": false,
+    "is_unassigned": false,
+    "category": {
+     "name": "النفايات والقمامة",
+     "icon": "delete",
+     "color": "#8D6E63"
+    }
+   },
+   {
+    "id": "0981ae98-533f-4f80-9958-f3592f461d43",
+    "ticket_number": "MTR-2026-000458",
+    "title": "تراكم القمامة في صحنايا",
+    "status": "in_progress",
+    "status_ar": "جاري المعالجة",
+    "priority": "medium",
+    "priority_ar": "متوسطة",
+    "latitude": 33.43291,
+    "longitude": 36.22511,
+    "is_mine": false,
+    "is_unassigned": false,
+    "category": {
+     "name": "النفايات والقمامة",
+     "icon": "delete",
+     "color": "#8D6E63"
+    }
+   },
+   {
+    "id": "6fe628a3-6bea-4187-addb-4f55ab0023f4",
+    "ticket_number": "MTR-2026-000441",
+    "title": "تشققات بالزفت بعد الأمطار — الحاضر",
+    "status": "in_progress",
+    "status_ar": "جاري المعالجة",
+    "priority": "medium",
+    "priority_ar": "متوسطة",
+    "latitude": 35.13598,
+    "longitude": 36.76206,
+    "is_mine": false,
+    "is_unassigned": false,
+    "category": {
+     "name": "حفر وتلف الطرق",
+     "icon": "construction",
+     "color": "#E4572E"
+    }
+   },
+   {
+    "id": "b04a7dc7-6a46-439c-8405-98ccb596de9c",
+    "ticket_number": "MTR-2026-000311",
+    "title": "فتحات التصريف مسدودة — مصياف",
+    "status": "in_progress",
+    "status_ar": "جاري المعالجة",
+    "priority": "medium",
+    "priority_ar": "متوسطة",
+    "latitude": 35.06771,
+    "longitude": 36.33858,
+    "is_mine": false,
+    "is_unassigned": false,
+    "category": {
+     "name": "مجاري الأمطار المسدودة",
+     "icon": "water_damage",
+     "color": "#6D4C41"
+    }
+   }
+  ]
+ }
+}

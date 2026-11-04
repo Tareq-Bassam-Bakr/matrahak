@@ -1,0 +1,404 @@
+{
+ "success": true,
+ "message": "تمت العملية بنجاح",
+ "data": [
+  {
+   "id": "dfeece99-1934-4ac8-8f20-433bbddbe021",
+   "ticket_number": "MTR-2026-000702",
+   "title": "تراكم نفايات قرب الحديقة",
+   "description": "النفايات متراكمة من يومين قرب مدخل الحديقة والريحة صارت قوية كتير",
+   "status": "resolved",
+   "status_ar": "تم الحل",
+   "priority": "medium",
+   "priority_ar": "متوسطة",
+   "citizen": {
+    "name": "أحمد المواطن",
+    "phone": "0930000003"
+   },
+   "is_anonymous": false,
+   "category": {
+    "id": 3,
+    "name": "النفايات والقمامة",
+    "icon": "delete",
+    "color": "#8D6E63"
+   },
+   "department": {
+    "id": 1,
+    "name": "مديرية الخدمات والصيانة"
+   },
+   "district": {
+    "id": 1,
+    "name": "محافظة دمشق"
+   },
+   "location": {
+    "latitude": 33.5089,
+    "longitude": 36.3012,
+    "address": null,
+    "notes": null
+   },
+   "ai": {
+    "category": null,
+    "priority": "medium",
+    "confidence": 0.7416,
+    "summary": "تراكم نفايات قرب الحديقة — النفايات متراكمة من يومين قرب مدخل الحديقة والريحة صارت قوية كتير",
+    "is_duplicate": false,
+    "duplicate_of": null
+   },
+   "attachments": [
+    {
+     "id": 6,
+     "type": "image",
+     "stage": "before",
+     "url": "http://127.0.0.1:8000/storage/reports/dfeece99-1934-4ac8-8f20-433bbddbe021/aC7iIka0mbmORPs4nngaD2rUS9uu1HK0hE1Zkqoq.png",
+     "thumbnail": null,
+     "name": "tiny.png",
+     "size": "0.1 KB",
+     "mime": "image/png",
+     "ai_tags": null
+    }
+   ],
+   "after_attachments": [
+    {
+     "id": 9,
+     "type": "image",
+     "stage": "after",
+     "url": "http://127.0.0.1:8000/storage/reports/dfeece99-1934-4ac8-8f20-433bbddbe021/XB3hwVsjWgjhppH5JkRylomZIK9OkVvodYcngxaM.png",
+     "thumbnail": null,
+     "name": "after1.png",
+     "size": "0.1 KB",
+     "mime": "image/png",
+     "ai_tags": null
+    },
+    {
+     "id": 10,
+     "type": "image",
+     "stage": "after",
+     "url": "http://127.0.0.1:8000/storage/reports/dfeece99-1934-4ac8-8f20-433bbddbe021/9evUgkyl59Dl9EoSs8eVkmKTRwg2ax2hF8hghQiN.png",
+     "thumbnail": null,
+     "name": "after2.png",
+     "size": "0.1 KB",
+     "mime": "image/png",
+     "ai_tags": null
+    },
+    {
+     "id": 11,
+     "type": "image",
+     "stage": "after",
+     "url": "http://127.0.0.1:8000/storage/reports/dfeece99-1934-4ac8-8f20-433bbddbe021/rlhbVNhMVptYMkDptPmItBQ2hWJB1yQb2UI8FvL2.png",
+     "thumbnail": null,
+     "name": "after3.png",
+     "size": "0.1 KB",
+     "mime": "image/png",
+     "ai_tags": null
+    }
+   ],
+   "updates": [],
+   "assignment": {
+    "employee": "سامر الخطيب",
+    "is_me": true,
+    "method": "claim",
+    "method_ar": "استلام ذاتي",
+    "assigned_at": "2026-10-25T04:43:37+03:00"
+   },
+   "rating": null,
+   "permissions": {
+    "can_act": false,
+    "can_claim": false,
+    "allowed_statuses": []
+   },
+   "sla": {
+    "expected_resolution": "2026-10-26T04:41:46+03:00",
+    "is_overdue": false
+   },
+   "dates": {
+    "created": "2026-10-25T04:41:46+03:00",
+    "assigned": "2026-10-25T04:43:37+03:00",
+    "started": "2026-10-25T04:43:38+03:00",
+    "resolved": "2026-10-25T04:43:38+03:00"
+   }
+  },
+  {
+   "id": "82ab6147-5cc5-4350-9782-67f5f864c6ef",
+   "ticket_number": "MTR-2026-000637",
+   "title": "نفايات مرمية جنب المدرسة — سراقب",
+   "description": "ما حدا عم يرحّل القمامة من الحاويات بالحي، صار في أكياس مرمية عالرصيف وعم تسد الطريق.",
+   "status": "resolved",
+   "status_ar": "تم الحل",
+   "priority": "medium",
+   "priority_ar": "متوسطة",
+   "citizen": {
+    "name": "عمر الحلبي",
+    "phone": "0930174218"
+   },
+   "is_anonymous": false,
+   "category": {
+    "id": 3,
+    "name": "النفايات والقمامة",
+    "icon": "delete",
+    "color": "#8D6E63"
+   },
+   "department": {
+    "id": 1,
+    "name": "مديرية الخدمات والصيانة"
+   },
+   "district": {
+    "id": 8,
+    "name": "محافظة إدلب"
+   },
+   "location": {
+    "latitude": 35.86696,
+    "longitude": 36.80306,
+    "address": "سراقب، محافظة إدلب",
+    "notes": null
+   },
+   "ai": {
+    "category": null,
+    "priority": "medium",
+    "confidence": 0.66,
+    "summary": "ما حدا عم يرحّل القمامة من الحاويات بالحي، صار في أكياس مرمية عالرصيف وعم تسد الطريق.",
+    "is_duplicate": false,
+    "duplicate_of": null
+   },
+   "attachments": [],
+   "after_attachments": [],
+   "updates": [],
+   "assignment": {
+    "employee": "سامر الخطيب",
+    "is_me": true,
+    "method": "auto",
+    "method_ar": "تلقائي",
+    "assigned_at": "2026-10-20T17:14:34+03:00"
+   },
+   "rating": null,
+   "permissions": {
+    "can_act": false,
+    "can_claim": false,
+    "allowed_statuses": []
+   },
+   "sla": {
+    "expected_resolution": "2026-10-21T13:40:34+03:00",
+    "is_overdue": false
+   },
+   "dates": {
+    "created": "2026-10-20T13:40:34+03:00",
+    "assigned": "2026-10-20T17:14:34+03:00",
+    "started": "2026-10-20T20:22:34+03:00",
+    "resolved": "2026-10-21T04:03:34+03:00"
+   }
+  },
+  {
+   "id": "c3a817f3-0903-45ac-8b0d-4feb3635ece9",
+   "ticket_number": "MTR-2026-000636",
+   "title": "نفايات مرمية جنب المدرسة — المهاجرين",
+   "description": "ما حدا عم يرحّل القمامة من الحاويات بالحي، صار في أكياس مرمية عالرصيف وعم تسد الطريق.",
+   "status": "resolved",
+   "status_ar": "تم الحل",
+   "priority": "medium",
+   "priority_ar": "متوسطة",
+   "citizen": {
+    "name": "ريم النجار",
+    "phone": "0930395950"
+   },
+   "is_anonymous": false,
+   "category": {
+    "id": 3,
+    "name": "النفايات والقمامة",
+    "icon": "delete",
+    "color": "#8D6E63"
+   },
+   "department": {
+    "id": 1,
+    "name": "مديرية الخدمات والصيانة"
+   },
+   "district": {
+    "id": 1,
+    "name": "محافظة دمشق"
+   },
+   "location": {
+    "latitude": 33.52816,
+    "longitude": 36.27324,
+    "address": "المهاجرين، محافظة دمشق",
+    "notes": null
+   },
+   "ai": {
+    "category": null,
+    "priority": "medium",
+    "confidence": 0.81,
+    "summary": "ما حدا عم يرحّل القمامة من الحاويات بالحي، صار في أكياس مرمية عالرصيف وعم تسد الطريق.",
+    "is_duplicate": false,
+    "duplicate_of": null
+   },
+   "attachments": [],
+   "after_attachments": [],
+   "updates": [],
+   "assignment": {
+    "employee": "سامر الخطيب",
+    "is_me": true,
+    "method": "auto",
+    "method_ar": "تلقائي",
+    "assigned_at": "2026-10-20T21:57:51+03:00"
+   },
+   "rating": null,
+   "permissions": {
+    "can_act": false,
+    "can_claim": false,
+    "allowed_statuses": []
+   },
+   "sla": {
+    "expected_resolution": "2026-10-21T19:45:51+03:00",
+    "is_overdue": false
+   },
+   "dates": {
+    "created": "2026-10-20T19:45:51+03:00",
+    "assigned": "2026-10-20T21:57:51+03:00",
+    "started": "2026-10-21T01:32:51+03:00",
+    "resolved": "2026-10-21T06:18:51+03:00"
+   }
+  },
+  {
+   "id": "d293eb0e-d3d3-467f-a59a-815c02331aba",
+   "ticket_number": "MTR-2026-000564",
+   "title": "بلاط الرصيف مقلوع — الحمدانية",
+   "description": "الرصيف مكسر بالكامل والناس عم تمشي بنص الطريق.",
+   "status": "closed",
+   "status_ar": "مغلق",
+   "priority": "low",
+   "priority_ar": "منخفضة",
+   "citizen": null,
+   "is_anonymous": true,
+   "category": {
+    "id": 2,
+    "name": "تلف الأرصفة",
+    "icon": "directions_walk",
+    "color": "#F17C67"
+   },
+   "department": {
+    "id": 1,
+    "name": "مديرية الخدمات والصيانة"
+   },
+   "district": {
+    "id": 3,
+    "name": "محافظة حلب"
+   },
+   "location": {
+    "latitude": 36.179,
+    "longitude": 37.10328,
+    "address": "الحمدانية، محافظة حلب",
+    "notes": null
+   },
+   "ai": {
+    "category": null,
+    "priority": "low",
+    "confidence": 0.91,
+    "summary": "الرصيف مكسر بالكامل والناس عم تمشي بنص الطريق.",
+    "is_duplicate": false,
+    "duplicate_of": null
+   },
+   "attachments": [],
+   "after_attachments": [],
+   "updates": [],
+   "assignment": {
+    "employee": "سامر الخطيب",
+    "is_me": true,
+    "method": "auto",
+    "method_ar": "تلقائي",
+    "assigned_at": "2026-10-12T10:58:31+03:00"
+   },
+   "rating": null,
+   "permissions": {
+    "can_act": false,
+    "can_claim": false,
+    "allowed_statuses": []
+   },
+   "sla": {
+    "expected_resolution": "2026-10-17T07:43:31+03:00",
+    "is_overdue": false
+   },
+   "dates": {
+    "created": "2026-10-12T07:43:31+03:00",
+    "assigned": "2026-10-12T10:58:31+03:00",
+    "started": "2026-10-12T18:09:31+03:00",
+    "resolved": "2026-10-17T00:31:31+03:00"
+   }
+  },
+  {
+   "id": "20feda70-d159-4320-b3fa-fdfea6cab6f8",
+   "ticket_number": "MTR-2026-000416",
+   "title": "مجرور مطر مسدود — مدينة البعث",
+   "description": "فتحات تصريف مياه الأمطار مسدودة بـمدينة البعث وكل ما تشتي بتصير الطريق بحيرة.",
+   "status": "closed",
+   "status_ar": "مغلق",
+   "priority": "medium",
+   "priority_ar": "متوسطة",
+   "citizen": {
+    "name": "علي الدمشقي",
+    "phone": "0930443464"
+   },
+   "is_anonymous": false,
+   "category": {
+    "id": 4,
+    "name": "مجاري الأمطار المسدودة",
+    "icon": "water_damage",
+    "color": "#6D4C41"
+   },
+   "department": {
+    "id": 1,
+    "name": "مديرية الخدمات والصيانة"
+   },
+   "district": {
+    "id": 14,
+    "name": "محافظة القنيطرة"
+   },
+   "location": {
+    "latitude": 33.14753,
+    "longitude": 35.87316,
+    "address": "مدينة البعث، محافظة القنيطرة",
+    "notes": null
+   },
+   "ai": {
+    "category": null,
+    "priority": "medium",
+    "confidence": 0.63,
+    "summary": "فتحات تصريف مياه الأمطار مسدودة بـمدينة البعث وكل ما تشتي بتصير الطريق بحيرة.",
+    "is_duplicate": false,
+    "duplicate_of": null
+   },
+   "attachments": [],
+   "after_attachments": [],
+   "updates": [],
+   "assignment": {
+    "employee": "سامر الخطيب",
+    "is_me": true,
+    "method": "claim",
+    "method_ar": "استلام ذاتي",
+    "assigned_at": "2026-09-22T00:47:54+03:00"
+   },
+   "rating": {
+    "score": 1,
+    "feedback": "تأخرتوا كتير"
+   },
+   "permissions": {
+    "can_act": false,
+    "can_claim": false,
+    "allowed_statuses": []
+   },
+   "sla": {
+    "expected_resolution": "2026-09-23T19:33:54+03:00",
+    "is_overdue": false
+   },
+   "dates": {
+    "created": "2026-09-21T19:33:54+03:00",
+    "assigned": "2026-09-22T00:47:54+03:00",
+    "started": "2026-09-22T03:29:54+03:00",
+    "resolved": "2026-09-25T07:04:54+03:00"
+   }
+  }
+ ],
+ "meta": {
+  "current_page": 1,
+  "last_page": 8,
+  "per_page": 5,
+  "total": 40,
+  "has_more": true
+ }
+}

@@ -1,0 +1,78 @@
+{
+ "success": true,
+ "message": "تم جلب البلاغات القريبة",
+ "data": {
+  "count": 3,
+  "reports": [
+   {
+    "id": "cf69475a-ad52-4248-8831-4154c987d3f2",
+    "ticket_number": "MTR-2026-000694",
+    "title": "شريط كهربا مقطوع قدام المدرسة",
+    "status": "resolved",
+    "status_ar": "تم الحل",
+    "priority": "high",
+    "priority_ar": "عالية",
+    "latitude": 33.5138,
+    "longitude": 36.2765,
+    "distance_km": 0,
+    "upvotes": 0,
+    "has_upvoted": false,
+    "is_mine": true,
+    "category": {
+     "id": 8,
+     "name": "أسلاك كهربائية مكشوفة",
+     "icon": "bolt",
+     "color": "#EA580C"
+    },
+    "district": "محافظة دمشق",
+    "created_at": "2026-10-23T04:19:21+03:00"
+   },
+   {
+    "id": "c088091a-1fb4-4866-abf8-488443a23cbf",
+    "ticket_number": "MTR-2026-000697",
+    "title": "حفرة كبيرة قرب المدرسة",
+    "status": "assigned",
+    "status_ar": "تم الإسناد",
+    "priority": "high",
+    "priority_ar": "عالية",
+    "latitude": 33.5148,
+    "longitude": 36.2775,
+    "distance_km": 0.14,
+    "upvotes": 0,
+    "has_upvoted": false,
+    "is_mine": false,
+    "category": {
+     "id": 1,
+     "name": "حفر وتلف الطرق",
+     "icon": "construction",
+     "color": "#E4572E"
+    },
+    "district": "محافظة دمشق",
+    "created_at": "2026-10-23T23:06:45+03:00"
+   },
+   {
+    "id": "4922acd9-26ab-472b-8d1f-54ee2854cc52",
+    "ticket_number": "MTR-2026-000695",
+    "title": "ما في مي من تلت ايام",
+    "status": "resolved",
+    "status_ar": "تم الحل",
+    "priority": "medium",
+    "priority_ar": "متوسطة",
+    "latitude": 33.515,
+    "longitude": 36.279,
+    "distance_km": 0.27,
+    "upvotes": 0,
+    "has_upvoted": false,
+    "is_mine": true,
+    "category": {
+     "id": 10,
+     "name": "انقطاع مياه الشرب",
+     "icon": "format_color_reset",
+     "color": "#0284C7"
+    },
+    "district": "محافظة دمشق",
+    "created_at": "2026-10-23T04:19:21+03:00"
+   }
+  ]
+ }
+}

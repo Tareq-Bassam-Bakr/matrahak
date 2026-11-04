@@ -1,0 +1,10 @@
+{
+ "method": "POST",
+ "url": "/v1/classify",
+ "headers": {},
+ "request": "(بدون X-Internal-Key)",
+ "status": 401,
+ "response": {
+  "detail": "invalid or missing X-Internal-Key"
+ }
+}

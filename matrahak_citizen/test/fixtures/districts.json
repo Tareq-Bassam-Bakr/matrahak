@@ -1,0 +1,34 @@
+{
+ "success": true,
+ "message": "تمت العملية بنجاح",
+ "data": [
+  {
+   "id": 1,
+   "name": "محافظة دمشق",
+   "name_en": "Damascus",
+   "code": "DAM",
+   "city": "دمشق",
+   "center": {
+    "lat": 33.5138,
+    "lng": 36.2765
+   },
+   "population": 1754000,
+   "risk_score": 48.81,
+   "risk_level": "medium"
+  },
+  {
+   "id": 2,
+   "name": "محافظة ريف دمشق",
+   "name_en": "Rif Dimashq",
+   "code": "RIF",
+   "city": "دوما",
+   "center": {
+    "lat": 33.5731,
+    "lng": 36.4003
+   },
+   "population": 2836000,
+   "risk_score": 71.88,
+   "risk_level": "high"
+  }
+ ]
+}

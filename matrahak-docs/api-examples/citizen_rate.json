@@ -1,0 +1,20 @@
+{
+ "key": "citizen_rate",
+ "method": "POST",
+ "path": "/api/v1/citizen/reports/7bcdeae9-e2ad-4c79-a33b-ebc67a582a25/rate",
+ "query": null,
+ "body": {
+  "rating": 5,
+  "feedback": "شكراً على سرعة الاستجابة"
+ },
+ "form": null,
+ "files": null,
+ "auth": true,
+ "status": 200,
+ "note": null,
+ "response": {
+  "success": true,
+  "message": "شكراً على تقييمك",
+  "data": null
+ }
+}

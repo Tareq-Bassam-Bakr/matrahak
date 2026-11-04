@@ -1,0 +1,34 @@
+{
+ "key": "citizen_report_store_422",
+ "method": "POST",
+ "path": "/api/v1/citizen/reports",
+ "query": null,
+ "body": null,
+ "form": {
+  "title": "قص",
+  "description": "قصير",
+  "latitude": "200"
+ },
+ "files": null,
+ "auth": true,
+ "status": 422,
+ "note": null,
+ "response": {
+  "success": false,
+  "message": "العنوان قصير جداً (5 أحرف على الأقل)",
+  "errors": {
+   "title": [
+    "العنوان قصير جداً (5 أحرف على الأقل)"
+   ],
+   "description": [
+    "الوصف قصير جداً (10 أحرف على الأقل)"
+   ],
+   "latitude": [
+    "يجب أن تكون قيمة خط العرض بين -90 و 90."
+   ],
+   "longitude": [
+    "الموقع الجغرافي مطلوب"
+   ]
+  }
+ }
+}

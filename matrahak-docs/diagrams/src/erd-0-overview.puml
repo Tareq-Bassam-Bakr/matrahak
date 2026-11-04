@@ -1,0 +1,107 @@
+@startuml erd-0-overview
+skinparam defaultFontName Cairo
+skinparam defaultFontSize 13
+skinparam dpi 160
+skinparam shadowing false
+skinparam roundcorner 8
+skinparam nodesep 45
+skinparam ranksep 55
+skinparam ArrowColor #4B5563
+skinparam ArrowThickness 1.1
+skinparam class {
+  BackgroundColor #FFFFFF
+  BorderColor #0F6B4A
+  BorderThickness 1.3
+  HeaderBackgroundColor #E7F2EC
+  FontStyle bold
+  AttributeFontSize 12
+  StereotypeFontSize 10
+}
+hide circle
+hide methods
+hide stereotype
+
+title <size:18>المخطط المفاهيمي لقاعدة بيانات مطرحك (Conceptual ERD) — 27 جدولاً</size>
+left to right direction
+hide empty members
+skinparam nodesep 30
+skinparam ranksep 70
+entity "<b>تصنيفات الذكاء الاصطناعي</b>\n<size:10><color:#4B5563>ai_classifications</color></size>" as ai_classifications
+entity "<b>الرؤى الذكية</b>\n<size:10><color:#4B5563>ai_insights</color></size>" as ai_insights
+entity "<b>التنبؤات</b>\n<size:10><color:#4B5563>ai_predictions</color></size>" as ai_predictions
+entity "<b>لقطات المؤشرات</b>\n<size:10><color:#4B5563>analytics_snapshots</color></size>" as analytics_snapshots
+entity "<b>سجل التدقيق</b>\n<size:10><color:#4B5563>audit_logs</color></size>" as audit_logs
+entity "<b>التصنيفات</b>\n<size:10><color:#4B5563>categories</color></size>" as categories
+entity "<b>المديريات</b>\n<size:10><color:#4B5563>departments</color></size>" as departments
+entity "<b>المحافظات</b>\n<size:10><color:#4B5563>districts</color></size>" as districts
+entity "<b>أداء الموظفين</b>\n<size:10><color:#4B5563>employee_stats</color></size>" as employee_stats
+entity "<b>مناطق المراقبة</b>\n<size:10><color:#4B5563>geofence_zones</color></size>" as geofence_zones
+entity "<b>بيانات الخريطة الحرارية</b>\n<size:10><color:#4B5563>heatmap_snapshots</color></size>" as heatmap_snapshots
+entity "<b>طبقات الخريطة</b>\n<size:10><color:#4B5563>map_layers</color></size>" as map_layers
+entity "<b>صلاحيات مباشرة</b>\n<size:10><color:#4B5563>model_has_permissions</color></size>" as model_has_permissions
+entity "<b>أدوار المستخدمين</b>\n<size:10><color:#4B5563>model_has_roles</color></size>" as model_has_roles
+entity "<b>الإشعارات</b>\n<size:10><color:#4B5563>notifications</color></size>" as notifications
+entity "<b>الصلاحيات</b>\n<size:10><color:#4B5563>permissions</color></size>" as permissions
+entity "<b>رموز الدخول Sanctum</b>\n<size:10><color:#4B5563>personal_access_tokens</color></size>" as personal_access_tokens
+entity "<b>الإسنادات</b>\n<size:10><color:#4B5563>report_assignments</color></size>" as report_assignments
+entity "<b>المرفقات</b>\n<size:10><color:#4B5563>report_attachments</color></size>" as report_attachments
+entity "<b>التقييمات</b>\n<size:10><color:#4B5563>report_ratings</color></size>" as report_ratings
+entity "<b>السجل الزمني للبلاغ</b>\n<size:10><color:#4B5563>report_updates</color></size>" as report_updates
+entity "<b>التأييدات</b>\n<size:10><color:#4B5563>report_upvotes</color></size>" as report_upvotes
+entity "<b>البلاغات</b>\n<size:10><color:#4B5563>reports</color></size>" as reports
+entity "<b>صلاحيات الأدوار</b>\n<size:10><color:#4B5563>role_has_permissions</color></size>" as role_has_permissions
+entity "<b>الأدوار</b>\n<size:10><color:#4B5563>roles</color></size>" as roles
+entity "<b>إعدادات النظام</b>\n<size:10><color:#4B5563>settings</color></size>" as settings
+entity "<b>المستخدمون</b>\n<size:10><color:#4B5563>users</color></size>" as users
+categories |o--o{ ai_classifications : <size:10>category_id</size>
+departments |o--o{ ai_classifications : <size:10>department_id</size>
+reports ||--o{ ai_classifications : <size:10>report_id</size>
+categories |o--o{ ai_insights : <size:10>category_id</size>
+departments |o--o{ ai_insights : <size:10>department_id</size>
+districts |o--o{ ai_insights : <size:10>district_id</size>
+categories |o--o{ ai_predictions : <size:10>category_id</size>
+districts |o--o{ ai_predictions : <size:10>district_id</size>
+departments |o--o{ analytics_snapshots : <size:10>department_id</size>
+districts |o--o{ analytics_snapshots : <size:10>district_id</size>
+users |o--o{ audit_logs : <size:10>user_id</size>
+departments ||--o{ categories : <size:10>department_id</size>
+categories |o--o{ categories : <size:10>parent_id</size>
+users |o--o{ departments : <size:10>manager_id</size>
+departments |o--o{ departments : <size:10>parent_id</size>
+users ||--o| employee_stats : <size:10>employee_id</size>
+users |o--o{ geofence_zones : <size:10>created_by</size>
+categories |o--o{ heatmap_snapshots : <size:10>category_id</size>
+districts |o--o{ heatmap_snapshots : <size:10>district_id</size>
+map_layers |o--o{ heatmap_snapshots : <size:10>layer_id</size>
+users |o--o{ map_layers : <size:10>created_by</size>
+permissions ||--o{ model_has_permissions : <size:10>permission_id</size>
+roles ||--o{ model_has_roles : <size:10>role_id</size>
+users |o--o{ report_assignments : <size:10>assigned_by</size>
+departments ||--o{ report_assignments : <size:10>department_id</size>
+users ||--o{ report_assignments : <size:10>employee_id</size>
+reports ||--o{ report_assignments : <size:10>report_id</size>
+reports ||--o{ report_attachments : <size:10>report_id</size>
+users ||--o{ report_attachments : <size:10>uploader_id</size>
+users ||--o{ report_ratings : <size:10>citizen_id</size>
+users |o--o{ report_ratings : <size:10>employee_id</size>
+reports ||--o| report_ratings : <size:10>report_id</size>
+reports ||--o{ report_updates : <size:10>report_id</size>
+users |o--o{ report_updates : <size:10>user_id</size>
+reports ||--o{ report_upvotes : <size:10>report_id</size>
+users ||--o{ report_upvotes : <size:10>user_id</size>
+categories |o--o{ reports : <size:10>ai_category_id</size>
+departments |o--o{ reports : <size:10>ai_department_id</size>
+reports |o--o{ reports : <size:10>ai_duplicate_of</size>
+categories |o--o{ reports : <size:10>category_id</size>
+users ||--o{ reports : <size:10>citizen_id</size>
+departments |o--o{ reports : <size:10>department_id</size>
+districts |o--o{ reports : <size:10>district_id</size>
+permissions ||--o{ role_has_permissions : <size:10>permission_id</size>
+roles ||--o{ role_has_permissions : <size:10>role_id</size>
+departments |o--o{ users : <size:10>department_id</size>
+districts |o--o{ users : <size:10>district_id</size>
+users |o..o{ notifications : <size:10>notifiable_type, notifiable_id (polymorphic)</size>
+users |o..o{ personal_access_tokens : <size:10>tokenable_type, tokenable_id (polymorphic)</size>
+users |o..o{ model_has_roles : <size:10>model_type, model_id (polymorphic)</size>
+users |o..o{ model_has_permissions : <size:10>model_type, model_id (polymorphic)</size>
+@enduml

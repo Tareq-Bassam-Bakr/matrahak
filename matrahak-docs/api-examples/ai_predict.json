@@ -1,0 +1,4885 @@
+{
+ "method": "POST",
+ "url": "/v1/predict",
+ "headers": {
+  "X-Internal-Key": "***"
+ },
+ "request": {
+  "horizon_days": 7,
+  "lookback_days": 90,
+  "today": "2026-10-25",
+  "type_map": {
+   "power-outage": "electricity_failure",
+   "street-light-failure": "electricity_failure",
+   "dangerous-electric-pole": "electricity_failure",
+   "exposed-wires": "electricity_failure",
+   "street-water-leak": "water_problem",
+   "drinking-water-outage": "water_problem",
+   "sewage-overflow": "water_problem",
+   "blocked-drains": "water_problem",
+   "contaminated-water": "water_problem",
+   "traffic-congestion": "traffic_congestion",
+   "traffic-signal-failure": "traffic_congestion"
+  },
+  "districts": [
+   {
+    "id": 1,
+    "name": "محافظة دمشق",
+    "population": 1754000
+   },
+   {
+    "id": 2,
+    "name": "محافظة ريف دمشق",
+    "population": 2836000
+   },
+   {
+    "id": 3,
+    "name": "محافظة حلب",
+    "population": 4868000
+   },
+   {
+    "id": 4,
+    "name": "محافظة حمص",
+    "population": 1803000
+   },
+   {
+    "id": 5,
+    "name": "محافظة حماة",
+    "population": 1628000
+   },
+   {
+    "id": 6,
+    "name": "محافظة اللاذقية",
+    "population": 1008000
+   },
+   {
+    "id": 7,
+    "name": "محافظة طرطوس",
+    "population": 797000
+   },
+   {
+    "id": 8,
+    "name": "محافظة إدلب",
+    "population": 1501000
+   },
+   {
+    "id": 9,
+    "name": "محافظة الحسكة",
+    "population": 1512000
+   },
+   {
+    "id": 10,
+    "name": "محافظة دير الزور",
+    "population": 1239000
+   },
+   {
+    "id": 11,
+    "name": "محافظة الرقة",
+    "population": 944000
+   },
+   {
+    "id": 12,
+    "name": "محافظة درعا",
+    "population": 1027000
+   },
+   {
+    "id": 13,
+    "name": "محافظة السويداء",
+    "population": 370000
+   },
+   {
+    "id": 14,
+    "name": "محافظة القنيطرة",
+    "population": 90000
+   }
+  ],
+  "categories": {
+   "road-damage": "حفر وتلف الطرق",
+   "sidewalk-damage": "تلف الأرصفة",
+   "garbage": "النفايات والقمامة",
+   "blocked-drains": "مجاري الأمطار المسدودة",
+   "power-outage": "انقطاع الكهرباء",
+   "street-light-failure": "إنارة شوارع معطلة",
+   "dangerous-electric-pole": "عمود كهربائي خطر",
+   "exposed-wires": "أسلاك كهربائية مكشوفة",
+   "street-water-leak": "تسرب مياه في الشارع",
+   "drinking-water-outage": "انقطاع مياه الشرب",
+   "sewage-overflow": "طفح الصرف الصحي",
+   "traffic-signal-failure": "إشارة مرور معطلة",
+   "traffic-congestion": "ازدحام مروري",
+   "damaged-road-sign": "لافتة طرقية تالفة",
+   "environmental-violation": "مخالفة بيئية",
+   "waste-burning": "حرق نفايات",
+   "water-pollution": "تلوث مائي",
+   "collapsing-building": "مبنى آيل للسقوط",
+   "fire": "حريق",
+   "public-safety-hazard": "خطر على السلامة العامة",
+   "internet-outage": "انقطاع الإنترنت",
+   "telecom-network-failure": "عطل في شبكة الاتصالات",
+   "health-violation": "مخالفة صحية",
+   "contaminated-water": "مياه ملوثة"
+  },
+  "series": [
+   {
+    "date": "2026-07-28",
+    "district_id": 1,
+    "category_slug": "sewage-overflow",
+    "count": 1,
+    "high_count": 1
+   },
+   {
+    "date": "2026-07-28",
+    "district_id": 12,
+    "category_slug": "street-water-leak",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-07-28",
+    "district_id": 5,
+    "category_slug": "power-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-07-28",
+    "district_id": 4,
+    "category_slug": "street-light-failure",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-07-29",
+    "district_id": 8,
+    "category_slug": "garbage",
+    "count": 1,
+    "high_count": 1
+   },
+   {
+    "date": "2026-07-29",
+    "district_id": 1,
+    "category_slug": "drinking-water-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-07-29",
+    "district_id": 13,
+    "category_slug": "street-light-failure",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-07-29",
+    "district_id": 11,
+    "category_slug": "blocked-drains",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-07-29",
+    "district_id": 4,
+    "category_slug": "road-damage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-07-29",
+    "district_id": 5,
+    "category_slug": "garbage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-07-29",
+    "district_id": 7,
+    "category_slug": "internet-outage",
+    "count": 2,
+    "high_count": 0
+   },
+   {
+    "date": "2026-07-30",
+    "district_id": 3,
+    "category_slug": "road-damage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-07-30",
+    "district_id": 2,
+    "category_slug": "garbage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-07-30",
+    "district_id": 12,
+    "category_slug": "garbage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-07-30",
+    "district_id": 6,
+    "category_slug": "telecom-network-failure",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-07-31",
+    "district_id": 1,
+    "category_slug": "road-damage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-07-31",
+    "district_id": 8,
+    "category_slug": "health-violation",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-01",
+    "district_id": 2,
+    "category_slug": "street-water-leak",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-01",
+    "district_id": 2,
+    "category_slug": "damaged-road-sign",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-01",
+    "district_id": 6,
+    "category_slug": "damaged-road-sign",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-01",
+    "district_id": 11,
+    "category_slug": "damaged-road-sign",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-01",
+    "district_id": 12,
+    "category_slug": "sidewalk-damage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-01",
+    "district_id": 2,
+    "category_slug": "sidewalk-damage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-01",
+    "district_id": 1,
+    "category_slug": "traffic-congestion",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-02",
+    "district_id": 10,
+    "category_slug": "waste-burning",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-02",
+    "district_id": 10,
+    "category_slug": "water-pollution",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-02",
+    "district_id": 12,
+    "category_slug": "drinking-water-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-02",
+    "district_id": 1,
+    "category_slug": "sewage-overflow",
+    "count": 1,
+    "high_count": 1
+   },
+   {
+    "date": "2026-08-02",
+    "district_id": 2,
+    "category_slug": "drinking-water-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-02",
+    "district_id": 8,
+    "category_slug": "garbage",
+    "count": 1,
+    "high_count": 1
+   },
+   {
+    "date": "2026-08-02",
+    "district_id": 3,
+    "category_slug": "street-light-failure",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-02",
+    "district_id": 7,
+    "category_slug": "road-damage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-03",
+    "district_id": 2,
+    "category_slug": "waste-burning",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-03",
+    "district_id": 2,
+    "category_slug": "garbage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-03",
+    "district_id": 2,
+    "category_slug": "road-damage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-03",
+    "district_id": 8,
+    "category_slug": "sidewalk-damage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-03",
+    "district_id": 1,
+    "category_slug": "street-light-failure",
+    "count": 1,
+    "high_count": 1
+   },
+   {
+    "date": "2026-08-03",
+    "district_id": 4,
+    "category_slug": "road-damage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-03",
+    "district_id": 5,
+    "category_slug": "drinking-water-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-03",
+    "district_id": 4,
+    "category_slug": "sidewalk-damage",
+    "count": 2,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-03",
+    "district_id": 7,
+    "category_slug": "street-water-leak",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-03",
+    "district_id": 1,
+    "category_slug": "garbage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-04",
+    "district_id": 1,
+    "category_slug": "road-damage",
+    "count": 2,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-04",
+    "district_id": 3,
+    "category_slug": "drinking-water-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-04",
+    "district_id": 2,
+    "category_slug": "waste-burning",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-04",
+    "district_id": 3,
+    "category_slug": "garbage",
+    "count": 1,
+    "high_count": 1
+   },
+   {
+    "date": "2026-08-04",
+    "district_id": 2,
+    "category_slug": "power-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-05",
+    "district_id": 12,
+    "category_slug": "street-light-failure",
+    "count": 2,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-05",
+    "district_id": 5,
+    "category_slug": "street-water-leak",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-05",
+    "district_id": 4,
+    "category_slug": "sidewalk-damage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-05",
+    "district_id": 3,
+    "category_slug": "road-damage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-05",
+    "district_id": 9,
+    "category_slug": "road-damage",
+    "count": 1,
+    "high_count": 1
+   },
+   {
+    "date": "2026-08-06",
+    "district_id": 10,
+    "category_slug": "power-outage",
+    "count": 2,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-06",
+    "district_id": 8,
+    "category_slug": "garbage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-06",
+    "district_id": 7,
+    "category_slug": "environmental-violation",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-06",
+    "district_id": 6,
+    "category_slug": "sidewalk-damage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-06",
+    "district_id": 3,
+    "category_slug": "traffic-congestion",
+    "count": 2,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-06",
+    "district_id": 3,
+    "category_slug": "exposed-wires",
+    "count": 1,
+    "high_count": 1
+   },
+   {
+    "date": "2026-08-06",
+    "district_id": 10,
+    "category_slug": "street-light-failure",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-07",
+    "district_id": 5,
+    "category_slug": "street-water-leak",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-07",
+    "district_id": 4,
+    "category_slug": "garbage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-07",
+    "district_id": 3,
+    "category_slug": "garbage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-07",
+    "district_id": 3,
+    "category_slug": "traffic-congestion",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-08",
+    "district_id": 5,
+    "category_slug": "traffic-congestion",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-08",
+    "district_id": 4,
+    "category_slug": "garbage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-08",
+    "district_id": 6,
+    "category_slug": "traffic-congestion",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-08",
+    "district_id": 1,
+    "category_slug": "sidewalk-damage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-08",
+    "district_id": 3,
+    "category_slug": "power-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-08",
+    "district_id": 8,
+    "category_slug": "sewage-overflow",
+    "count": 1,
+    "high_count": 1
+   },
+   {
+    "date": "2026-08-08",
+    "district_id": 13,
+    "category_slug": "drinking-water-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-08",
+    "district_id": 4,
+    "category_slug": "sewage-overflow",
+    "count": 1,
+    "high_count": 1
+   },
+   {
+    "date": "2026-08-09",
+    "district_id": 1,
+    "category_slug": "road-damage",
+    "count": 2,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-09",
+    "district_id": 10,
+    "category_slug": "power-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-09",
+    "district_id": 7,
+    "category_slug": "drinking-water-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-09",
+    "district_id": 6,
+    "category_slug": "collapsing-building",
+    "count": 1,
+    "high_count": 1
+   },
+   {
+    "date": "2026-08-09",
+    "district_id": 7,
+    "category_slug": "street-light-failure",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-09",
+    "district_id": 2,
+    "category_slug": "garbage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-09",
+    "district_id": 6,
+    "category_slug": "garbage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-10",
+    "district_id": 2,
+    "category_slug": "drinking-water-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-10",
+    "district_id": 3,
+    "category_slug": "traffic-signal-failure",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-10",
+    "district_id": 8,
+    "category_slug": "sewage-overflow",
+    "count": 1,
+    "high_count": 1
+   },
+   {
+    "date": "2026-08-10",
+    "district_id": 9,
+    "category_slug": "exposed-wires",
+    "count": 1,
+    "high_count": 1
+   },
+   {
+    "date": "2026-08-10",
+    "district_id": 2,
+    "category_slug": "telecom-network-failure",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-10",
+    "district_id": 3,
+    "category_slug": "traffic-congestion",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-10",
+    "district_id": 11,
+    "category_slug": "road-damage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-11",
+    "district_id": 3,
+    "category_slug": "internet-outage",
+    "count": 1,
+    "high_count": 1
+   },
+   {
+    "date": "2026-08-11",
+    "district_id": 2,
+    "category_slug": "traffic-congestion",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-11",
+    "district_id": 12,
+    "category_slug": "sewage-overflow",
+    "count": 1,
+    "high_count": 1
+   },
+   {
+    "date": "2026-08-11",
+    "district_id": 5,
+    "category_slug": "public-safety-hazard",
+    "count": 1,
+    "high_count": 1
+   },
+   {
+    "date": "2026-08-12",
+    "district_id": 12,
+    "category_slug": "internet-outage",
+    "count": 1,
+    "high_count": 1
+   },
+   {
+    "date": "2026-08-12",
+    "district_id": 9,
+    "category_slug": "street-light-failure",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-12",
+    "district_id": 2,
+    "category_slug": "waste-burning",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-12",
+    "district_id": 5,
+    "category_slug": "internet-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-12",
+    "district_id": 5,
+    "category_slug": "power-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-12",
+    "district_id": 7,
+    "category_slug": "street-water-leak",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-12",
+    "district_id": 2,
+    "category_slug": "internet-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-12",
+    "district_id": 3,
+    "category_slug": "traffic-signal-failure",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-13",
+    "district_id": 7,
+    "category_slug": "drinking-water-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-13",
+    "district_id": 3,
+    "category_slug": "road-damage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-13",
+    "district_id": 1,
+    "category_slug": "environmental-violation",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-13",
+    "district_id": 1,
+    "category_slug": "garbage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-13",
+    "district_id": 9,
+    "category_slug": "power-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-13",
+    "district_id": 2,
+    "category_slug": "traffic-signal-failure",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-13",
+    "district_id": 9,
+    "category_slug": "garbage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-14",
+    "district_id": 2,
+    "category_slug": "power-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-14",
+    "district_id": 2,
+    "category_slug": "street-light-failure",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-15",
+    "district_id": 2,
+    "category_slug": "power-outage",
+    "count": 2,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-15",
+    "district_id": 3,
+    "category_slug": "road-damage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-15",
+    "district_id": 9,
+    "category_slug": "road-damage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-15",
+    "district_id": 8,
+    "category_slug": "power-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-15",
+    "district_id": 4,
+    "category_slug": "power-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-15",
+    "district_id": 1,
+    "category_slug": "power-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-15",
+    "district_id": 1,
+    "category_slug": "damaged-road-sign",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-16",
+    "district_id": 2,
+    "category_slug": "street-light-failure",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-16",
+    "district_id": 13,
+    "category_slug": "contaminated-water",
+    "count": 1,
+    "high_count": 1
+   },
+   {
+    "date": "2026-08-16",
+    "district_id": 12,
+    "category_slug": "internet-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-16",
+    "district_id": 1,
+    "category_slug": "road-damage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-16",
+    "district_id": 10,
+    "category_slug": "waste-burning",
+    "count": 1,
+    "high_count": 1
+   },
+   {
+    "date": "2026-08-16",
+    "district_id": 3,
+    "category_slug": "waste-burning",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-16",
+    "district_id": 3,
+    "category_slug": "power-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-16",
+    "district_id": 3,
+    "category_slug": "dangerous-electric-pole",
+    "count": 1,
+    "high_count": 1
+   },
+   {
+    "date": "2026-08-17",
+    "district_id": 3,
+    "category_slug": "road-damage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-17",
+    "district_id": 2,
+    "category_slug": "waste-burning",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-17",
+    "district_id": 14,
+    "category_slug": "power-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-17",
+    "district_id": 6,
+    "category_slug": "street-water-leak",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-17",
+    "district_id": 1,
+    "category_slug": "sidewalk-damage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-17",
+    "district_id": 1,
+    "category_slug": "drinking-water-outage",
+    "count": 1,
+    "high_count": 1
+   },
+   {
+    "date": "2026-08-17",
+    "district_id": 8,
+    "category_slug": "garbage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-17",
+    "district_id": 5,
+    "category_slug": "dangerous-electric-pole",
+    "count": 1,
+    "high_count": 1
+   },
+   {
+    "date": "2026-08-17",
+    "district_id": 1,
+    "category_slug": "street-water-leak",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-17",
+    "district_id": 1,
+    "category_slug": "blocked-drains",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-17",
+    "district_id": 6,
+    "category_slug": "blocked-drains",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-17",
+    "district_id": 10,
+    "category_slug": "drinking-water-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-18",
+    "district_id": 5,
+    "category_slug": "blocked-drains",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-18",
+    "district_id": 1,
+    "category_slug": "telecom-network-failure",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-18",
+    "district_id": 1,
+    "category_slug": "street-light-failure",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-18",
+    "district_id": 4,
+    "category_slug": "road-damage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-19",
+    "district_id": 8,
+    "category_slug": "drinking-water-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-19",
+    "district_id": 7,
+    "category_slug": "damaged-road-sign",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-19",
+    "district_id": 3,
+    "category_slug": "traffic-congestion",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-19",
+    "district_id": 3,
+    "category_slug": "street-light-failure",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-19",
+    "district_id": 3,
+    "category_slug": "power-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-19",
+    "district_id": 3,
+    "category_slug": "road-damage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-19",
+    "district_id": 11,
+    "category_slug": "power-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-20",
+    "district_id": 3,
+    "category_slug": "road-damage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-20",
+    "district_id": 8,
+    "category_slug": "street-light-failure",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-20",
+    "district_id": 10,
+    "category_slug": "dangerous-electric-pole",
+    "count": 1,
+    "high_count": 1
+   },
+   {
+    "date": "2026-08-20",
+    "district_id": 3,
+    "category_slug": "traffic-congestion",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-20",
+    "district_id": 1,
+    "category_slug": "power-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-20",
+    "district_id": 10,
+    "category_slug": "traffic-congestion",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-21",
+    "district_id": 3,
+    "category_slug": "traffic-signal-failure",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-21",
+    "district_id": 1,
+    "category_slug": "street-light-failure",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-21",
+    "district_id": 8,
+    "category_slug": "health-violation",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-21",
+    "district_id": 6,
+    "category_slug": "traffic-signal-failure",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-21",
+    "district_id": 9,
+    "category_slug": "sidewalk-damage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-21",
+    "district_id": 4,
+    "category_slug": "power-outage",
+    "count": 1,
+    "high_count": 1
+   },
+   {
+    "date": "2026-08-22",
+    "district_id": 14,
+    "category_slug": "internet-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-22",
+    "district_id": 6,
+    "category_slug": "waste-burning",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-22",
+    "district_id": 1,
+    "category_slug": "garbage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-22",
+    "district_id": 2,
+    "category_slug": "garbage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-22",
+    "district_id": 1,
+    "category_slug": "power-outage",
+    "count": 2,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-22",
+    "district_id": 1,
+    "category_slug": "sewage-overflow",
+    "count": 1,
+    "high_count": 1
+   },
+   {
+    "date": "2026-08-22",
+    "district_id": 4,
+    "category_slug": "drinking-water-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-22",
+    "district_id": 7,
+    "category_slug": "drinking-water-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-23",
+    "district_id": 3,
+    "category_slug": "sidewalk-damage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-23",
+    "district_id": 7,
+    "category_slug": "damaged-road-sign",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-23",
+    "district_id": 2,
+    "category_slug": "power-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-23",
+    "district_id": 3,
+    "category_slug": "internet-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-23",
+    "district_id": 11,
+    "category_slug": "collapsing-building",
+    "count": 1,
+    "high_count": 1
+   },
+   {
+    "date": "2026-08-23",
+    "district_id": 3,
+    "category_slug": "traffic-signal-failure",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-23",
+    "district_id": 2,
+    "category_slug": "drinking-water-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-23",
+    "district_id": 1,
+    "category_slug": "telecom-network-failure",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-23",
+    "district_id": 7,
+    "category_slug": "street-water-leak",
+    "count": 1,
+    "high_count": 1
+   },
+   {
+    "date": "2026-08-24",
+    "district_id": 2,
+    "category_slug": "garbage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-24",
+    "district_id": 4,
+    "category_slug": "power-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-24",
+    "district_id": 2,
+    "category_slug": "public-safety-hazard",
+    "count": 1,
+    "high_count": 1
+   },
+   {
+    "date": "2026-08-24",
+    "district_id": 1,
+    "category_slug": "garbage",
+    "count": 1,
+    "high_count": 1
+   },
+   {
+    "date": "2026-08-24",
+    "district_id": 1,
+    "category_slug": "traffic-congestion",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-24",
+    "district_id": 2,
+    "category_slug": "dangerous-electric-pole",
+    "count": 2,
+    "high_count": 2
+   },
+   {
+    "date": "2026-08-24",
+    "district_id": 10,
+    "category_slug": "street-light-failure",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-25",
+    "district_id": 11,
+    "category_slug": "internet-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-25",
+    "district_id": 11,
+    "category_slug": "power-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-25",
+    "district_id": 10,
+    "category_slug": "road-damage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-25",
+    "district_id": 1,
+    "category_slug": "road-damage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-25",
+    "district_id": 3,
+    "category_slug": "traffic-signal-failure",
+    "count": 1,
+    "high_count": 1
+   },
+   {
+    "date": "2026-08-25",
+    "district_id": 3,
+    "category_slug": "garbage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-25",
+    "district_id": 2,
+    "category_slug": "sidewalk-damage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-26",
+    "district_id": 5,
+    "category_slug": "health-violation",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-26",
+    "district_id": 2,
+    "category_slug": "road-damage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-26",
+    "district_id": 4,
+    "category_slug": "internet-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-26",
+    "district_id": 4,
+    "category_slug": "telecom-network-failure",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-27",
+    "district_id": 6,
+    "category_slug": "internet-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-27",
+    "district_id": 6,
+    "category_slug": "road-damage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-27",
+    "district_id": 10,
+    "category_slug": "garbage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-27",
+    "district_id": 12,
+    "category_slug": "sewage-overflow",
+    "count": 1,
+    "high_count": 1
+   },
+   {
+    "date": "2026-08-27",
+    "district_id": 4,
+    "category_slug": "blocked-drains",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-27",
+    "district_id": 1,
+    "category_slug": "environmental-violation",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-27",
+    "district_id": 1,
+    "category_slug": "traffic-congestion",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-27",
+    "district_id": 7,
+    "category_slug": "power-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-28",
+    "district_id": 14,
+    "category_slug": "health-violation",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-28",
+    "district_id": 8,
+    "category_slug": "garbage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-28",
+    "district_id": 5,
+    "category_slug": "internet-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-28",
+    "district_id": 4,
+    "category_slug": "drinking-water-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-29",
+    "district_id": 5,
+    "category_slug": "dangerous-electric-pole",
+    "count": 1,
+    "high_count": 1
+   },
+   {
+    "date": "2026-08-29",
+    "district_id": 4,
+    "category_slug": "blocked-drains",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-29",
+    "district_id": 1,
+    "category_slug": "sewage-overflow",
+    "count": 1,
+    "high_count": 1
+   },
+   {
+    "date": "2026-08-29",
+    "district_id": 2,
+    "category_slug": "power-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-29",
+    "district_id": 1,
+    "category_slug": "contaminated-water",
+    "count": 1,
+    "high_count": 1
+   },
+   {
+    "date": "2026-08-29",
+    "district_id": 1,
+    "category_slug": "power-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-29",
+    "district_id": 7,
+    "category_slug": "drinking-water-outage",
+    "count": 1,
+    "high_count": 1
+   },
+   {
+    "date": "2026-08-30",
+    "district_id": 6,
+    "category_slug": "garbage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-30",
+    "district_id": 8,
+    "category_slug": "exposed-wires",
+    "count": 1,
+    "high_count": 1
+   },
+   {
+    "date": "2026-08-30",
+    "district_id": 2,
+    "category_slug": "collapsing-building",
+    "count": 1,
+    "high_count": 1
+   },
+   {
+    "date": "2026-08-30",
+    "district_id": 9,
+    "category_slug": "street-light-failure",
+    "count": 1,
+    "high_count": 1
+   },
+   {
+    "date": "2026-08-30",
+    "district_id": 6,
+    "category_slug": "health-violation",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-30",
+    "district_id": 2,
+    "category_slug": "road-damage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-30",
+    "district_id": 8,
+    "category_slug": "drinking-water-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-30",
+    "district_id": 5,
+    "category_slug": "street-water-leak",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-30",
+    "district_id": 11,
+    "category_slug": "drinking-water-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-30",
+    "district_id": 3,
+    "category_slug": "sewage-overflow",
+    "count": 1,
+    "high_count": 1
+   },
+   {
+    "date": "2026-08-30",
+    "district_id": 1,
+    "category_slug": "telecom-network-failure",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-30",
+    "district_id": 4,
+    "category_slug": "street-water-leak",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-31",
+    "district_id": 3,
+    "category_slug": "power-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-31",
+    "district_id": 2,
+    "category_slug": "power-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-31",
+    "district_id": 3,
+    "category_slug": "street-light-failure",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-31",
+    "district_id": 5,
+    "category_slug": "street-light-failure",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-31",
+    "district_id": 2,
+    "category_slug": "internet-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-31",
+    "district_id": 3,
+    "category_slug": "sidewalk-damage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-31",
+    "district_id": 3,
+    "category_slug": "collapsing-building",
+    "count": 1,
+    "high_count": 1
+   },
+   {
+    "date": "2026-08-31",
+    "district_id": 3,
+    "category_slug": "drinking-water-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-31",
+    "district_id": 9,
+    "category_slug": "road-damage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-08-31",
+    "district_id": 6,
+    "category_slug": "road-damage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-01",
+    "district_id": 3,
+    "category_slug": "power-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-01",
+    "district_id": 1,
+    "category_slug": "power-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-01",
+    "district_id": 4,
+    "category_slug": "blocked-drains",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-01",
+    "district_id": 12,
+    "category_slug": "traffic-signal-failure",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-01",
+    "district_id": 6,
+    "category_slug": "traffic-signal-failure",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-01",
+    "district_id": 5,
+    "category_slug": "road-damage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-02",
+    "district_id": 3,
+    "category_slug": "garbage",
+    "count": 2,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-02",
+    "district_id": 5,
+    "category_slug": "traffic-congestion",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-02",
+    "district_id": 7,
+    "category_slug": "street-light-failure",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-02",
+    "district_id": 4,
+    "category_slug": "drinking-water-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-02",
+    "district_id": 2,
+    "category_slug": "blocked-drains",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-02",
+    "district_id": 1,
+    "category_slug": "blocked-drains",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-02",
+    "district_id": 5,
+    "category_slug": "damaged-road-sign",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-02",
+    "district_id": 6,
+    "category_slug": "sewage-overflow",
+    "count": 1,
+    "high_count": 1
+   },
+   {
+    "date": "2026-09-03",
+    "district_id": 8,
+    "category_slug": "drinking-water-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-03",
+    "district_id": 8,
+    "category_slug": "water-pollution",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-03",
+    "district_id": 9,
+    "category_slug": "power-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-03",
+    "district_id": 2,
+    "category_slug": "road-damage",
+    "count": 2,
+    "high_count": 1
+   },
+   {
+    "date": "2026-09-03",
+    "district_id": 1,
+    "category_slug": "street-light-failure",
+    "count": 2,
+    "high_count": 1
+   },
+   {
+    "date": "2026-09-03",
+    "district_id": 5,
+    "category_slug": "sewage-overflow",
+    "count": 1,
+    "high_count": 1
+   },
+   {
+    "date": "2026-09-03",
+    "district_id": 12,
+    "category_slug": "sidewalk-damage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-04",
+    "district_id": 3,
+    "category_slug": "exposed-wires",
+    "count": 1,
+    "high_count": 1
+   },
+   {
+    "date": "2026-09-04",
+    "district_id": 1,
+    "category_slug": "street-light-failure",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-04",
+    "district_id": 9,
+    "category_slug": "health-violation",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-04",
+    "district_id": 7,
+    "category_slug": "sewage-overflow",
+    "count": 1,
+    "high_count": 1
+   },
+   {
+    "date": "2026-09-05",
+    "district_id": 2,
+    "category_slug": "traffic-congestion",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-05",
+    "district_id": 3,
+    "category_slug": "fire",
+    "count": 1,
+    "high_count": 1
+   },
+   {
+    "date": "2026-09-05",
+    "district_id": 3,
+    "category_slug": "internet-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-05",
+    "district_id": 2,
+    "category_slug": "road-damage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-05",
+    "district_id": 2,
+    "category_slug": "internet-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-05",
+    "district_id": 5,
+    "category_slug": "sidewalk-damage",
+    "count": 1,
+    "high_count": 1
+   },
+   {
+    "date": "2026-09-05",
+    "district_id": 5,
+    "category_slug": "road-damage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-05",
+    "district_id": 8,
+    "category_slug": "traffic-congestion",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-05",
+    "district_id": 9,
+    "category_slug": "garbage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-06",
+    "district_id": 6,
+    "category_slug": "traffic-signal-failure",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-06",
+    "district_id": 4,
+    "category_slug": "sewage-overflow",
+    "count": 1,
+    "high_count": 1
+   },
+   {
+    "date": "2026-09-06",
+    "district_id": 8,
+    "category_slug": "traffic-congestion",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-06",
+    "district_id": 1,
+    "category_slug": "power-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-06",
+    "district_id": 2,
+    "category_slug": "traffic-congestion",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-06",
+    "district_id": 4,
+    "category_slug": "street-light-failure",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-06",
+    "district_id": 2,
+    "category_slug": "traffic-signal-failure",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-06",
+    "district_id": 10,
+    "category_slug": "exposed-wires",
+    "count": 1,
+    "high_count": 1
+   },
+   {
+    "date": "2026-09-06",
+    "district_id": 3,
+    "category_slug": "water-pollution",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-06",
+    "district_id": 5,
+    "category_slug": "sewage-overflow",
+    "count": 1,
+    "high_count": 1
+   },
+   {
+    "date": "2026-09-06",
+    "district_id": 1,
+    "category_slug": "health-violation",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-07",
+    "district_id": 3,
+    "category_slug": "road-damage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-07",
+    "district_id": 5,
+    "category_slug": "blocked-drains",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-07",
+    "district_id": 10,
+    "category_slug": "street-light-failure",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-07",
+    "district_id": 3,
+    "category_slug": "dangerous-electric-pole",
+    "count": 1,
+    "high_count": 1
+   },
+   {
+    "date": "2026-09-07",
+    "district_id": 5,
+    "category_slug": "garbage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-07",
+    "district_id": 12,
+    "category_slug": "traffic-congestion",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-07",
+    "district_id": 3,
+    "category_slug": "contaminated-water",
+    "count": 1,
+    "high_count": 1
+   },
+   {
+    "date": "2026-09-07",
+    "district_id": 12,
+    "category_slug": "public-safety-hazard",
+    "count": 1,
+    "high_count": 1
+   },
+   {
+    "date": "2026-09-07",
+    "district_id": 10,
+    "category_slug": "street-water-leak",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-08",
+    "district_id": 6,
+    "category_slug": "garbage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-08",
+    "district_id": 4,
+    "category_slug": "health-violation",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-08",
+    "district_id": 9,
+    "category_slug": "power-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-08",
+    "district_id": 2,
+    "category_slug": "sidewalk-damage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-08",
+    "district_id": 3,
+    "category_slug": "street-light-failure",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-08",
+    "district_id": 1,
+    "category_slug": "internet-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-08",
+    "district_id": 5,
+    "category_slug": "street-light-failure",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-09",
+    "district_id": 2,
+    "category_slug": "dangerous-electric-pole",
+    "count": 1,
+    "high_count": 1
+   },
+   {
+    "date": "2026-09-09",
+    "district_id": 3,
+    "category_slug": "power-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-09",
+    "district_id": 9,
+    "category_slug": "traffic-congestion",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-09",
+    "district_id": 2,
+    "category_slug": "road-damage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-09",
+    "district_id": 4,
+    "category_slug": "health-violation",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-10",
+    "district_id": 3,
+    "category_slug": "traffic-congestion",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-10",
+    "district_id": 2,
+    "category_slug": "internet-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-10",
+    "district_id": 3,
+    "category_slug": "street-water-leak",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-10",
+    "district_id": 3,
+    "category_slug": "garbage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-10",
+    "district_id": 2,
+    "category_slug": "power-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-10",
+    "district_id": 1,
+    "category_slug": "street-water-leak",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-10",
+    "district_id": 6,
+    "category_slug": "power-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-11",
+    "district_id": 8,
+    "category_slug": "road-damage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-11",
+    "district_id": 13,
+    "category_slug": "traffic-signal-failure",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-11",
+    "district_id": 9,
+    "category_slug": "power-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-11",
+    "district_id": 13,
+    "category_slug": "power-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-11",
+    "district_id": 5,
+    "category_slug": "power-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-11",
+    "district_id": 3,
+    "category_slug": "blocked-drains",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-12",
+    "district_id": 3,
+    "category_slug": "drinking-water-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-12",
+    "district_id": 7,
+    "category_slug": "street-water-leak",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-12",
+    "district_id": 2,
+    "category_slug": "sewage-overflow",
+    "count": 1,
+    "high_count": 1
+   },
+   {
+    "date": "2026-09-12",
+    "district_id": 3,
+    "category_slug": "health-violation",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-12",
+    "district_id": 9,
+    "category_slug": "traffic-congestion",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-12",
+    "district_id": 10,
+    "category_slug": "dangerous-electric-pole",
+    "count": 1,
+    "high_count": 1
+   },
+   {
+    "date": "2026-09-12",
+    "district_id": 13,
+    "category_slug": "power-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-12",
+    "district_id": 10,
+    "category_slug": "waste-burning",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-12",
+    "district_id": 1,
+    "category_slug": "power-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-13",
+    "district_id": 4,
+    "category_slug": "sidewalk-damage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-13",
+    "district_id": 7,
+    "category_slug": "traffic-congestion",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-13",
+    "district_id": 3,
+    "category_slug": "telecom-network-failure",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-13",
+    "district_id": 3,
+    "category_slug": "power-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-13",
+    "district_id": 5,
+    "category_slug": "power-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-13",
+    "district_id": 8,
+    "category_slug": "sewage-overflow",
+    "count": 1,
+    "high_count": 1
+   },
+   {
+    "date": "2026-09-13",
+    "district_id": 3,
+    "category_slug": "street-light-failure",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-14",
+    "district_id": 3,
+    "category_slug": "garbage",
+    "count": 2,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-14",
+    "district_id": 3,
+    "category_slug": "road-damage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-14",
+    "district_id": 11,
+    "category_slug": "street-water-leak",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-14",
+    "district_id": 7,
+    "category_slug": "internet-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-14",
+    "district_id": 8,
+    "category_slug": "power-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-14",
+    "district_id": 1,
+    "category_slug": "blocked-drains",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-14",
+    "district_id": 5,
+    "category_slug": "garbage",
+    "count": 1,
+    "high_count": 1
+   },
+   {
+    "date": "2026-09-14",
+    "district_id": 6,
+    "category_slug": "power-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-14",
+    "district_id": 3,
+    "category_slug": "drinking-water-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-14",
+    "district_id": 1,
+    "category_slug": "garbage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-14",
+    "district_id": 6,
+    "category_slug": "drinking-water-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-15",
+    "district_id": 14,
+    "category_slug": "street-water-leak",
+    "count": 1,
+    "high_count": 1
+   },
+   {
+    "date": "2026-09-15",
+    "district_id": 9,
+    "category_slug": "public-safety-hazard",
+    "count": 1,
+    "high_count": 1
+   },
+   {
+    "date": "2026-09-15",
+    "district_id": 6,
+    "category_slug": "road-damage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-15",
+    "district_id": 6,
+    "category_slug": "garbage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-15",
+    "district_id": 8,
+    "category_slug": "road-damage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-16",
+    "district_id": 2,
+    "category_slug": "street-water-leak",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-16",
+    "district_id": 7,
+    "category_slug": "power-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-16",
+    "district_id": 1,
+    "category_slug": "traffic-congestion",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-16",
+    "district_id": 7,
+    "category_slug": "traffic-congestion",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-16",
+    "district_id": 7,
+    "category_slug": "waste-burning",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-16",
+    "district_id": 2,
+    "category_slug": "road-damage",
+    "count": 2,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-16",
+    "district_id": 3,
+    "category_slug": "road-damage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-16",
+    "district_id": 2,
+    "category_slug": "exposed-wires",
+    "count": 1,
+    "high_count": 1
+   },
+   {
+    "date": "2026-09-17",
+    "district_id": 1,
+    "category_slug": "traffic-congestion",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-17",
+    "district_id": 13,
+    "category_slug": "collapsing-building",
+    "count": 1,
+    "high_count": 1
+   },
+   {
+    "date": "2026-09-17",
+    "district_id": 13,
+    "category_slug": "dangerous-electric-pole",
+    "count": 1,
+    "high_count": 1
+   },
+   {
+    "date": "2026-09-17",
+    "district_id": 3,
+    "category_slug": "road-damage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-18",
+    "district_id": 3,
+    "category_slug": "road-damage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-18",
+    "district_id": 2,
+    "category_slug": "power-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-18",
+    "district_id": 3,
+    "category_slug": "sidewalk-damage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-18",
+    "district_id": 3,
+    "category_slug": "power-outage",
+    "count": 1,
+    "high_count": 1
+   },
+   {
+    "date": "2026-09-18",
+    "district_id": 1,
+    "category_slug": "drinking-water-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-19",
+    "district_id": 1,
+    "category_slug": "health-violation",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-19",
+    "district_id": 7,
+    "category_slug": "drinking-water-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-19",
+    "district_id": 3,
+    "category_slug": "waste-burning",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-19",
+    "district_id": 9,
+    "category_slug": "sidewalk-damage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-20",
+    "district_id": 4,
+    "category_slug": "contaminated-water",
+    "count": 1,
+    "high_count": 1
+   },
+   {
+    "date": "2026-09-20",
+    "district_id": 4,
+    "category_slug": "power-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-20",
+    "district_id": 3,
+    "category_slug": "garbage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-20",
+    "district_id": 3,
+    "category_slug": "blocked-drains",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-20",
+    "district_id": 9,
+    "category_slug": "power-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-20",
+    "district_id": 1,
+    "category_slug": "blocked-drains",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-20",
+    "district_id": 1,
+    "category_slug": "road-damage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-20",
+    "district_id": 2,
+    "category_slug": "street-light-failure",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-20",
+    "district_id": 1,
+    "category_slug": "internet-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-21",
+    "district_id": 1,
+    "category_slug": "damaged-road-sign",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-21",
+    "district_id": 10,
+    "category_slug": "blocked-drains",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-21",
+    "district_id": 1,
+    "category_slug": "traffic-congestion",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-21",
+    "district_id": 3,
+    "category_slug": "traffic-congestion",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-21",
+    "district_id": 1,
+    "category_slug": "drinking-water-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-21",
+    "district_id": 5,
+    "category_slug": "sidewalk-damage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-21",
+    "district_id": 1,
+    "category_slug": "power-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-21",
+    "district_id": 9,
+    "category_slug": "public-safety-hazard",
+    "count": 1,
+    "high_count": 1
+   },
+   {
+    "date": "2026-09-21",
+    "district_id": 14,
+    "category_slug": "blocked-drains",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-21",
+    "district_id": 5,
+    "category_slug": "traffic-signal-failure",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-21",
+    "district_id": 2,
+    "category_slug": "street-water-leak",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-22",
+    "district_id": 2,
+    "category_slug": "road-damage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-22",
+    "district_id": 11,
+    "category_slug": "sewage-overflow",
+    "count": 1,
+    "high_count": 1
+   },
+   {
+    "date": "2026-09-22",
+    "district_id": 1,
+    "category_slug": "exposed-wires",
+    "count": 1,
+    "high_count": 1
+   },
+   {
+    "date": "2026-09-22",
+    "district_id": 1,
+    "category_slug": "traffic-congestion",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-22",
+    "district_id": 1,
+    "category_slug": "power-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-23",
+    "district_id": 1,
+    "category_slug": "road-damage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-23",
+    "district_id": 2,
+    "category_slug": "garbage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-23",
+    "district_id": 1,
+    "category_slug": "garbage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-23",
+    "district_id": 4,
+    "category_slug": "power-outage",
+    "count": 1,
+    "high_count": 1
+   },
+   {
+    "date": "2026-09-23",
+    "district_id": 13,
+    "category_slug": "street-water-leak",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-23",
+    "district_id": 13,
+    "category_slug": "environmental-violation",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-23",
+    "district_id": 3,
+    "category_slug": "exposed-wires",
+    "count": 1,
+    "high_count": 1
+   },
+   {
+    "date": "2026-09-23",
+    "district_id": 1,
+    "category_slug": "street-water-leak",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-23",
+    "district_id": 3,
+    "category_slug": "power-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-24",
+    "district_id": 3,
+    "category_slug": "street-water-leak",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-24",
+    "district_id": 5,
+    "category_slug": "drinking-water-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-24",
+    "district_id": 5,
+    "category_slug": "power-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-24",
+    "district_id": 4,
+    "category_slug": "health-violation",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-24",
+    "district_id": 13,
+    "category_slug": "collapsing-building",
+    "count": 1,
+    "high_count": 1
+   },
+   {
+    "date": "2026-09-24",
+    "district_id": 2,
+    "category_slug": "power-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-25",
+    "district_id": 3,
+    "category_slug": "street-light-failure",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-25",
+    "district_id": 1,
+    "category_slug": "exposed-wires",
+    "count": 1,
+    "high_count": 1
+   },
+   {
+    "date": "2026-09-26",
+    "district_id": 5,
+    "category_slug": "road-damage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-26",
+    "district_id": 9,
+    "category_slug": "traffic-congestion",
+    "count": 1,
+    "high_count": 1
+   },
+   {
+    "date": "2026-09-26",
+    "district_id": 9,
+    "category_slug": "street-light-failure",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-26",
+    "district_id": 1,
+    "category_slug": "garbage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-26",
+    "district_id": 4,
+    "category_slug": "environmental-violation",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-26",
+    "district_id": 3,
+    "category_slug": "traffic-congestion",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-26",
+    "district_id": 7,
+    "category_slug": "street-water-leak",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-27",
+    "district_id": 12,
+    "category_slug": "drinking-water-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-27",
+    "district_id": 12,
+    "category_slug": "blocked-drains",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-27",
+    "district_id": 4,
+    "category_slug": "garbage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-27",
+    "district_id": 8,
+    "category_slug": "public-safety-hazard",
+    "count": 1,
+    "high_count": 1
+   },
+   {
+    "date": "2026-09-27",
+    "district_id": 8,
+    "category_slug": "blocked-drains",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-27",
+    "district_id": 2,
+    "category_slug": "internet-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-27",
+    "district_id": 9,
+    "category_slug": "drinking-water-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-27",
+    "district_id": 2,
+    "category_slug": "fire",
+    "count": 1,
+    "high_count": 1
+   },
+   {
+    "date": "2026-09-27",
+    "district_id": 14,
+    "category_slug": "garbage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-28",
+    "district_id": 3,
+    "category_slug": "road-damage",
+    "count": 2,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-28",
+    "district_id": 2,
+    "category_slug": "garbage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-28",
+    "district_id": 3,
+    "category_slug": "street-light-failure",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-28",
+    "district_id": 8,
+    "category_slug": "sewage-overflow",
+    "count": 2,
+    "high_count": 2
+   },
+   {
+    "date": "2026-09-28",
+    "district_id": 3,
+    "category_slug": "street-water-leak",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-28",
+    "district_id": 4,
+    "category_slug": "traffic-signal-failure",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-29",
+    "district_id": 1,
+    "category_slug": "garbage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-29",
+    "district_id": 5,
+    "category_slug": "damaged-road-sign",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-29",
+    "district_id": 2,
+    "category_slug": "street-light-failure",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-29",
+    "district_id": 1,
+    "category_slug": "road-damage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-29",
+    "district_id": 12,
+    "category_slug": "garbage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-29",
+    "district_id": 1,
+    "category_slug": "street-light-failure",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-29",
+    "district_id": 8,
+    "category_slug": "garbage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-29",
+    "district_id": 2,
+    "category_slug": "garbage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-30",
+    "district_id": 6,
+    "category_slug": "power-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-30",
+    "district_id": 2,
+    "category_slug": "power-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-30",
+    "district_id": 7,
+    "category_slug": "garbage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-30",
+    "district_id": 8,
+    "category_slug": "traffic-congestion",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-30",
+    "district_id": 4,
+    "category_slug": "traffic-congestion",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-30",
+    "district_id": 3,
+    "category_slug": "traffic-signal-failure",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-30",
+    "district_id": 3,
+    "category_slug": "garbage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-09-30",
+    "district_id": 12,
+    "category_slug": "damaged-road-sign",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-01",
+    "district_id": 2,
+    "category_slug": "health-violation",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-01",
+    "district_id": 4,
+    "category_slug": "health-violation",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-01",
+    "district_id": 5,
+    "category_slug": "road-damage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-01",
+    "district_id": 2,
+    "category_slug": "sewage-overflow",
+    "count": 1,
+    "high_count": 1
+   },
+   {
+    "date": "2026-10-01",
+    "district_id": 6,
+    "category_slug": "street-light-failure",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-01",
+    "district_id": 9,
+    "category_slug": "exposed-wires",
+    "count": 1,
+    "high_count": 1
+   },
+   {
+    "date": "2026-10-01",
+    "district_id": 1,
+    "category_slug": "garbage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-02",
+    "district_id": 12,
+    "category_slug": "drinking-water-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-02",
+    "district_id": 8,
+    "category_slug": "contaminated-water",
+    "count": 1,
+    "high_count": 1
+   },
+   {
+    "date": "2026-10-02",
+    "district_id": 2,
+    "category_slug": "sidewalk-damage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-03",
+    "district_id": 10,
+    "category_slug": "sewage-overflow",
+    "count": 1,
+    "high_count": 1
+   },
+   {
+    "date": "2026-10-03",
+    "district_id": 3,
+    "category_slug": "power-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-03",
+    "district_id": 13,
+    "category_slug": "blocked-drains",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-03",
+    "district_id": 6,
+    "category_slug": "road-damage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-03",
+    "district_id": 4,
+    "category_slug": "damaged-road-sign",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-03",
+    "district_id": 6,
+    "category_slug": "street-water-leak",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-04",
+    "district_id": 10,
+    "category_slug": "internet-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-04",
+    "district_id": 5,
+    "category_slug": "traffic-congestion",
+    "count": 1,
+    "high_count": 1
+   },
+   {
+    "date": "2026-10-04",
+    "district_id": 2,
+    "category_slug": "road-damage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-04",
+    "district_id": 12,
+    "category_slug": "sewage-overflow",
+    "count": 1,
+    "high_count": 1
+   },
+   {
+    "date": "2026-10-04",
+    "district_id": 6,
+    "category_slug": "street-water-leak",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-04",
+    "district_id": 3,
+    "category_slug": "traffic-congestion",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-04",
+    "district_id": 8,
+    "category_slug": "drinking-water-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-04",
+    "district_id": 3,
+    "category_slug": "blocked-drains",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-04",
+    "district_id": 6,
+    "category_slug": "road-damage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-04",
+    "district_id": 2,
+    "category_slug": "sidewalk-damage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-04",
+    "district_id": 6,
+    "category_slug": "traffic-signal-failure",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-04",
+    "district_id": 1,
+    "category_slug": "drinking-water-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-05",
+    "district_id": 11,
+    "category_slug": "traffic-signal-failure",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-05",
+    "district_id": 5,
+    "category_slug": "fire",
+    "count": 1,
+    "high_count": 1
+   },
+   {
+    "date": "2026-10-05",
+    "district_id": 5,
+    "category_slug": "garbage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-05",
+    "district_id": 2,
+    "category_slug": "street-light-failure",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-05",
+    "district_id": 3,
+    "category_slug": "street-light-failure",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-05",
+    "district_id": 5,
+    "category_slug": "street-light-failure",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-05",
+    "district_id": 2,
+    "category_slug": "street-water-leak",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-05",
+    "district_id": 13,
+    "category_slug": "traffic-signal-failure",
+    "count": 1,
+    "high_count": 1
+   },
+   {
+    "date": "2026-10-05",
+    "district_id": 2,
+    "category_slug": "blocked-drains",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-06",
+    "district_id": 1,
+    "category_slug": "road-damage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-06",
+    "district_id": 5,
+    "category_slug": "power-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-06",
+    "district_id": 13,
+    "category_slug": "exposed-wires",
+    "count": 1,
+    "high_count": 1
+   },
+   {
+    "date": "2026-10-06",
+    "district_id": 3,
+    "category_slug": "sewage-overflow",
+    "count": 1,
+    "high_count": 1
+   },
+   {
+    "date": "2026-10-06",
+    "district_id": 7,
+    "category_slug": "traffic-signal-failure",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-07",
+    "district_id": 1,
+    "category_slug": "public-safety-hazard",
+    "count": 1,
+    "high_count": 1
+   },
+   {
+    "date": "2026-10-07",
+    "district_id": 1,
+    "category_slug": "internet-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-07",
+    "district_id": 4,
+    "category_slug": "waste-burning",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-07",
+    "district_id": 12,
+    "category_slug": "exposed-wires",
+    "count": 1,
+    "high_count": 1
+   },
+   {
+    "date": "2026-10-07",
+    "district_id": 3,
+    "category_slug": "garbage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-07",
+    "district_id": 1,
+    "category_slug": "street-light-failure",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-07",
+    "district_id": 1,
+    "category_slug": "contaminated-water",
+    "count": 1,
+    "high_count": 1
+   },
+   {
+    "date": "2026-10-07",
+    "district_id": 2,
+    "category_slug": "power-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-08",
+    "district_id": 1,
+    "category_slug": "garbage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-08",
+    "district_id": 4,
+    "category_slug": "telecom-network-failure",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-08",
+    "district_id": 10,
+    "category_slug": "power-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-08",
+    "district_id": 11,
+    "category_slug": "road-damage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-09",
+    "district_id": 6,
+    "category_slug": "waste-burning",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-09",
+    "district_id": 4,
+    "category_slug": "drinking-water-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-09",
+    "district_id": 2,
+    "category_slug": "blocked-drains",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-09",
+    "district_id": 1,
+    "category_slug": "power-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-09",
+    "district_id": 10,
+    "category_slug": "environmental-violation",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-09",
+    "district_id": 4,
+    "category_slug": "sidewalk-damage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-10",
+    "district_id": 3,
+    "category_slug": "blocked-drains",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-10",
+    "district_id": 2,
+    "category_slug": "traffic-congestion",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-10",
+    "district_id": 3,
+    "category_slug": "drinking-water-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-10",
+    "district_id": 8,
+    "category_slug": "power-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-10",
+    "district_id": 4,
+    "category_slug": "sidewalk-damage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-10",
+    "district_id": 12,
+    "category_slug": "street-water-leak",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-10",
+    "district_id": 2,
+    "category_slug": "drinking-water-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-11",
+    "district_id": 3,
+    "category_slug": "drinking-water-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-11",
+    "district_id": 1,
+    "category_slug": "waste-burning",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-11",
+    "district_id": 8,
+    "category_slug": "drinking-water-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-11",
+    "district_id": 1,
+    "category_slug": "blocked-drains",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-11",
+    "district_id": 8,
+    "category_slug": "power-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-11",
+    "district_id": 5,
+    "category_slug": "public-safety-hazard",
+    "count": 1,
+    "high_count": 1
+   },
+   {
+    "date": "2026-10-11",
+    "district_id": 5,
+    "category_slug": "street-light-failure",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-11",
+    "district_id": 11,
+    "category_slug": "power-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-11",
+    "district_id": 1,
+    "category_slug": "power-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-11",
+    "district_id": 2,
+    "category_slug": "drinking-water-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-12",
+    "district_id": 7,
+    "category_slug": "power-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-12",
+    "district_id": 3,
+    "category_slug": "power-outage",
+    "count": 2,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-12",
+    "district_id": 2,
+    "category_slug": "fire",
+    "count": 1,
+    "high_count": 1
+   },
+   {
+    "date": "2026-10-12",
+    "district_id": 3,
+    "category_slug": "exposed-wires",
+    "count": 1,
+    "high_count": 1
+   },
+   {
+    "date": "2026-10-12",
+    "district_id": 1,
+    "category_slug": "garbage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-12",
+    "district_id": 3,
+    "category_slug": "sidewalk-damage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-12",
+    "district_id": 10,
+    "category_slug": "contaminated-water",
+    "count": 1,
+    "high_count": 1
+   },
+   {
+    "date": "2026-10-12",
+    "district_id": 5,
+    "category_slug": "traffic-signal-failure",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-12",
+    "district_id": 2,
+    "category_slug": "traffic-signal-failure",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-12",
+    "district_id": 2,
+    "category_slug": "drinking-water-outage",
+    "count": 2,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-13",
+    "district_id": 12,
+    "category_slug": "street-light-failure",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-13",
+    "district_id": 8,
+    "category_slug": "road-damage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-13",
+    "district_id": 3,
+    "category_slug": "drinking-water-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-13",
+    "district_id": 12,
+    "category_slug": "street-water-leak",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-13",
+    "district_id": 2,
+    "category_slug": "drinking-water-outage",
+    "count": 2,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-14",
+    "district_id": 9,
+    "category_slug": "power-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-14",
+    "district_id": 1,
+    "category_slug": "road-damage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-14",
+    "district_id": 5,
+    "category_slug": "street-light-failure",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-14",
+    "district_id": 4,
+    "category_slug": "power-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-14",
+    "district_id": 3,
+    "category_slug": "street-water-leak",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-14",
+    "district_id": 12,
+    "category_slug": "street-light-failure",
+    "count": 1,
+    "high_count": 1
+   },
+   {
+    "date": "2026-10-14",
+    "district_id": 3,
+    "category_slug": "public-safety-hazard",
+    "count": 1,
+    "high_count": 1
+   },
+   {
+    "date": "2026-10-14",
+    "district_id": 2,
+    "category_slug": "drinking-water-outage",
+    "count": 2,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-15",
+    "district_id": 8,
+    "category_slug": "power-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-15",
+    "district_id": 2,
+    "category_slug": "street-light-failure",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-15",
+    "district_id": 9,
+    "category_slug": "street-water-leak",
+    "count": 1,
+    "high_count": 1
+   },
+   {
+    "date": "2026-10-15",
+    "district_id": 1,
+    "category_slug": "road-damage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-15",
+    "district_id": 3,
+    "category_slug": "road-damage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-15",
+    "district_id": 2,
+    "category_slug": "drinking-water-outage",
+    "count": 3,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-16",
+    "district_id": 6,
+    "category_slug": "sidewalk-damage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-16",
+    "district_id": 12,
+    "category_slug": "collapsing-building",
+    "count": 1,
+    "high_count": 1
+   },
+   {
+    "date": "2026-10-16",
+    "district_id": 12,
+    "category_slug": "power-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-16",
+    "district_id": 8,
+    "category_slug": "garbage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-16",
+    "district_id": 3,
+    "category_slug": "sewage-overflow",
+    "count": 1,
+    "high_count": 1
+   },
+   {
+    "date": "2026-10-16",
+    "district_id": 2,
+    "category_slug": "street-water-leak",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-16",
+    "district_id": 2,
+    "category_slug": "drinking-water-outage",
+    "count": 3,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-17",
+    "district_id": 1,
+    "category_slug": "garbage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-17",
+    "district_id": 2,
+    "category_slug": "road-damage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-17",
+    "district_id": 5,
+    "category_slug": "drinking-water-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-17",
+    "district_id": 3,
+    "category_slug": "garbage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-17",
+    "district_id": 2,
+    "category_slug": "drinking-water-outage",
+    "count": 3,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-18",
+    "district_id": 1,
+    "category_slug": "street-water-leak",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-18",
+    "district_id": 8,
+    "category_slug": "drinking-water-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-18",
+    "district_id": 11,
+    "category_slug": "drinking-water-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-18",
+    "district_id": 7,
+    "category_slug": "drinking-water-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-18",
+    "district_id": 1,
+    "category_slug": "fire",
+    "count": 1,
+    "high_count": 1
+   },
+   {
+    "date": "2026-10-18",
+    "district_id": 10,
+    "category_slug": "sewage-overflow",
+    "count": 1,
+    "high_count": 1
+   },
+   {
+    "date": "2026-10-18",
+    "district_id": 5,
+    "category_slug": "power-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-18",
+    "district_id": 2,
+    "category_slug": "drinking-water-outage",
+    "count": 4,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-19",
+    "district_id": 8,
+    "category_slug": "sidewalk-damage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-19",
+    "district_id": 4,
+    "category_slug": "street-light-failure",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-19",
+    "district_id": 2,
+    "category_slug": "drinking-water-outage",
+    "count": 5,
+    "high_count": 1
+   },
+   {
+    "date": "2026-10-19",
+    "district_id": 4,
+    "category_slug": "garbage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-19",
+    "district_id": 2,
+    "category_slug": "collapsing-building",
+    "count": 1,
+    "high_count": 1
+   },
+   {
+    "date": "2026-10-19",
+    "district_id": 2,
+    "category_slug": "sewage-overflow",
+    "count": 1,
+    "high_count": 1
+   },
+   {
+    "date": "2026-10-19",
+    "district_id": 13,
+    "category_slug": "traffic-signal-failure",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-19",
+    "district_id": 5,
+    "category_slug": "power-outage",
+    "count": 1,
+    "high_count": 1
+   },
+   {
+    "date": "2026-10-20",
+    "district_id": 3,
+    "category_slug": "contaminated-water",
+    "count": 1,
+    "high_count": 1
+   },
+   {
+    "date": "2026-10-20",
+    "district_id": 2,
+    "category_slug": "traffic-congestion",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-20",
+    "district_id": 1,
+    "category_slug": "garbage",
+    "count": 3,
+    "high_count": 1
+   },
+   {
+    "date": "2026-10-20",
+    "district_id": 3,
+    "category_slug": "exposed-wires",
+    "count": 1,
+    "high_count": 1
+   },
+   {
+    "date": "2026-10-20",
+    "district_id": 8,
+    "category_slug": "garbage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-20",
+    "district_id": 8,
+    "category_slug": "blocked-drains",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-20",
+    "district_id": 2,
+    "category_slug": "drinking-water-outage",
+    "count": 4,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-21",
+    "district_id": 1,
+    "category_slug": "street-light-failure",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-21",
+    "district_id": 1,
+    "category_slug": "drinking-water-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-21",
+    "district_id": 1,
+    "category_slug": "power-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-21",
+    "district_id": 1,
+    "category_slug": "public-safety-hazard",
+    "count": 1,
+    "high_count": 1
+   },
+   {
+    "date": "2026-10-21",
+    "district_id": 3,
+    "category_slug": "dangerous-electric-pole",
+    "count": 1,
+    "high_count": 1
+   },
+   {
+    "date": "2026-10-21",
+    "district_id": 3,
+    "category_slug": "exposed-wires",
+    "count": 1,
+    "high_count": 1
+   },
+   {
+    "date": "2026-10-21",
+    "district_id": 7,
+    "category_slug": "street-light-failure",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-21",
+    "district_id": 2,
+    "category_slug": "drinking-water-outage",
+    "count": 5,
+    "high_count": 1
+   },
+   {
+    "date": "2026-10-21",
+    "district_id": 3,
+    "category_slug": "power-outage",
+    "count": 6,
+    "high_count": 1
+   },
+   {
+    "date": "2026-10-22",
+    "district_id": 5,
+    "category_slug": "sidewalk-damage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-22",
+    "district_id": 6,
+    "category_slug": "power-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-22",
+    "district_id": 5,
+    "category_slug": "drinking-water-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-22",
+    "district_id": 4,
+    "category_slug": "power-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-22",
+    "district_id": 9,
+    "category_slug": "street-light-failure",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-22",
+    "district_id": 3,
+    "category_slug": "sidewalk-damage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-22",
+    "district_id": 2,
+    "category_slug": "internet-outage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-22",
+    "district_id": 1,
+    "category_slug": "road-damage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-22",
+    "district_id": 2,
+    "category_slug": "drinking-water-outage",
+    "count": 5,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-22",
+    "district_id": 3,
+    "category_slug": "power-outage",
+    "count": 6,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-23",
+    "district_id": 7,
+    "category_slug": "street-light-failure",
+    "count": 1,
+    "high_count": 1
+   },
+   {
+    "date": "2026-10-23",
+    "district_id": 9,
+    "category_slug": "traffic-signal-failure",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-23",
+    "district_id": 2,
+    "category_slug": "drinking-water-outage",
+    "count": 5,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-23",
+    "district_id": 3,
+    "category_slug": "power-outage",
+    "count": 6,
+    "high_count": 2
+   },
+   {
+    "date": "2026-10-23",
+    "district_id": 1,
+    "category_slug": "exposed-wires",
+    "count": 1,
+    "high_count": 1
+   },
+   {
+    "date": "2026-10-23",
+    "district_id": 1,
+    "category_slug": "drinking-water-outage",
+    "count": 2,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-23",
+    "district_id": 1,
+    "category_slug": "road-damage",
+    "count": 2,
+    "high_count": 2
+   },
+   {
+    "date": "2026-10-23",
+    "district_id": 1,
+    "category_slug": "street-water-leak",
+    "count": 1,
+    "high_count": 1
+   },
+   {
+    "date": "2026-10-25",
+    "district_id": 1,
+    "category_slug": "road-damage",
+    "count": 3,
+    "high_count": 3
+   },
+   {
+    "date": "2026-10-25",
+    "district_id": 1,
+    "category_slug": "garbage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-25",
+    "district_id": 1,
+    "category_slug": "sidewalk-damage",
+    "count": 1,
+    "high_count": 0
+   },
+   {
+    "date": "2026-10-25",
+    "district_id": 1,
+    "category_slug": "power-outage",
+    "count": 2,
+    "high_count": 2
+   }
+  ]
+ },
+ "status": 200,
+ "response": {
+  "model_version": "poisson-ewma-v1",
+  "predictions": [
+   {
+    "prediction_type": "water_problem",
+    "district_id": 2,
+    "category_slug": null,
+    "predicted_date": "2026-10-26",
+    "window_end": "2026-11-01",
+    "probability": 1,
+    "expected_count": 18.56,
+    "severity": "critical",
+    "description": "متوقع حدوث مشكلة مياه في محافظة ريف دمشق خلال 7 أيام — الاحتمال 100%، والعدد المتوقع ≈ 18.6 بلاغ",
+    "supporting_data": {
+     "daily_rate": 1.7677,
+     "recent_14": 45,
+     "previous_14": 6,
+     "growth": 6.5,
+     "lookback_total": 59
+    }
+   },
+   {
+    "prediction_type": "electricity_failure",
+    "district_id": 3,
+    "category_slug": null,
+    "predicted_date": "2026-10-26",
+    "window_end": "2026-11-01",
+    "probability": 1,
+    "expected_count": 11.45,
+    "severity": "critical",
+    "description": "متوقع حدوث انقطاع كهرباء في محافظة حلب خلال 7 أيام — الاحتمال 100%، والعدد المتوقع ≈ 11.4 بلاغ",
+    "supporting_data": {
+     "daily_rate": 1.0902,
+     "recent_14": 24,
+     "previous_14": 3,
+     "growth": 7,
+     "lookback_total": 47
+    }
+   },
+   {
+    "prediction_type": "water_problem",
+    "district_id": 1,
+    "category_slug": null,
+    "predicted_date": "2026-10-26",
+    "window_end": "2026-11-01",
+    "probability": 0.956,
+    "expected_count": 3.12,
+    "severity": "high",
+    "description": "متوقع حدوث مشكلة مياه في محافظة دمشق خلال 7 أيام — الاحتمال 96%، والعدد المتوقع ≈ 3.1 بلاغ",
+    "supporting_data": {
+     "daily_rate": 0.3347,
+     "recent_14": 5,
+     "previous_14": 3,
+     "growth": 0.667,
+     "lookback_total": 24
+    }
+   },
+   {
+    "prediction_type": "electricity_failure",
+    "district_id": 1,
+    "category_slug": null,
+    "predicted_date": "2026-10-26",
+    "window_end": "2026-11-01",
+    "probability": 0.9503,
+    "expected_count": 3,
+    "severity": "high",
+    "description": "متوقع حدوث انقطاع كهرباء في محافظة دمشق خلال 7 أيام — الاحتمال 95%، والعدد المتوقع ≈ 3 بلاغ",
+    "supporting_data": {
+     "daily_rate": 0.3812,
+     "recent_14": 5,
+     "previous_14": 4,
+     "growth": 0.25,
+     "lookback_total": 27
+    }
+   },
+   {
+    "prediction_type": "seasonal_trend",
+    "district_id": 1,
+    "category_slug": "road-damage",
+    "predicted_date": "2026-10-26",
+    "window_end": "2026-11-01",
+    "probability": 0.95,
+    "expected_count": 4,
+    "severity": "high",
+    "description": "اتجاه متصاعد لـ«حفر وتلف الطرق» في محافظة دمشق: 8 بلاغ خلال آخر 14 يوماً مقابل 2 في الـ 14 يوماً السابقة (+300%)",
+    "supporting_data": {
+     "recent_14": 8,
+     "previous_14": 2,
+     "growth": 3
+    }
+   },
+   {
+    "prediction_type": "seasonal_trend",
+    "district_id": 2,
+    "category_slug": "drinking-water-outage",
+    "predicted_date": "2026-10-26",
+    "window_end": "2026-11-01",
+    "probability": 0.95,
+    "expected_count": 21.5,
+    "severity": "high",
+    "description": "اتجاه متصاعد لـ«انقطاع مياه الشرب» في محافظة ريف دمشق: 43 بلاغ خلال آخر 14 يوماً مقابل 2 في الـ 14 يوماً السابقة (+2050%)",
+    "supporting_data": {
+     "recent_14": 43,
+     "previous_14": 2,
+     "growth": 20.5
+    }
+   },
+   {
+    "prediction_type": "seasonal_trend",
+    "district_id": 3,
+    "category_slug": "power-outage",
+    "predicted_date": "2026-10-26",
+    "window_end": "2026-11-01",
+    "probability": 0.95,
+    "expected_count": 10,
+    "severity": "high",
+    "description": "اتجاه متصاعد لـ«انقطاع الكهرباء» في محافظة حلب: 20 بلاغ خلال آخر 14 يوماً مقابل 1 في الـ 14 يوماً السابقة (+1900%)",
+    "supporting_data": {
+     "recent_14": 20,
+     "previous_14": 1,
+     "growth": 19
+    }
+   },
+   {
+    "prediction_type": "water_problem",
+    "district_id": 3,
+    "category_slug": null,
+    "predicted_date": "2026-10-26",
+    "window_end": "2026-11-01",
+    "probability": 0.8765,
+    "expected_count": 2.09,
+    "severity": "high",
+    "description": "متوقع حدوث مشكلة مياه في محافظة حلب خلال 7 أيام — الاحتمال 88%، والعدد المتوقع ≈ 2.1 بلاغ",
+    "supporting_data": {
+     "daily_rate": 0.2988,
+     "recent_14": 4,
+     "previous_14": 6,
+     "growth": -0.333,
+     "lookback_total": 20
+    }
+   },
+   {
+    "prediction_type": "electricity_failure",
+    "district_id": 4,
+    "category_slug": null,
+    "predicted_date": "2026-10-26",
+    "window_end": "2026-11-01",
+    "probability": 0.7603,
+    "expected_count": 1.43,
+    "severity": "medium",
+    "description": "متوقع حدوث انقطاع كهرباء في محافظة حمص خلال 7 أيام — الاحتمال 76%، والعدد المتوقع ≈ 1.4 بلاغ",
+    "supporting_data": {
+     "daily_rate": 0.136,
+     "recent_14": 3,
+     "previous_14": 0,
+     "growth": 3,
+     "lookback_total": 10
+    }
+   },
+   {
+    "prediction_type": "seasonal_trend",
+    "district_id": 1,
+    "category_slug": "garbage",
+    "predicted_date": "2026-10-26",
+    "window_end": "2026-11-01",
+    "probability": 0.75,
+    "expected_count": 3,
+    "severity": "high",
+    "description": "اتجاه متصاعد لـ«النفايات والقمامة» في محافظة دمشق: 6 بلاغ خلال آخر 14 يوماً مقابل 3 في الـ 14 يوماً السابقة (+100%)",
+    "supporting_data": {
+     "recent_14": 6,
+     "previous_14": 3,
+     "growth": 1
+    }
+   },
+   {
+    "prediction_type": "electricity_failure",
+    "district_id": 5,
+    "category_slug": null,
+    "predicted_date": "2026-10-26",
+    "window_end": "2026-11-01",
+    "probability": 0.7489,
+    "expected_count": 1.38,
+    "severity": "medium",
+    "description": "متوقع حدوث انقطاع كهرباء في محافظة حماة خلال 7 أيام — الاحتمال 75%، والعدد المتوقع ≈ 1.4 بلاغ",
+    "supporting_data": {
+     "daily_rate": 0.1974,
+     "recent_14": 3,
+     "previous_14": 3,
+     "growth": 0,
+     "lookback_total": 15
+    }
+   },
+   {
+    "prediction_type": "electricity_failure",
+    "district_id": 7,
+    "category_slug": null,
+    "predicted_date": "2026-10-26",
+    "window_end": "2026-11-01",
+    "probability": 0.7291,
+    "expected_count": 1.31,
+    "severity": "medium",
+    "description": "متوقع حدوث انقطاع كهرباء في محافظة طرطوس خلال 7 أيام — الاحتمال 73%، والعدد المتوقع ≈ 1.3 بلاغ",
+    "supporting_data": {
+     "daily_rate": 0.1244,
+     "recent_14": 3,
+     "previous_14": 0,
+     "growth": 3,
+     "lookback_total": 7
+    }
+   },
+   {
+    "prediction_type": "water_problem",
+    "district_id": 8,
+    "category_slug": null,
+    "predicted_date": "2026-10-26",
+    "window_end": "2026-11-01",
+    "probability": 0.7257,
+    "expected_count": 1.29,
+    "severity": "medium",
+    "description": "متوقع حدوث مشكلة مياه في محافظة إدلب خلال 7 أيام — الاحتمال 73%، والعدد المتوقع ≈ 1.3 بلاغ",
+    "supporting_data": {
+     "daily_rate": 0.1848,
+     "recent_14": 2,
+     "previous_14": 5,
+     "growth": -0.6,
+     "lookback_total": 14
+    }
+   },
+   {
+    "prediction_type": "electricity_failure",
+    "district_id": 12,
+    "category_slug": null,
+    "predicted_date": "2026-10-26",
+    "window_end": "2026-11-01",
+    "probability": 0.6798,
+    "expected_count": 1.14,
+    "severity": "medium",
+    "description": "متوقع حدوث انقطاع كهرباء في محافظة درعا خلال 7 أيام — الاحتمال 68%، والعدد المتوقع ≈ 1.1 بلاغ",
+    "supporting_data": {
+     "daily_rate": 0.1084,
+     "recent_14": 3,
+     "previous_14": 1,
+     "growth": 2,
+     "lookback_total": 6
+    }
+   },
+   {
+    "prediction_type": "electricity_failure",
+    "district_id": 2,
+    "category_slug": null,
+    "predicted_date": "2026-10-26",
+    "window_end": "2026-11-01",
+    "probability": 0.6757,
+    "expected_count": 1.13,
+    "severity": "medium",
+    "description": "متوقع حدوث انقطاع كهرباء في محافظة ريف دمشق خلال 7 أيام — الاحتمال 68%، والعدد المتوقع ≈ 1.1 بلاغ",
+    "supporting_data": {
+     "daily_rate": 0.1609,
+     "recent_14": 1,
+     "previous_14": 4,
+     "growth": -0.75,
+     "lookback_total": 22
+    }
+   },
+   {
+    "prediction_type": "electricity_failure",
+    "district_id": 9,
+    "category_slug": null,
+    "predicted_date": "2026-10-26",
+    "window_end": "2026-11-01",
+    "probability": 0.5873,
+    "expected_count": 0.88,
+    "severity": "low",
+    "description": "متوقع حدوث انقطاع كهرباء في محافظة الحسكة خلال 7 أيام — الاحتمال 59%، والعدد المتوقع ≈ 0.9 بلاغ",
+    "supporting_data": {
+     "daily_rate": 0.1264,
+     "recent_14": 2,
+     "previous_14": 1,
+     "growth": 1,
+     "lookback_total": 12
+    }
+   },
+   {
+    "prediction_type": "water_problem",
+    "district_id": 12,
+    "category_slug": null,
+    "predicted_date": "2026-10-26",
+    "window_end": "2026-11-01",
+    "probability": 0.5459,
+    "expected_count": 0.79,
+    "severity": "low",
+    "description": "متوقع حدوث مشكلة مياه في محافظة درعا خلال 7 أيام — الاحتمال 55%، والعدد المتوقع ≈ 0.8 بلاغ",
+    "supporting_data": {
+     "daily_rate": 0.1128,
+     "recent_14": 1,
+     "previous_14": 3,
+     "growth": -0.667,
+     "lookback_total": 10
+    }
+   },
+   {
+    "prediction_type": "water_problem",
+    "district_id": 5,
+    "category_slug": null,
+    "predicted_date": "2026-10-26",
+    "window_end": "2026-11-01",
+    "probability": 0.5223,
+    "expected_count": 0.74,
+    "severity": "low",
+    "description": "متوقع حدوث مشكلة مياه في محافظة حماة خلال 7 أيام — الاحتمال 52%، والعدد المتوقع ≈ 0.7 بلاغ",
+    "supporting_data": {
+     "daily_rate": 0.1055,
+     "recent_14": 2,
+     "previous_14": 0,
+     "growth": 2,
+     "lookback_total": 11
+    }
+   },
+   {
+    "prediction_type": "traffic_congestion",
+    "district_id": 2,
+    "category_slug": null,
+    "predicted_date": "2026-10-26",
+    "window_end": "2026-11-01",
+    "probability": 0.5115,
+    "expected_count": 0.72,
+    "severity": "low",
+    "description": "متوقع حدوث ازدحام مروري في محافظة ريف دمشق خلال 7 أيام — الاحتمال 51%، والعدد المتوقع ≈ 0.7 بلاغ",
+    "supporting_data": {
+     "daily_rate": 0.1023,
+     "recent_14": 2,
+     "previous_14": 1,
+     "growth": 1,
+     "lookback_total": 8
+    }
+   },
+   {
+    "prediction_type": "water_problem",
+    "district_id": 10,
+    "category_slug": null,
+    "predicted_date": "2026-10-26",
+    "window_end": "2026-11-01",
+    "probability": 0.4744,
+    "expected_count": 0.64,
+    "severity": "low",
+    "description": "متوقع حدوث مشكلة مياه في محافظة دير الزور خلال 7 أيام — الاحتمال 47%، والعدد المتوقع ≈ 0.6 بلاغ",
+    "supporting_data": {
+     "daily_rate": 0.0919,
+     "recent_14": 2,
+     "previous_14": 1,
+     "growth": 1,
+     "lookback_total": 6
+    }
+   },
+   {
+    "prediction_type": "electricity_failure",
+    "district_id": 8,
+    "category_slug": null,
+    "predicted_date": "2026-10-26",
+    "window_end": "2026-11-01",
+    "probability": 0.4684,
+    "expected_count": 0.63,
+    "severity": "low",
+    "description": "متوقع حدوث انقطاع كهرباء في محافظة إدلب خلال 7 أيام — الاحتمال 47%، والعدد المتوقع ≈ 0.6 بلاغ",
+    "supporting_data": {
+     "daily_rate": 0.0903,
+     "recent_14": 1,
+     "previous_14": 2,
+     "growth": -0.5,
+     "lookback_total": 7
+    }
+   },
+   {
+    "prediction_type": "electricity_failure",
+    "district_id": 6,
+    "category_slug": null,
+    "predicted_date": "2026-10-26",
+    "window_end": "2026-11-01",
+    "probability": 0.4402,
+    "expected_count": 0.58,
+    "severity": "low",
+    "description": "متوقع حدوث انقطاع كهرباء في محافظة اللاذقية خلال 7 أيام — الاحتمال 44%، والعدد المتوقع ≈ 0.6 بلاغ",
+    "supporting_data": {
+     "daily_rate": 0.0829,
+     "recent_14": 1,
+     "previous_14": 2,
+     "growth": -0.5,
+     "lookback_total": 5
+    }
+   },
+   {
+    "prediction_type": "water_problem",
+    "district_id": 7,
+    "category_slug": null,
+    "predicted_date": "2026-10-26",
+    "window_end": "2026-11-01",
+    "probability": 0.4114,
+    "expected_count": 0.53,
+    "severity": "low",
+    "description": "متوقع حدوث مشكلة مياه في محافظة طرطوس خلال 7 أيام — الاحتمال 41%، والعدد المتوقع ≈ 0.5 بلاغ",
+    "supporting_data": {
+     "daily_rate": 0.0757,
+     "recent_14": 1,
+     "previous_14": 0,
+     "growth": 1,
+     "lookback_total": 12
+    }
+   },
+   {
+    "prediction_type": "traffic_congestion",
+    "district_id": 3,
+    "category_slug": null,
+    "predicted_date": "2026-10-26",
+    "window_end": "2026-11-01",
+    "probability": 0.404,
+    "expected_count": 0.52,
+    "severity": "low",
+    "description": "متوقع حدوث ازدحام مروري في محافظة حلب خلال 7 أيام — الاحتمال 40%، والعدد المتوقع ≈ 0.5 بلاغ",
+    "supporting_data": {
+     "daily_rate": 0.0739,
+     "recent_14": 0,
+     "previous_14": 2,
+     "growth": -1,
+     "lookback_total": 16
+    }
+   },
+   {
+    "prediction_type": "traffic_congestion",
+    "district_id": 9,
+    "category_slug": null,
+    "predicted_date": "2026-10-26",
+    "window_end": "2026-11-01",
+    "probability": 0.3731,
+    "expected_count": 0.47,
+    "severity": "low",
+    "description": "متوقع حدوث ازدحام مروري في محافظة الحسكة خلال 7 أيام — الاحتمال 37%، والعدد المتوقع ≈ 0.5 بلاغ",
+    "supporting_data": {
+     "daily_rate": 0.0667,
+     "recent_14": 1,
+     "previous_14": 0,
+     "growth": 1,
+     "lookback_total": 4
+    }
+   }
+  ]
+ }
+}

@@ -1,0 +1,41 @@
+{
+ "method": "GET",
+ "url": "/v1/model",
+ "headers": {
+  "X-Internal-Key": "***"
+ },
+ "request": [],
+ "status": 200,
+ "response": {
+  "model": {
+   "ready": true,
+   "version": "tfidf-hybrid-v1",
+   "algorithm": "LinearSVC (Platt calibration), C=0.5, TF-IDF word+char",
+   "config": {
+    "kind": "word+char",
+    "classifier": "svm",
+    "C": 0.5,
+    "keyword_weight": 0.3
+   },
+   "keyword_weight": 0.3,
+   "trained_at": "2026-10-23T01:25:03+00:00",
+   "train_seconds": 1.1,
+   "n_samples": 1917,
+   "sources": {
+    "synthetic": 1917
+   },
+   "labels": 24,
+   "sklearn": "1.9.1",
+   "metrics": {
+    "kind": "offline",
+    "test_kind": "heldout",
+    "cv_accuracy_mean": 0.9942,
+    "test_accuracy": 1,
+    "n_test": 148,
+    "challenge_accuracy": 0.9167,
+    "evaluated_at": "2026-10-23T04:25:01"
+   }
+  },
+  "history": []
+ }
+}

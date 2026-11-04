@@ -1,0 +1,17 @@
+{
+ "key": "report_404",
+ "method": "GET",
+ "path": "/api/v1/employee/reports/00000000-0000-0000-0000-000000000000",
+ "query": null,
+ "body": null,
+ "form": null,
+ "files": null,
+ "auth": true,
+ "status": 404,
+ "note": null,
+ "response": {
+  "success": false,
+  "message": "البلاغ غير موجود أو لا يتبع مديريتك",
+  "errors": null
+ }
+}

@@ -1,0 +1,38 @@
+{
+ "key": "citizen_login",
+ "method": "POST",
+ "path": "/api/v1/citizen/auth/login",
+ "query": null,
+ "body": {
+  "email": "0928803791",
+  "password": "Docs@2026x"
+ },
+ "form": null,
+ "files": null,
+ "auth": false,
+ "status": 200,
+ "note": "الدخول برقم الجوال (أو البريد) في نفس الحقل email",
+ "response": {
+  "success": true,
+  "message": "تم تسجيل الدخول بنجاح",
+  "data": {
+   "user": {
+    "id": "f9252e73-8be5-47be-871d-b91ad9f98ae0",
+    "name": "مواطن التوثيق",
+    "email": "docs.945417@example.com",
+    "phone": "0928803791",
+    "avatar": null,
+    "user_type": "citizen",
+    "is_verified": false,
+    "preferred_lang": "ar",
+    "district": {
+     "id": 1,
+     "name": "محافظة دمشق"
+    },
+    "department": null,
+    "created_at": "2026-10-25T19:23:38+03:00"
+   },
+   "token": "<TOKEN>"
+  }
+ }
+}

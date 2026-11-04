@@ -1,0 +1,20 @@
+{
+ "success": true,
+ "message": "تمت العملية بنجاح",
+ "data": {
+  "count": 6,
+  "latest": {
+   "id": "081907d0-b0e2-40d8-bf4b-8691401c58cd",
+   "type": "status_change",
+   "title": "تحديث البلاغ MTR-2026-000696",
+   "body": "تمت معالجة بلاغك — نرجو تقييم الخدمة",
+   "data": {
+    "report_uuid": "93309ee9-bd46-4a35-a8bc-0212afc1befe",
+    "ticket_number": "MTR-2026-000696",
+    "status": "resolved"
+   },
+   "read_at": null,
+   "created_at": "2026-10-23T04:21:13+03:00"
+  }
+ }
+}

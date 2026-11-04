@@ -1,0 +1,88 @@
+{
+ "success": true,
+ "message": "تمت العملية بنجاح",
+ "data": [
+  {
+   "id": "9cfaebd1-9feb-4246-8df2-199bfaeb6560",
+   "ticket_number": "MTR-2026-000703",
+   "title": "رصيف مكسور بشارع بغداد",
+   "description": "بلاطات الرصيف مكسورة وفي حفر صغيرة بتعرقل مرور الكراسي المتحركة",
+   "status": "pending",
+   "status_ar": "في الانتظار",
+   "priority": "low",
+   "priority_ar": "منخفضة",
+   "citizen": {
+    "name": "أحمد المواطن",
+    "phone": "0930000003"
+   },
+   "is_anonymous": false,
+   "category": {
+    "id": 2,
+    "name": "تلف الأرصفة",
+    "icon": "directions_walk",
+    "color": "#F17C67"
+   },
+   "department": {
+    "id": 1,
+    "name": "مديرية الخدمات والصيانة"
+   },
+   "district": {
+    "id": 1,
+    "name": "محافظة دمشق"
+   },
+   "location": {
+    "latitude": 33.517,
+    "longitude": 36.2985,
+    "address": null,
+    "notes": null
+   },
+   "ai": {
+    "category": null,
+    "priority": "low",
+    "confidence": 0.5509,
+    "summary": "رصيف مكسور بشارع بغداد — بلاطات الرصيف مكسورة وفي حفر صغيرة بتعرقل مرور الكراسي المتحركة",
+    "is_duplicate": false,
+    "duplicate_of": null
+   },
+   "attachments": [
+    {
+     "id": 7,
+     "type": "image",
+     "stage": "before",
+     "url": "http://127.0.0.1:8000/storage/reports/9cfaebd1-9feb-4246-8df2-199bfaeb6560/nKxA5NJVl9AQ1l1XSfpkmOK00sWflnt3Q4Fo2RTO.png",
+     "thumbnail": null,
+     "name": "tiny.png",
+     "size": "0.1 KB",
+     "mime": "image/png",
+     "ai_tags": null
+    }
+   ],
+   "after_attachments": [],
+   "updates": [],
+   "assignment": null,
+   "rating": null,
+   "permissions": {
+    "can_act": false,
+    "can_claim": true,
+    "allowed_statuses": []
+   },
+   "sla": {
+    "expected_resolution": "2026-10-30T04:41:46+03:00",
+    "is_overdue": false
+   },
+   "dates": {
+    "created": "2026-10-25T04:41:46+03:00",
+    "assigned": null,
+    "started": null,
+    "resolved": null
+   }
+  }
+ ],
+ "meta": {
+  "current_page": 1,
+  "last_page": 1,
+  "per_page": 5,
+  "total": 1,
+  "has_more": false
+ }
+}

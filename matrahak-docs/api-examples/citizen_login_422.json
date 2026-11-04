@@ -1,0 +1,24 @@
+{
+ "key": "citizen_login_422",
+ "method": "POST",
+ "path": "/api/v1/citizen/auth/login",
+ "query": null,
+ "body": {
+  "email": "docs.945417@example.com",
+  "password": "wrong-pass-1"
+ },
+ "form": null,
+ "files": null,
+ "auth": false,
+ "status": 422,
+ "note": null,
+ "response": {
+  "success": false,
+  "message": "البريد الإلكتروني/رقم الجوال أو كلمة المرور غير صحيحة",
+  "errors": {
+   "email": [
+    "البريد الإلكتروني/رقم الجوال أو كلمة المرور غير صحيحة"
+   ]
+  }
+ }
+}
